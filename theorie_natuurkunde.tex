@@ -53,11 +53,38 @@
 	\newpage
 	\section{Deel 1 - Mechanica}
 	\section{Kinematica in 1 dimensie}
-	\subsection{Delen in Giancoli}
 	2.1-2.6, 2.8-2.9
+	\subsection{2.5: Formules bij constante versnelling}
+	We nemen aan dat het initiële tijdstip in elk van deze formules altijd 0 is. \((t_{0} = 0)\).
+	Vergelijking voor snelheid afleiden: 
+	\[\mathbf{a = \frac{dv}{dt} = constante}\]
+	$\iff$ \[a dt = dv\]
+	$\iff$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
+	$\iff$\[v - v_0 = at\]
+	$\iff$\[\mathbf{v = v_0 + at}\]
+	Vergelijking voor verplaatsing afleiden: 
+	\[v = \frac{dx}{dt}\]
+	$\iff$\[dx = v dt\]
+	$\iff$\[x - x_0 = \int_{0}^{t} v \, dt\]
+	$\iff$\[x - x_0 = \int_{0}^{t} (v_0 + at) \, dt\]
+	$\iff$\[x - x_0 = \int_{0}^{t} v_0 \, dt + \int_{0}^{t} at \, dt\]
+	$\iff$\[\mathbf{x - x_0 = v_0t + a\frac{t^2}{2}}\]
+	Alternatieve vergelijking voor snelheid: 
+	\[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
+	dan geldt voor de vergelijking van verplaatsing: 
+	\[x = x_0 + (\frac{v + v_0}{2})(\frac{v - v_0}{a})\]
+	$\iff$\[x = x_0 + \frac{v^2 + v_0^2}{2a}\]
+	$\iff$\[\mathbf{v^2 = v_0^2 + 2a(x - x_0)}\]
 	\section{Kinematica in twee of drie dimensies}
-	\subsection{Delen in Giancoli}
 	3.7
+	\subsection{Projectiel beweging: formules}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{projectiel}
+		\caption{}
+		\label{fig:projectiel}
+	\end{figure}
+	
 	\section{Dynamica: Newton's bewegingswetten}
 	\subsection{Delen in Giancoli}
 	4.1-4.7
