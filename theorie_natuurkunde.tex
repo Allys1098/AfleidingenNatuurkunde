@@ -6,6 +6,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \author{Estelle Severs, Matthias Kovacic}
 \title{Afleidingen Natuurkunde}
 \date{:)}
@@ -81,13 +82,41 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{projectiel}
-		\caption{}
-		\label{fig:projectiel}
+		\caption{Er zal enkel een in de verticale component een versnelling aanwezig zijn. Hierdoor verandert de snelheid enkel in de verticale component.}
+		\label{projectiel}
 	\end{figure}
-	
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Horizontaal} & \textbf{Verticaal} \\
+		\hline
+		\(a_x = 0\)&\(a_y = -g\)  \\
+		\hline
+		\(v_x(t) = v_{x0}\)&\(v_y(t) = v_{y0} - gt\)  \\
+		\hline
+		\(x(t) = x_0 + v_{x0}t\)&\(y(t) = y_0 + v_{y0}t - \frac{gt^2}{2}\)  \\
+		\hline
+	\end{tabular}
+\end{table}
 	\section{Dynamica: Newton's bewegingswetten}
-	\subsection{Delen in Giancoli}
 	4.1-4.7
+	\subsection{Eerste wet: inertie}
+	Een lichaam in rust (of in eenparige rechtlijnige beweging) zal in rust (eenparige rechtlijnige beweging) blijven tenzij er een uitwendige resulterende kracht inwerkt.
+	\[\sum_{i}\overrightarrow{F_i} = 0 \Rightarrow \overrightarrow{a} = 0\]
+	\subsection{Tweede wet: versnelling}
+	Een grotere kracht op een lichaam met massa m veroorzaakt een grotere versnelling: a \textasciitilde F
+	
+	Bij een dubbele massa 2m zal eenzelfde kracht slechts een versnelling a/2 veroorzaken: a \textasciitilde 1/m 
+	
+	\[\sum_{i} \overrightarrow{F_i} = \overrightarrow{F} = m\overrightarrow{a}\]
+	\subsection{Derde wet: actie-reactie}
+	Bij wisselwerking tussen twee lichamen is de kracht \(\overrightarrow{F_{21}}\) van lichaam 1 op lichaam 2 even groot en tegengesteld aan de kracht \(\overrightarrow{F_{12}}\) van lichaam 2 op lichaam 1.
+	\[\overrightarrow{F_{12}} = -\overrightarrow{F_{21}}\]
+	Deze krachten komen steeds in paren voor en werken op verschillende voorwerpen.
+	\subsection{Gewicht - Gravitatie - Normaalkracht}
+	Alle voorwerpen nabij het aardoppervak vallen met dezelfde versnelling $\overrightarrow{g}$. 
+	\[\text{Gravitatiekracht: } \overrightarrow{F_G} = m\overrightarrow{g}\]	
 	\section{De wetten van Newton: wrijving, cirkelbeweging, weerstandskrachten}
 	\subsection{Delen in de Giancoli}
 	5.1-5.3, 5.5-5.6
