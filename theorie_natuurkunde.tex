@@ -10,6 +10,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{gensymb}
+\usepackage{siunitx}
 \author{Estelle Severs, Matthias Kovacic}
 \title{Afleidingen Natuurkunde}
 \date{:)}
@@ -30,17 +31,17 @@
             \hline
             Prefix & Afkorting & Value      \\
             \hline
-            Giga        & G         & $10^{9}$   \\
-            Mega        & M         & $10^{6}$   \\
-            Kilo        & k         & $10^{3}$   \\
-            Hecto       & h         & $10^{2}$   \\
-            Deka        & da        & $10^{1}$   \\
-            Deci        & d         & $10^{-1}$  \\
-            Centi       & c         & $10^{-2}$  \\
-            Milli       & m         & $10^{-3}$  \\
-            Micro       & $\mu$     & $10^{-6}$  \\
-            Nano        & n         & $10^{-9}$  \\
-            Pico        & p         & $10^{-12}$ \\
+            Giga   & G         & $10^{9}$   \\
+            Mega   & M         & $10^{6}$   \\
+            Kilo   & k         & $10^{3}$   \\
+            Hecto  & h         & $10^{2}$   \\
+            Deka   & da        & $10^{1}$   \\
+            Deci   & d         & $10^{-1}$  \\
+            Centi  & c         & $10^{-2}$  \\
+            Milli  & m         & $10^{-3}$  \\
+            Micro  & $\mu$     & $10^{-6}$  \\
+            Nano   & n         & $10^{-9}$  \\
+            Pico   & p         & $10^{-12}$ \\
             \hline
         \end{tabular}
     \end{center}
@@ -48,61 +49,67 @@
     \subsection{Vectoren}
     Vergeet niet je vector altijd in componenten te splitsen!
 
-    \(A_x = Acos\theta\) en \(A_y = Asin\theta\)
-
-    \(A = \sqrt{A_x^2 + A_y^2}\)
-
-    \(\theta = tan^{-1}\frac{A_y}{A_x}\)
+    \begin{itemize}
+        \item \(A_x = A\cos\theta\) en \(A_y = A\sin\theta\)
+        \item \(A = \sqrt{A_x^2 + A_y^2}\)
+        \item \(\theta = \tan^{-1}(\frac{A_y}{A_x})\)
+    \end{itemize}
 
     \subsubsection{Scalair product}
     De grote van deze vector vermenigvuldigd met de projectie van de andere vector op deze vector. Hieruit krijg je dus een scalar!!
-    \[\textbf{A} * \textbf{B} = ABcos\theta\]
+    \[\textbf{A} \cdot \textbf{B} = AB \cos\theta\]
 
     \subsubsection{Vectorproduct}
     Dit product geeft altijd een vector loodrecht op beide vectoren. Deze uitkomst is te vinden met de rechterhandregel. Als je deze nog niet kent: zoekt es op op youtube ;)
     De grootte is te vinden met volgende formule:
-    \[\textbf{A} x \textbf{B} = ABsin\theta\]
+    \[\textbf{A} \times \textbf{B} = AB\sin\theta\]
 
     \subsection{Pollevs}
-    - Welke uitdrukking geeft het volume van een afgeknotte kegel?
-    \begin{enumerate}
-        [label=\alph*)]
-        \item \(\pi(r_1 + r_2)\sqrt{h^2 + (r_1 - r_2)^2}\)
-        \item \(2\pi(r_1 + r_2)\)
-        \item \(\pi h(r_1^2 + r_1r_2 + r_2^2)\)
-    \end{enumerate}
-    \textit{Oplossing:} c, dit is de enige formule die een term gaat hebben tot de 3e macht en een volume is altijd van een macht 3.
-    \newline
-    - Voor welke van de volgende vectoren is de grootte van de vector gelijk aan een van de componenten van de vector?
-    \begin{enumerate}
-        [label = \alph*)]
-        \item \(\vec{A} = 2\hat{i} + 5\hat{j}\)
-        \item \(\vec{B} = -3\hat{j}\)
-        \item \(\vec{C} = +5\hat{k}\)
-        \item \(\vec{B} \text{ en } \vec{C}\)
-    \end{enumerate}
-    \textit{Oplossing:} c is het juiste antwoord. a kan niet omdat de grootte van de vector moet gelijk zijn aan de grote van de component. b kan niet omdat de grootte van een component niet negatief kan zijn. (na te kijken, not sure). Hieruit volgt dat d natuurlijk niet waar kan zijn.
-    \newline
-    - Welk van de volgende stellingen is juist, over het verband tussen $\vec{A}$ * $\vec{B}$ en \((-\vec{A}) * (-\vec{B})\)
-    \begin{enumerate}
-        [label=\alph*)]
-        \item \(\vec{A} * \vec{B} = -((-\vec{A})*(-\vec{B}))\)
-        \item als \(\vec{A} * \vec{B} = ABcos\theta \), dan is \((-\vec{A}) * (-\vec{B}) = ABcos(\theta + 180\degree)\)
-        \item Zowel a als b is correct.
-        \item Zowel a als b is fout.
-    \end{enumerate}
-    \textit{Oplossing:} d is het juiste antwoord. Of de vectoren nu in de positieve of negatieve richting staan, de hoek zal niet veranderen. De lengte van de vectoren zal ook gelijk blijven.
-    \newline
-    - Gegeven: twee vectoren $\vec{a}$ en $\vec{b}$, gelegen in het xy-vlak. Bepaal \(c = \vec{a} x \vec{b}\)
-    \begin{enumerate}
-        [label=\alph*)]
-        \item \(\vec{c} = - ab sin(\pi/2 - \phi)\hat{k}\)
-        \item \(\vec{c} = abcos(\phi)\hat{k}\)
-        \item \(\vec{c} = abcos(\pi/2 - \phi)\)
-        \item Geen van deze antwoorden is correct.
-    \end{enumerate}
-    \textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\vec{a}$ en $\vec{b}$ is 90$\degree$ - $\theta$
-    \newpage
+
+    \begin{itemize}
+        \renewcommand\labelitemi{--}
+        \item Welke uitdrukking geeft het volume van een afgeknotte kegel?
+        \begin{enumerate}
+            [label=\alph*)]
+            \item \(\pi(r_1 + r_2)\sqrt{h^2 + (r_1 - r_2)^2}\)
+            \item \(2\pi(r_1 + r_2)\)
+            \item \(\pi h(r_1^2 + r_1r_2 + r_2^2)\)
+        \end{enumerate}
+        \textit{Oplossing:} c, dit is de enige formule die een term gaat hebben tot de 3e macht en een volume is altijd van een macht 3.
+
+        \item Voor welke van de volgende vectoren is de grootte van de vector gelijk aan een van de componenten van de vector?
+        \begin{enumerate}
+            [label = \alph*)]
+            \item \(\vec{A} = 2\hat{\imath} + 5\hat{\jmath}\)
+            \item \(\vec{B} = -3\hat{\jmath}\)
+            \item \(\vec{C} = +5\hat{k}\)
+            \item \(\vec{B} \text{ en } \vec{C}\)
+        \end{enumerate}
+        \textit{Oplossing:} c is het juiste antwoord. a kan niet omdat de grootte van de vector moet gelijk zijn aan de grote van de component. b kan niet omdat de grootte van een component niet negatief kan zijn. (na te kijken, not sure). Hieruit volgt dat d natuurlijk niet waar kan zijn.
+
+        \item Welk van de volgende stellingen is juist, over het verband tussen \(\vec{A} \cdot \vec{B}\) en \((-\vec{A}) \cdot (-\vec{B})\)
+        \begin{enumerate}
+            [label=\alph*)]
+            \item \(\vec{A} \cdot \vec{B} = -((-\vec{A})\cdot(-\vec{B}))\)
+            \item als \(\vec{A} \cdot \vec{B} = AB\cos\theta \), dan is \((-\vec{A}) \cdot (-\vec{B}) = AB\cos(\theta + 180\degree)\)
+            \item Zowel a als b is correct.
+            \item Zowel a als b is fout.
+        \end{enumerate}
+        \textit{Oplossing:} d is het juiste antwoord.
+        Of de vectoren nu in de positieve of negatieve richting staan, de hoek zal niet veranderen.
+        De lengte van de vectoren zal ook gelijk blijven.
+
+        \item Gegeven: twee vectoren $\vec{a}$ en $\vec{b}$, gelegen in het xy-vlak.
+        Bepaal \(c = \vec{a} \times \vec{b}\)
+        \begin{enumerate}
+            [label=\alph*)]
+            \item \(\vec{c} = - ab \sin(\pi/2 - \phi)\hat{k}\)
+            \item \(\vec{c} = ab \cos(\phi)\hat{k}\)
+            \item \(\vec{c} = ab \cos(\pi/2 - \phi)\)
+            \item Geen van deze antwoorden is correct.
+        \end{enumerate}
+        \textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\vec{a}$ en $\vec{b}$ is 90$\degree$ - $\theta$
+    \end{itemize}
 
 
     \section{Deel 1 - Mechanica}
@@ -148,7 +155,7 @@
         \centering
         \begin{tabular}{|c|c|}
             \hline
-            \textbf{Horizontaal}   & \textbf{Verticaal}                        \\
+            \textbf{Horizontaal}     & \textbf{Verticaal}                        \\
             \hline
             \(a_x = 0\)              & \(a_y = -g\)                              \\
             \hline
@@ -222,36 +229,6 @@
 
     \subsection{Delen in Giancoli}
     11.3-11.4, 11.6
-
-
-    \section{Pollevs}
-    - Een kanonbal volgt pad B op aarde. Welk pad zou de kanonbal op de maan volgen (\(g_{maan} = 1.6m/s^2\)) indien hij op dezelfde manier uit het kanon werd afgevuurd? (zie afbeelding cursus)
-    \begin{enumerate}
-        [label=\alph*)]
-        \item A
-        \item B
-        \item C
-        \item D
-    \end{enumerate}
-    \textit{Oplossing:} D, g is kleiner dus de versnelling naar beneden is kleiner.
-    \newline
-    - Welk van de volgende stellingen is het meest correct?
-    \begin{enumerate}[label=\alph*]
-        \item Het is mogelijk dat een voorwerp in beweging is zonder dat er krachten op het voorwerp werken.
-        \item Het is mogelijk dat er krachten op een voorwerp inwerken zonder dat er beweging is.
-        \item A en B zijn fout.
-        \item A en B zijn correct.
-    \end{enumerate}
-    \textit{Oplossing:} A en B zijn beide correct. Een voorwerp A) Een voorwerp op een trein, het beweegt tegenover de aarde. B) Een voorwerp dat op een bank ligt, maar zwaartkracht werkt hier wel op in.
-    - Een voorwerp ondervindt een nettokracht wordt hiervoor versneld. Welke stelling is \textit{altijd} vorrect?
-    \begin{enumerate}[label=\alph*]
-        \item Het voorwerp beweegt in de richting van de nettokracht.
-        \item De versnelling is in dezelfde richting als de snelheid.
-        \item De versnelling is in dezelfde richting als de kracht.
-        \item De snelheid van het voorwerp neemt toe.
-    \end{enumerate}
-    \textit{Oplossing:} d is de juiste oplossing. $\vec{F}$ en $\vec{a}$ hebben gelijke richting en zin op een constante na: \(\vec{F} = m\vec{a}\). Tegenvoorbeeld voor A en B: Het voorwerp is al in beweging en er werkt een kraht loodrecht op dat voorwerp. Tegenvoorbeeld voor C: Als versnelling in tegengestelde richting staatn (vertragen).
-    -
     \newpage
 
 
@@ -270,7 +247,36 @@
     22.1-22.3
 
 
-    \section{Elektrische potentiaal}
+	\section{Pollevs}
+	- Een kanonbal volgt pad B op aarde. Welk pad zou de kanonbal op de maan volgen (\(g_{maan} = 1.6m/s^2\)) indien hij op dezelfde manier uit het kanon werd afgevuurd? (zie afbeelding cursus)
+	\begin{enumerate}
+		[label=\alph*)]
+		\item A
+		\item B
+		\item C
+		\item D
+	\end{enumerate}
+	\textit{Oplossing:} D, g is kleiner dus de versnelling naar beneden is kleiner.
+	\newline
+	- Welk van de volgende stellingen is het meest correct?
+	\begin{enumerate}[label=\alph*]
+		\item Het is mogelijk dat een voorwerp in beweging is zonder dat er krachten op het voorwerp werken.
+		\item Het is mogelijk dat er krachten op een voorwerp inwerken zonder dat er beweging is.
+		\item A en B zijn fout.
+		\item A en B zijn correct.
+	\end{enumerate}
+	\textit{Oplossing:} A en B zijn beide correct. Een voorwerp A) Een voorwerp op een trein, het beweegt tegenover de aarde. B) Een voorwerp dat op een bank ligt, maar zwaartkracht werkt hier wel op in.
+	- Een voorwerp ondervindt een nettokracht wordt hiervoor versneld. Welke stelling is \textit{altijd} vorrect?
+	\begin{enumerate}[label=\alph*]
+		\item Het voorwerp beweegt in de richting van de nettokracht.
+		\item De versnelling is in dezelfde richting als de snelheid.
+		\item De versnelling is in dezelfde richting als de kracht.
+		\item De snelheid van het voorwerp neemt toe.
+	\end{enumerate}
+	\textit{Oplossing:} d is de juiste oplossing. $\vec{F}$ en $\vec{a}$ hebben gelijke richting en zin op een constante na: \(\vec{F} = m\vec{a}\). Tegenvoorbeeld voor A en B: Het voorwerp is al in beweging en er werkt een kraht loodrecht op dat voorwerp. Tegenvoorbeeld voor C: Als versnelling in tegengestelde richting staatn (vertragen).
+
+
+	\section{Elektrische potentiaal}
 
     \subsection{Delen in Giancoli}
     23.1-23.9
