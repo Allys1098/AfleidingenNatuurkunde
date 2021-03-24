@@ -10,6 +10,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{gensymb}
+\usepackage{siunitx}
 \author{Estelle Severs, Matthias Kovacic}
 \title{Afleidingen Natuurkunde}
 \date{:)}
@@ -30,17 +31,17 @@
             \hline
             Prefix & Afkorting & Value      \\
             \hline
-            Giga        & G         & $10^{9}$   \\
-            Mega        & M         & $10^{6}$   \\
-            Kilo        & k         & $10^{3}$   \\
-            Hecto       & h         & $10^{2}$   \\
-            Deka        & da        & $10^{1}$   \\
-            Deci        & d         & $10^{-1}$  \\
-            Centi       & c         & $10^{-2}$  \\
-            Milli       & m         & $10^{-3}$  \\
-            Micro       & $\mu$     & $10^{-6}$  \\
-            Nano        & n         & $10^{-9}$  \\
-            Pico        & p         & $10^{-12}$ \\
+            Giga   & G         & $10^{9}$   \\
+            Mega   & M         & $10^{6}$   \\
+            Kilo   & k         & $10^{3}$   \\
+            Hecto  & h         & $10^{2}$   \\
+            Deka   & da        & $10^{1}$   \\
+            Deci   & d         & $10^{-1}$  \\
+            Centi  & c         & $10^{-2}$  \\
+            Milli  & m         & $10^{-3}$  \\
+            Micro  & $\mu$     & $10^{-6}$  \\
+            Nano   & n         & $10^{-9}$  \\
+            Pico   & p         & $10^{-12}$ \\
             \hline
         \end{tabular}
     \end{center}
@@ -48,61 +49,67 @@
     \subsection{Vectoren}
     Vergeet niet je vector altijd in componenten te splitsen!
 
-    \(A_x = Acos\theta\) en \(A_y = Asin\theta\)
-
-    \(A = \sqrt{A_x^2 + A_y^2}\)
-
-    \(\theta = tan^{-1}\frac{A_y}{A_x}\)
+    \begin{itemize}
+        \item \(A_x = A\cos\theta\) en \(A_y = A\sin\theta\)
+        \item \(A = \sqrt{A_x^2 + A_y^2}\)
+        \item \(\theta = \tan^{-1}(\frac{A_y}{A_x})\)
+    \end{itemize}
 
     \subsubsection{Scalair product}
     De grote van deze vector vermenigvuldigd met de projectie van de andere vector op deze vector. Hieruit krijg je dus een scalar!!
-    \[\textbf{A} * \textbf{B} = ABcos\theta\]
+    \[\textbf{A} \cdot \textbf{B} = AB \cos\theta\]
 
     \subsubsection{Vectorproduct}
     Dit product geeft altijd een vector loodrecht op beide vectoren. Deze uitkomst is te vinden met de rechterhandregel. Als je deze nog niet kent: zoekt es op op youtube ;)
     De grootte is te vinden met volgende formule:
-    \[\textbf{A} x \textbf{B} = ABsin\theta\]
+    \[\textbf{A} \times \textbf{B} = AB\sin\theta\]
 
     \subsection{Pollevs}
-    - Welke uitdrukking geeft het volume van een afgeknotte kegel?
-    \begin{enumerate}
-        [label=\alph*)]
-        \item \(\pi(r_1 + r_2)\sqrt{h^2 + (r_1 - r_2)^2}\)
-        \item \(2\pi(r_1 + r_2)\)
-        \item \(\pi h(r_1^2 + r_1r_2 + r_2^2)\)
-    \end{enumerate}
-    \textit{Oplossing:} c, dit is de enige formule die een term gaat hebben tot de 3e macht en een volume is altijd van een macht 3.
-    \newline
-    - Voor welke van de volgende vectoren is de grootte van de vector gelijk aan een van de componenten van de vector?
-    \begin{enumerate}
-        [label = \alph*)]
-        \item \(\overrightarrow{A} = 2\hat{i} + 5\hat{j}\)
-        \item \(\overrightarrow{B} = -3\hat{j}\)
-        \item \(\overrightarrow{C} = +5\hat{k}\)
-        \item \(\overrightarrow{B} \text{ en } \overrightarrow{C}\)
-    \end{enumerate}
-    \textit{Oplossing:} c is het juiste antwoord. a kan niet omdat de grootte van de vector moet gelijk zijn aan de grote van de component. b kan niet omdat de grootte van een component niet negatief kan zijn. (na te kijken, not sure). Hieruit volgt dat d natuurlijk niet waar kan zijn.
-    \newline
-    - Welk van de volgende stellingen is juist, over het verband tussen $\overrightarrow{A}$ * $\overrightarrow{B}$ en \((-\overrightarrow{A}) * (-\overrightarrow{B})\)
-    \begin{enumerate}
-        [label=\alph*)]
-        \item \(\overrightarrow{A} * \overrightarrow{B} = -((-\overrightarrow{A})*(-\overrightarrow{B}))\)
-        \item als \(\overrightarrow{A} * \overrightarrow{B} = ABcos\theta \), dan is \((-\overrightarrow{A}) * (-\overrightarrow{B}) = ABcos(\theta + 180\degree)\)
-        \item Zowel a als b is correct.
-        \item Zowel a als b is fout.
-    \end{enumerate}
-    \textit{Oplossing:} d is het juiste antwoord. Of de vectoren nu in de positieve of negatieve richting staan, de hoek zal niet veranderen. De lengte van de vectoren zal ook gelijk blijven.
-    \newline
-    - Gegeven: twee vectoren $\overrightarrow{a}$ en $\overrightarrow{b}$, gelegen in het xy-vlak. Bepaal \(c = \overrightarrow{a} x \overrightarrow{b}\)
-    \begin{enumerate}
-        [label=\alph*)]
-        \item \(\overrightarrow{c} = - ab sin(\pi/2 - \phi)\hat{k}\)
-        \item \(\overrightarrow{c} = abcos(\phi)\hat{k}\)
-        \item \(\overrightarrow{c} = abcos(\pi/2 - \phi)\)
-        \item Geen van deze antwoorden is correct.
-    \end{enumerate}
-    \textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\overrightarrow{a}$ en $\overrightarrow{b}$ is 90$\degree$ - $\theta$
-    \newpage
+
+    \begin{itemize}
+        \renewcommand\labelitemi{--}
+        \item Welke uitdrukking geeft het volume van een afgeknotte kegel?
+        \begin{enumerate}
+            [label=\alph*)]
+            \item \(\pi(r_1 + r_2)\sqrt{h^2 + (r_1 - r_2)^2}\)
+            \item \(2\pi(r_1 + r_2)\)
+            \item \(\pi h(r_1^2 + r_1r_2 + r_2^2)\)
+        \end{enumerate}
+        \textit{Oplossing:} c, dit is de enige formule die een term gaat hebben tot de 3e macht en een volume is altijd van een macht 3.
+
+        \item Voor welke van de volgende vectoren is de grootte van de vector gelijk aan een van de componenten van de vector?
+        \begin{enumerate}
+            [label = \alph*)]
+            \item \(\vec{A} = 2\hat{\imath} + 5\hat{\jmath}\)
+            \item \(\vec{B} = -3\hat{\jmath}\)
+            \item \(\vec{C} = +5\hat{k}\)
+            \item \(\vec{B} \text{ en } \vec{C}\)
+        \end{enumerate}
+        \textit{Oplossing:} c is het juiste antwoord. a kan niet omdat de grootte van de vector moet gelijk zijn aan de grote van de component. b kan niet omdat de grootte van een component niet negatief kan zijn. (na te kijken, not sure). Hieruit volgt dat d natuurlijk niet waar kan zijn.
+
+        \item Welk van de volgende stellingen is juist, over het verband tussen \(\vec{A} \cdot \vec{B}\) en \((-\vec{A}) \cdot (-\vec{B})\)
+        \begin{enumerate}
+            [label=\alph*)]
+            \item \(\vec{A} \cdot \vec{B} = -((-\vec{A})\cdot(-\vec{B}))\)
+            \item als \(\vec{A} \cdot \vec{B} = AB\cos\theta \), dan is \((-\vec{A}) \cdot (-\vec{B}) = AB\cos(\theta + 180\degree)\)
+            \item Zowel a als b is correct.
+            \item Zowel a als b is fout.
+        \end{enumerate}
+        \textit{Oplossing:} d is het juiste antwoord.
+        Of de vectoren nu in de positieve of negatieve richting staan, de hoek zal niet veranderen.
+        De lengte van de vectoren zal ook gelijk blijven.
+
+        \item Gegeven: twee vectoren $\vec{a}$ en $\vec{b}$, gelegen in het xy-vlak.
+        Bepaal \(c = \vec{a} \times \vec{b}\)
+        \begin{enumerate}
+            [label=\alph*)]
+            \item \(\vec{c} = - ab \sin(\pi/2 - \phi)\hat{k}\)
+            \item \(\vec{c} = ab \cos(\phi)\hat{k}\)
+            \item \(\vec{c} = ab \cos(\pi/2 - \phi)\)
+            \item Geen van deze antwoorden is correct.
+        \end{enumerate}
+        \textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\vec{a}$ en $\vec{b}$ is 90$\degree$ - $\theta$
+    \end{itemize}
 
 
     \section{Deel 1 - Mechanica}
@@ -148,7 +155,7 @@
         \centering
         \begin{tabular}{|c|c|}
             \hline
-            \textbf{Horizontaal}   & \textbf{Verticaal}                        \\
+            \textbf{Horizontaal}     & \textbf{Verticaal}                        \\
             \hline
             \(a_x = 0\)              & \(a_y = -g\)                              \\
             \hline
@@ -165,23 +172,23 @@
 
     \subsection{Eerste wet: inertie}
     Een lichaam in rust (of in eenparige rechtlijnige beweging) zal in rust (eenparige rechtlijnige beweging) blijven tenzij er een uitwendige resulterende kracht inwerkt.
-    \[\sum_{i}\overrightarrow{F_i} = 0 \Rightarrow \overrightarrow{a} = 0\]
+    \[\sum_{i}\vec{F_i} = 0 \Rightarrow \vec{a} = 0\]
 
     \subsection{Tweede wet: versnelling}
     Een grotere kracht op een lichaam met massa m veroorzaakt een grotere versnelling: a \textasciitilde F
 
     Bij een dubbele massa 2m zal eenzelfde kracht slechts een versnelling a/2 veroorzaken: a \textasciitilde 1/m
 
-    \[\sum_{i} \overrightarrow{F_i} = \overrightarrow{F} = m\overrightarrow{a}\]
+    \[\sum_{i} \vec{F_i} = \vec{F} = m\vec{a}\]
 
     \subsection{Derde wet: actie-reactie}
-    Bij wisselwerking tussen twee lichamen is de kracht \(\overrightarrow{F_{21}}\) van lichaam 1 op lichaam 2 even groot en tegengesteld aan de kracht \(\overrightarrow{F_{12}}\) van lichaam 2 op lichaam 1.
-    \[\overrightarrow{F_{12}} = -\overrightarrow{F_{21}}\]
+    Bij wisselwerking tussen twee lichamen is de kracht \(\vec{F_{21}}\) van lichaam 1 op lichaam 2 even groot en tegengesteld aan de kracht \(\vec{F_{12}}\) van lichaam 2 op lichaam 1.
+    \[\vec{F_{12}} = -\vec{F_{21}}\]
     Deze krachten komen steeds in paren voor en werken op verschillende voorwerpen.
 
     \subsection{Gewicht - Gravitatie - Normaalkracht}
-    Alle voorwerpen nabij het aardoppervak vallen met dezelfde versnelling $\overrightarrow{g}$.
-    \[\text{Gravitatiekracht: } \overrightarrow{F_G} = m\overrightarrow{g}\]
+    Alle voorwerpen nabij het aardoppervak vallen met dezelfde versnelling $\vec{g}$.
+    \[\text{Gravitatiekracht: } \vec{F_G} = m\vec{g}\]
 
 
     \section{De wetten van Newton: wrijving, cirkelbeweging, weerstandskrachten}
