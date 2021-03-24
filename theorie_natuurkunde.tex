@@ -14,218 +14,287 @@
 \title{Afleidingen Natuurkunde}
 \date{:)}
 \begin{document}
-	\maketitle
-	\tableofcontents
-	\newpage
-	\section{Algemene afspraken rond dit document}
-	\section{Algemene te kennen theorie}
-	\subsection{Prefixen}
-		\begin{center}
-		\begin{tabular}{ | c | c | c | }
-		\hline
-			 Prefix & Afkorting & Value \\ 
-		\hline
-			Giga & G & $10^{9}$ \\ 
-			Mega & M & $10^{6}$ \\  
- 			Kilo & k & $10^{3}$ \\   
- 			Hecto & h & $10^{2}$ \\   
- 			Deka & da & $10^{1}$ \\   
- 			Deci & d & $10^{-1}$ \\   
- 			Centi & c & $10^{-2}$ \\   
- 			Milli & m & $10^{-3}$ \\   
- 			Micro & $\mu$ & $10^{-6}$ \\   
- 			Nano & n & $10^{-9}$ \\   
- 			Pico & p & $10^{-12}$ \\   
- 		\hline
-		\end{tabular}
-		\end{center}
-	\subsection{Vectoren}
-	Vergeet niet je vector altijd in componenten te splitsen!
-	
-	\(A_x = Acos\theta\) en \(A_y = Asin\theta\)
-	
-	\(A = \sqrt{A_x^2 + A_y^2}\)
-	
-	\(\theta = tan^{-1}\frac{A_y}{A_x}\)
-	\subsubsection{Scalair product}
-	De grote van deze vector vermenigvuldigd met de projectie van de andere vector op deze vector. Hieruit krijg je dus een scalar!!
-	\[\textbf{A} * \textbf{B} = ABcos\theta\]
-	\subsubsection{Vectorproduct}
-	Dit product geeft altijd een vector loodrecht op beide vectoren. Deze uitkomst is te vinden met de rechterhandregel. Als je deze nog niet kent: zoekt es op op youtube ;) 
-	De grootte is te vinden met volgende formule: 
-	\[\textbf{A} x \textbf{B} = ABsin\theta\]
-	
-	\subsection{Pollevs}
-	- Welke uitdrukking geeft het volume van een afgeknotte kegel?
-	\begin{enumerate} [label=\alph*)]
-		\item \(\pi(r_1 + r_2)\sqrt{h^2 + (r_1 - r_2)^2}\)
-		\item \(2\pi(r_1 + r_2)\)
-		\item \(\pi h(r_1^2 + r_1r_2 + r_2^2)\)
-	\end{enumerate}
-	\textit{Oplossing:} c, dit is de enige formule die een term gaat hebben tot de 3e macht en een volume is altijd van een macht 3. 
-	\newline
-	- Voor welke van de volgende vectoren is de grootte van de vector gelijk aan een van de componenten van de vector? 
-	\begin{enumerate}[label = \alph*)]
-		\item \(\vec{A} = 2\hat{i} + 5\hat{j}\)
-		\item \(\vec{B} = -3\hat{j}\)
-		\item \(\vec{C} = +5\hat{k}\)
-		\item \(\vec{B} \text{ en } \vec{C}\)
-	\end{enumerate}
-	\textit{Oplossing:} c is het juiste antwoord. a kan niet omdat de grootte van de vector moet gelijk zijn aan de grote van de component. b kan niet omdat de grootte van een component niet negatief kan zijn. (na te kijken, not sure). Hieruit volgt dat d natuurlijk niet waar kan zijn. 
-	\newline
-	- Welk van de volgende stellingen is juist, over het verband tussen $\vec{A}$ * $\vec{B}$ en \((-\vec{A}) * (-\vec{B})\)
-	\begin{enumerate}[label=\alph*)]
-		\item \(\vec{A} * \vec{B} = -((-\vec{A})*(-\vec{B}))\)
-		\item als \(\vec{A} * \vec{B} = ABcos\theta \), dan is \((-\vec{A}) * (-\vec{B}) = ABcos(\theta + 180\degree)\)
-		\item Zowel a als b is correct. 
-		\item Zowel a als b is fout. 
-	\end{enumerate}
-	\textit{Oplossing:} d is het juiste antwoord. Of de vectoren nu in de positieve of negatieve richting staan, de hoek zal niet veranderen. De lengte van de vectoren zal ook gelijk blijven.
-	\newline
-	- Gegeven: twee vectoren $\vec{a}$ en $\vec{b}$, gelegen in het xy-vlak. Bepaal \(c = \vec{a} x \vec{b}\)
-	\begin{enumerate}[label=\alph*)]
-		\item \(\vec{c} = - ab sin(\pi/2 - \phi)\hat{k}\)
-		\item \(\vec{c} = abcos(\phi)\hat{k}\)
-		\item \(\vec{c} = abcos(\pi/2 - \phi)\)
-		\item Geen van deze antwoorden is correct. 
-	\end{enumerate}
-	\textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\vec{a}$ en $\vec{b}$ is 90$\degree$ - $\theta$
-	\newpage
-	\section{Deel 1 - Mechanica}
-	\section{Kinematica in 1 dimensie}
-	2.1-2.6, 2.8-2.9
-	\subsection{2.5: Formules bij constante versnelling}
-	We nemen aan dat het initiële tijdstip in elk van deze formules altijd 0 is. \((t_{0} = 0)\).
-	Vergelijking voor snelheid afleiden: 
-	\[\mathbf{a = \frac{dv}{dt} = constante}\]
-	$\iff$ \[a dt = dv\]
-	$\iff$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
-	$\iff$\[v - v_0 = at\]
-	$\iff$\[\mathbf{v = v_0 + at}\]
-	Vergelijking voor verplaatsing afleiden: 
-	\[v = \frac{dx}{dt}\]
-	$\iff$\[dx = v dt\]
-	$\iff$\[x - x_0 = \int_{0}^{t} v \, dt\]
-	$\iff$\[x - x_0 = \int_{0}^{t} (v_0 + at) \, dt\]
-	$\iff$\[x - x_0 = \int_{0}^{t} v_0 \, dt + \int_{0}^{t} at \, dt\]
-	$\iff$\[\mathbf{x - x_0 = v_0t + a\frac{t^2}{2}}\]
-	Alternatieve vergelijking voor snelheid: 
-	\[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
-	dan geldt voor de vergelijking van verplaatsing: 
-	\[x = x_0 + (\frac{v + v_0}{2})(\frac{v - v_0}{a})\]
-	$\iff$\[x = x_0 + \frac{v^2 + v_0^2}{2a}\]
-	$\iff$\[\mathbf{v^2 = v_0^2 + 2a(x - x_0)}\]
-	\section{Kinematica in twee of drie dimensies}
-	3.7
-	\subsection{Projectiel beweging: formules}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.7\linewidth]{projectiel}
-		\caption{Er zal enkel een in de verticale component een versnelling aanwezig zijn. Hierdoor verandert de snelheid enkel in de verticale component.}
-		\label{projectiel}
-	\end{figure}
-\begin{table}[h]
-	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		\textbf{Horizontaal} & \textbf{Verticaal} \\
-		\hline
-		\(a_x = 0\)&\(a_y = -g\)  \\
-		\hline
-		\(v_x(t) = v_{x0}\)&\(v_y(t) = v_{y0} - gt\)  \\
-		\hline
-		\(x(t) = x_0 + v_{x0}t\)&\(y(t) = y_0 + v_{y0}t - \frac{gt^2}{2}\)  \\
-		\hline
-	\end{tabular}
-\end{table}
-	\section{Dynamica: Newton's bewegingswetten}
-	4.1-4.7
-	\subsection{Eerste wet: inertie}
-	Een lichaam in rust (of in eenparige rechtlijnige beweging) zal in rust (eenparige rechtlijnige beweging) blijven tenzij er een uitwendige resulterende kracht inwerkt.
-	\[\sum_{i}\vec{F_i} = 0 \Rightarrow \vec{a} = 0\]
-	\subsection{Tweede wet: versnelling}
-	Een grotere kracht op een lichaam met massa m veroorzaakt een grotere versnelling: a \textasciitilde F
-	
-	Bij een dubbele massa 2m zal eenzelfde kracht slechts een versnelling a/2 veroorzaken: a \textasciitilde 1/m 
-	
-	\[\sum_{i} \vec{F_i} = \vec{F} = m\vec{a}\]
-	\subsection{Derde wet: actie-reactie}
-	Bij wisselwerking tussen twee lichamen is de kracht \(\vec{F_{21}}\) van lichaam 1 op lichaam 2 even groot en tegengesteld aan de kracht \(\vec{F_{12}}\) van lichaam 2 op lichaam 1.
-	\[\vec{F_{12}} = -\vec{F_{21}}\]
-	Deze krachten komen steeds in paren voor en werken op verschillende voorwerpen.
-	\subsection{Gewicht - Gravitatie - Normaalkracht}
-	Alle voorwerpen nabij het aardoppervak vallen met dezelfde versnelling $\vec{g}$. 
-	\[\text{Gravitatiekracht: } \vec{F_G} = m\vec{g}\]	
-	\section{De wetten van Newton: wrijving, cirkelbeweging, weerstandskrachten}
-	\subsection{Delen in de Giancoli}
-	5.1-5.3, 5.5-5.6
-	\section{De zwaartekracht en de synthese van Newton}
-	\subsection{Delen in Giancoli}
-	6.1-6.4, 6.6
-	\section{Arbeid en energie}
-	\subsection{Delen in Giancoli}
-	7.1, 7.3-7.4 (+14.1)
-	\section{Behoud van energie}
-	\subsection{Delen in Giancoli}
-	8.1-8.3, 8.5, 8.8
-	\section{Impuls}
-	\subsection{Delen in Giancoli}
-	9.1-9.2 (+36.11)
-	\section{Rotatie}
-	10.1, 10.4, 10.8
-	\section{Impulsmoment}
-	\subsection{Delen in Giancoli}
-	11.3-11.4, 11.6
-	\section{Pollevs}
-	- Een kanonbal volgt pad B op aarde. Welk pad zou de kanonbal op de maan volgen (\(g_{maan} = 1.6m/s^2\)) indien hij op dezelfde manier uit het kanon werd afgevuurd? (zie afbeelding cursus)
-	\begin{enumerate}[label=\alph*)]
-		\item A
-		\item B
-		\item C
-		\item D
-	\end{enumerate}
-	\textit{Oplossing:} D, g is kleiner dus de versnelling naar beneden is kleiner. 
-	\newline
-	- Welk van de volgende stellingen is het meest correct?
-	\begin{enumerate}[label=\alph*]
-		\item Het is mogelijk dat een voorwerp in beweging is zonder dat er krachten op het voorwerp werken.
-		\item Het is mogelijk dat er krachten op een voorwerp inwerken zonder dat er beweging is. 
-		\item A en B zijn fout.
-		\item A en B zijn correct.  
-	\end{enumerate}
-	\textit{Oplossing:} A en B zijn beide correct. Een voorwerp A) Een voorwerp op een trein, het beweegt tegenover de aarde. B) Een voorwerp dat op een bank ligt, maar zwaartkracht werkt hier wel op in. 
-	- Een voorwerp ondervindt een nettokracht wordt hiervoor versneld. Welke stelling is \textit{altijd} vorrect? 
-	\begin{enumerate}[label=\alph*]
-		\item Het voorwerp beweegt in de richting van de nettokracht. 
-		\item De versnelling is in dezelfde richting als de snelheid. 
-		\item De versnelling is in dezelfde richting als de kracht. 
-		\item De snelheid van het voorwerp neemt toe. 
-	\end{enumerate}
-	\textit{Oplossing:} d is de juiste oplossing. $\vec{F}$ en $\vec{a}$ hebben gelijke richting en zin op een constante na: \(\vec{F} = m\vec{a}\). Tegenvoorbeeld voor A en B: Het voorwerp is al in beweging en er werkt een kraht loodrecht op dat voorwerp. Tegenvoorbeeld voor C: Als versnelling in tegengestelde richting staatn (vertragen).
-	- 
-	\newpage
-	
-	
-	\section{Deel 2 - Elektriciteit}
-	\section{Elektrische velden}
-	\subsection{Delen in Giancoli}
-	21.1-21.2, 21.4-21.11, 21.13 
-	\section{De wet van Gauss}
-	\subsection{Delen in Giancoli}
-	22.1-22.3
-	\section{Elektrische potentiaal}
-	\subsection{Delen in Giancoli}
-	23.1-23.9
-	\section{Condensatoren en diëlektrica}
-	\subsection{Delen in Giancoli}
-	24.2-24.6
-	\section{Elektrische stroom en weerstand}
-	\subsection{Delen in Giancoli}
-	25.1-25.6, 25.8-25.9 (+40.7-40.10)
-	\section{Gelijkstroomschakelingen}
-	\subsection{Delen in Giancoli}
-	26.2-26.5, 26.7
-	\newpage
-	\section{Deel 3 - Magnetisme}
-	Dit is geen deel van het vak in het eerste jaar, maar zal je misschien van pas komen in het tweede jaar ;).
+    \maketitle
+    \tableofcontents
+    \newpage
+
+
+    \section{Algemene afspraken rond dit document}
+
+
+    \section{Algemene te kennen theorie}
+
+    \subsection{Prefixen}
+    \begin{center}
+        \begin{tabular}{ | c | c | c | }
+            \hline
+            Prefix & Afkorting & Value      \\
+            \hline
+            Giga        & G         & $10^{9}$   \\
+            Mega        & M         & $10^{6}$   \\
+            Kilo        & k         & $10^{3}$   \\
+            Hecto       & h         & $10^{2}$   \\
+            Deka        & da        & $10^{1}$   \\
+            Deci        & d         & $10^{-1}$  \\
+            Centi       & c         & $10^{-2}$  \\
+            Milli       & m         & $10^{-3}$  \\
+            Micro       & $\mu$     & $10^{-6}$  \\
+            Nano        & n         & $10^{-9}$  \\
+            Pico        & p         & $10^{-12}$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \subsection{Vectoren}
+    Vergeet niet je vector altijd in componenten te splitsen!
+
+    \(A_x = Acos\theta\) en \(A_y = Asin\theta\)
+
+    \(A = \sqrt{A_x^2 + A_y^2}\)
+
+    \(\theta = tan^{-1}\frac{A_y}{A_x}\)
+
+    \subsubsection{Scalair product}
+    De grote van deze vector vermenigvuldigd met de projectie van de andere vector op deze vector. Hieruit krijg je dus een scalar!!
+    \[\textbf{A} * \textbf{B} = ABcos\theta\]
+
+    \subsubsection{Vectorproduct}
+    Dit product geeft altijd een vector loodrecht op beide vectoren. Deze uitkomst is te vinden met de rechterhandregel. Als je deze nog niet kent: zoekt es op op youtube ;)
+    De grootte is te vinden met volgende formule:
+    \[\textbf{A} x \textbf{B} = ABsin\theta\]
+
+    \subsection{Pollevs}
+    - Welke uitdrukking geeft het volume van een afgeknotte kegel?
+    \begin{enumerate}
+        [label=\alph*)]
+        \item \(\pi(r_1 + r_2)\sqrt{h^2 + (r_1 - r_2)^2}\)
+        \item \(2\pi(r_1 + r_2)\)
+        \item \(\pi h(r_1^2 + r_1r_2 + r_2^2)\)
+    \end{enumerate}
+    \textit{Oplossing:} c, dit is de enige formule die een term gaat hebben tot de 3e macht en een volume is altijd van een macht 3.
+    \newline
+    - Voor welke van de volgende vectoren is de grootte van de vector gelijk aan een van de componenten van de vector?
+    \begin{enumerate}
+        [label = \alph*)]
+        \item \(\vec{A} = 2\hat{i} + 5\hat{j}\)
+        \item \(\vec{B} = -3\hat{j}\)
+        \item \(\vec{C} = +5\hat{k}\)
+        \item \(\vec{B} \text{ en } \vec{C}\)
+    \end{enumerate}
+    \textit{Oplossing:} c is het juiste antwoord. a kan niet omdat de grootte van de vector moet gelijk zijn aan de grote van de component. b kan niet omdat de grootte van een component niet negatief kan zijn. (na te kijken, not sure). Hieruit volgt dat d natuurlijk niet waar kan zijn.
+    \newline
+    - Welk van de volgende stellingen is juist, over het verband tussen $\vec{A}$ * $\vec{B}$ en \((-\vec{A}) * (-\vec{B})\)
+    \begin{enumerate}
+        [label=\alph*)]
+        \item \(\vec{A} * \vec{B} = -((-\vec{A})*(-\vec{B}))\)
+        \item als \(\vec{A} * \vec{B} = ABcos\theta \), dan is \((-\vec{A}) * (-\vec{B}) = ABcos(\theta + 180\degree)\)
+        \item Zowel a als b is correct.
+        \item Zowel a als b is fout.
+    \end{enumerate}
+    \textit{Oplossing:} d is het juiste antwoord. Of de vectoren nu in de positieve of negatieve richting staan, de hoek zal niet veranderen. De lengte van de vectoren zal ook gelijk blijven.
+    \newline
+    - Gegeven: twee vectoren $\vec{a}$ en $\vec{b}$, gelegen in het xy-vlak. Bepaal \(c = \vec{a} x \vec{b}\)
+    \begin{enumerate}
+        [label=\alph*)]
+        \item \(\vec{c} = - ab sin(\pi/2 - \phi)\hat{k}\)
+        \item \(\vec{c} = abcos(\phi)\hat{k}\)
+        \item \(\vec{c} = abcos(\pi/2 - \phi)\)
+        \item Geen van deze antwoorden is correct.
+    \end{enumerate}
+    \textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\vec{a}$ en $\vec{b}$ is 90$\degree$ - $\theta$
+    \newpage
+
+
+    \section{Deel 1 - Mechanica}
+
+
+    \section{Kinematica in 1 dimensie}
+    2.1-2.6, 2.8-2.9
+
+    \subsection{2.5: Formules bij constante versnelling}
+    We nemen aan dat het initiële tijdstip in elk van deze formules altijd 0 is. \((t_{0} = 0)\).
+    Vergelijking voor snelheid afleiden:
+    \[\mathbf{a = \frac{dv}{dt} = constante}\]
+    $\iff$ \[a dt = dv\]
+    $\iff$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
+    $\iff$\[v - v_0 = at\]
+    $\iff$\[\mathbf{v = v_0 + at}\]
+    Vergelijking voor verplaatsing afleiden:
+    \[v = \frac{dx}{dt}\]
+    $\iff$\[dx = v dt\]
+    $\iff$\[x - x_0 = \int_{0}^{t} v \, dt\]
+    $\iff$\[x - x_0 = \int_{0}^{t} (v_0 + at) \, dt\]
+    $\iff$\[x - x_0 = \int_{0}^{t} v_0 \, dt + \int_{0}^{t} at \, dt\]
+    $\iff$\[\mathbf{x - x_0 = v_0t + a\frac{t^2}{2}}\]
+    Alternatieve vergelijking voor snelheid:
+    \[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
+    dan geldt voor de vergelijking van verplaatsing:
+    \[x = x_0 + (\frac{v + v_0}{2})(\frac{v - v_0}{a})\]
+    $\iff$\[x = x_0 + \frac{v^2 + v_0^2}{2a}\]
+    $\iff$\[\mathbf{v^2 = v_0^2 + 2a(x - x_0)}\]
+
+
+    \section{Kinematica in twee of drie dimensies}
+    3.7
+
+    \subsection{Projectiel beweging: formules}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\linewidth]{projectiel}
+        \caption{Er zal enkel een in de verticale component een versnelling aanwezig zijn. Hierdoor verandert de snelheid enkel in de verticale component.}
+        \label{projectiel}
+    \end{figure}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Horizontaal}   & \textbf{Verticaal}                        \\
+            \hline
+            \(a_x = 0\)              & \(a_y = -g\)                              \\
+            \hline
+            \(v_x(t) = v_{x0}\)      & \(v_y(t) = v_{y0} - gt\)                  \\
+            \hline
+            \(x(t) = x_0 + v_{x0}t\) & \(y(t) = y_0 + v_{y0}t - \frac{gt^2}{2}\) \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+
+    \section{Dynamica: Newton's bewegingswetten}
+    4.1-4.7
+
+    \subsection{Eerste wet: inertie}
+    Een lichaam in rust (of in eenparige rechtlijnige beweging) zal in rust (eenparige rechtlijnige beweging) blijven tenzij er een uitwendige resulterende kracht inwerkt.
+    \[\sum_{i}\vec{F_i} = 0 \Rightarrow \vec{a} = 0\]
+
+    \subsection{Tweede wet: versnelling}
+    Een grotere kracht op een lichaam met massa m veroorzaakt een grotere versnelling: a \textasciitilde F
+
+    Bij een dubbele massa 2m zal eenzelfde kracht slechts een versnelling a/2 veroorzaken: a \textasciitilde 1/m
+
+    \[\sum_{i} \vec{F_i} = \vec{F} = m\vec{a}\]
+
+    \subsection{Derde wet: actie-reactie}
+    Bij wisselwerking tussen twee lichamen is de kracht \(\vec{F_{21}}\) van lichaam 1 op lichaam 2 even groot en tegengesteld aan de kracht \(\vec{F_{12}}\) van lichaam 2 op lichaam 1.
+    \[\vec{F_{12}} = -\vec{F_{21}}\]
+    Deze krachten komen steeds in paren voor en werken op verschillende voorwerpen.
+
+    \subsection{Gewicht - Gravitatie - Normaalkracht}
+    Alle voorwerpen nabij het aardoppervak vallen met dezelfde versnelling $\vec{g}$.
+    \[\text{Gravitatiekracht: } \vec{F_G} = m\vec{g}\]
+
+
+    \section{De wetten van Newton: wrijving, cirkelbeweging, weerstandskrachten}
+
+    \subsection{Delen in de Giancoli}
+    5.1-5.3, 5.5-5.6
+
+
+    \section{De zwaartekracht en de synthese van Newton}
+
+    \subsection{Delen in Giancoli}
+    6.1-6.4, 6.6
+
+
+    \section{Arbeid en energie}
+
+    \subsection{Delen in Giancoli}
+    7.1, 7.3-7.4 (+14.1)
+
+
+    \section{Behoud van energie}
+
+    \subsection{Delen in Giancoli}
+    8.1-8.3, 8.5, 8.8
+
+
+    \section{Impuls}
+
+    \subsection{Delen in Giancoli}
+    9.1-9.2 (+36.11)
+
+
+    \section{Rotatie}
+    10.1, 10.4, 10.8
+
+
+    \section{Impulsmoment}
+
+    \subsection{Delen in Giancoli}
+    11.3-11.4, 11.6
+
+
+    \section{Pollevs}
+    - Een kanonbal volgt pad B op aarde. Welk pad zou de kanonbal op de maan volgen (\(g_{maan} = 1.6m/s^2\)) indien hij op dezelfde manier uit het kanon werd afgevuurd? (zie afbeelding cursus)
+    \begin{enumerate}
+        [label=\alph*)]
+        \item A
+        \item B
+        \item C
+        \item D
+    \end{enumerate}
+    \textit{Oplossing:} D, g is kleiner dus de versnelling naar beneden is kleiner.
+    \newline
+    - Welk van de volgende stellingen is het meest correct?
+    \begin{enumerate}[label=\alph*]
+        \item Het is mogelijk dat een voorwerp in beweging is zonder dat er krachten op het voorwerp werken.
+        \item Het is mogelijk dat er krachten op een voorwerp inwerken zonder dat er beweging is.
+        \item A en B zijn fout.
+        \item A en B zijn correct.
+    \end{enumerate}
+    \textit{Oplossing:} A en B zijn beide correct. Een voorwerp A) Een voorwerp op een trein, het beweegt tegenover de aarde. B) Een voorwerp dat op een bank ligt, maar zwaartkracht werkt hier wel op in.
+    - Een voorwerp ondervindt een nettokracht wordt hiervoor versneld. Welke stelling is \textit{altijd} vorrect?
+    \begin{enumerate}[label=\alph*]
+        \item Het voorwerp beweegt in de richting van de nettokracht.
+        \item De versnelling is in dezelfde richting als de snelheid.
+        \item De versnelling is in dezelfde richting als de kracht.
+        \item De snelheid van het voorwerp neemt toe.
+    \end{enumerate}
+    \textit{Oplossing:} d is de juiste oplossing. $\vec{F}$ en $\vec{a}$ hebben gelijke richting en zin op een constante na: \(\vec{F} = m\vec{a}\). Tegenvoorbeeld voor A en B: Het voorwerp is al in beweging en er werkt een kraht loodrecht op dat voorwerp. Tegenvoorbeeld voor C: Als versnelling in tegengestelde richting staatn (vertragen).
+    -
+    \newpage
+
+
+    \section{Deel 2 - Elektriciteit}
+
+
+    \section{Elektrische velden}
+
+    \subsection{Delen in Giancoli}
+    21.1-21.2, 21.4-21.11, 21.13
+
+
+    \section{De wet van Gauss}
+
+    \subsection{Delen in Giancoli}
+    22.1-22.3
+
+
+    \section{Elektrische potentiaal}
+
+    \subsection{Delen in Giancoli}
+    23.1-23.9
+
+
+    \section{Condensatoren en diëlektrica}
+
+    \subsection{Delen in Giancoli}
+    24.2-24.6
+
+
+    \section{Elektrische stroom en weerstand}
+
+    \subsection{Delen in Giancoli}
+    25.1-25.6, 25.8-25.9 (+40.7-40.10)
+
+
+    \section{Gelijkstroomschakelingen}
+
+    \subsection{Delen in Giancoli}
+    26.2-26.5, 26.7
+    \newpage
+
+
+    \section{Deel 3 - Magnetisme}
+    Dit is geen deel van het vak in het eerste jaar, maar zal je misschien van pas komen in het tweede jaar ;).
 \end{document}
