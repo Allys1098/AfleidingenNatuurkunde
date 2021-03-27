@@ -421,12 +421,112 @@
     
     $$ \vec{F_{g}} = m\vec{g}$$ 
 
-    \section{Arbeid en energie}
+    \section{Arbeid en Energie}
 
     \subsection{Delen in Giancoli}
     7.1, 7.3-7.4 (+14.1)
 
-
+    \subsection{Arbeid en Energie}
+    Het algemene probleem dat optreedt bij de dynamica van een probleem is de tijdsafhankelijkheid.
+    We hebben in hoofdstuk 4 gezien dat:
+    
+    $$ \sum_{i} \vec{F_{i}} = m\frac{d\vec{v}}{dt} = m\vec{a} $$
+    
+    We zien hier echter dat we een kracht niet kunnen bepalen in functie van de tijd. Daarom voeren
+    we de notie in van Arbeid en Energie. De definities zijn als volgt:
+    
+    \begin{enumerate}
+    	\item Een systeem dat in staat is om arbeid te leveren, bezit energie
+    	\item Energie is de capaciteit om arbeid te leveren
+    	\item Arbeid is de overdracht van energie
+    \end{enumerate}
+    
+    \emph{Opmerking}: Arbeid en Energie zijn gelijkwaardig, ze hebben dezelfde eenheid en dimensie (zie later)
+    
+    \subsection{Arbeid en Energie door een constante kracht}
+    De arbeid geleverd door een kracht is afhankelijk van de efficiëntie van de kracht (grootte en richting) en de afstand waarover de kracht wordt uitgeoefend. 
+    Arbeid wordt gedefinieerd als: 
+    
+    $$ W = F_{\parallel }d = Fd\cos{\theta} = \vec{F} \cdot \vec{d}$$
+    
+    Een kracht oefent dus géén arbeid uit in de volgende gevallen:
+    \begin{enumerate}
+    	\item Er is geen verplaatsing
+    	\item $\vec{F} \perp \vec{d}$
+    \end{enumerate}
+    
+    De eenheid van arbeid is de Joule ($1J = 1Nm)$.
+    
+    \subsection{Arbeid langs een pad o.i.v. een variabele kracht}
+    Wat als de beweging niet rechtlijnig is en de kracht niet constant zoals in de onderstaande afbeelding?
+    
+    \begin{figure}[h]
+    	\centering
+	\includegraphics[width=0.6\linewidth]{variabele_kracht}
+    	\caption{Variabele kracht langst een pad}
+        	\label{variabele_kracht}
+    \end{figure}
+    
+    We delen het pad op in N infinitisimaal kleine deeltjes $\Delta l_i$ met $\vec{F_i}$. De totale arbeid langsheen het pad kan worden gevonden door:
+    
+    $$\Delta W \sim F_{i}\cos{\theta_{i}}\Delta l_{i}$$
+    $$\Luda$$
+    $$W \sim \sum_{i = 1}^{N} F_{i}\cos{\theta_{i}}\Delta l_{i}$$
+    $$\Luda$$
+    $$W = \lim_{\Delta l_{i} \to 0}\sum F_{i}\cos{\theta_{i}}\Delta l_{i}$$
+    $$\Luda$$
+    $$W = \int_{a}^{b} F\cos{\theta}\Delta l \,dx $$ 
+    $$\Luda$$
+    $$W = \int_{a}^{b} \vec{F} \cdot d\vec{\emph{l}} \, dx $$
+    
+    Dit is algemeen geldig voor elke ruimtedimensie (x, y en z). We kunnen dus in het algemeen schrijven:
+    
+    \begin{center}
+    	$\vec{F} = F_{x}\vec{e_{x}} + F_{y}\vec{e_{y}} + F_{z}\vec{e_{z}}$\\
+     	en\\
+   	$d\vec{l} = dx\vec{e_{x}} + dy\vec{e_{y}} + dz\vec{e_{z}} $\\
+   \end{center}
+    $$\Luda$$	
+    $$W = \int_{x_{a}}^{x_{b}} F_{x}dx + \int_{y_{a}}^{y_{b}} F_{y}dy + \int_{z_{a}}^{z_{b}} F_{z}dz$$
+    
+    \subsection{Teruggroepkracht van schroefveren}
+    \emph{Opemerking}: Dit is hoofdstuk 14.1 in het handboek!
+   
+    De teruggroepkracht van een veer (Wet van Hooke): 
+    
+    $$ F_{x} = -kx $$ 
+    
+    met $k$ de veerconstante. We kunnen de externe arbeid dan schrijven als:
+    
+    $$W_{e} = \int_{x_{i}}^{x_{f}} Fds = \int_{-x_{max}}^{0}(-kx)dx = \frac{1}{2}kx^{2}_{max}$$
+    
+    De arbeid geleverd door de veer is dan:
+    
+    $$W_{s} = \int_{x_{i}}^{x_{f}} Fds = \int_{0}^{x_{max}}(-kx)dx = -\frac{1}{2}kx^{2}_{max}$$
+    
+    \subsection{Kinetische Energie}
+    We weten uit eerdere hoofdstukken dat:
+    
+    \begin{enumerate}
+    	\item $F_{netto} = ma$
+    	\item $a = \frac{v_{2}^{2} - v_{1}^{2}}{2d}$
+    \end{enumerate}
+    
+    We kunnen dan met behulp van de definitie van arbeid afleiden dat:
+    
+    $$W_{netto} = F_{netto}d$$
+    $$\Luda$$
+    $$W_{netto} = mad$$
+    $$\Luda$$
+    $$W_{netto} = m\left( \frac{v_{2}^{2} - v_{1}^{2}}{2} \right)$$
+    $$\Luda$$
+    $$W_{netto} = \frac{1}{2} mv_{2}^{2} - \frac{1}{2} mv_{1}^{2} $$
+    
+    We definiëren kinetische energie als: $K = \frac{1}{2}mv^{2}$. We kunnen een analoge afleiding maken voor
+    een variabele kracht langst een pad. We zien dan dat (TODO; Afleiding):
+    
+    $$W_{netto} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2} = \Delta K$$
+    
     \section{Behoud van energie}
 
     \subsection{Delen in Giancoli}
