@@ -11,6 +11,9 @@
 \usepackage{hyperref}
 \usepackage{gensymb}
 \usepackage{siunitx}
+
+\newcommand{\Luda}{\Big\Updownarrow}
+
 \author{Estelle Severs, Matthias Kovacic}
 \title{Afleidingen Natuurkunde}
 \date{:)}
@@ -47,7 +50,7 @@
     \end{center}
 
     \subsection{Vectoren}
-    Vergeet niet je vector altijd in componenten te splitsen!
+    Vergeet niet je vector altijd in componenten te splitsen! Vergeet ook niet op pijltjes boven de vectoren te zetten!
 
     \begin{itemize}
         \item \(A_x = A\cos\theta\) en \(A_y = A\sin\theta\)
@@ -122,23 +125,31 @@
     We nemen aan dat het initiële tijdstip in elk van deze formules altijd 0 is. \((t_{0} = 0)\).
     Vergelijking voor snelheid afleiden:
     \[\mathbf{a = \frac{dv}{dt} = constante}\]
-    $\iff$ \[a dt = dv\]
-    $\iff$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
-    $\iff$\[v - v_0 = at\]
-    $\iff$\[\mathbf{v = v_0 + at}\]
+    \begin{center}
+	    $\Luda$ \[a dt = dv\]
+	    $\Luda$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
+	    $\Luda$\[v - v_0 = at\]
+	    $\Luda$\[\mathbf{v = v_0 + at}\]
+    \end{center}
     Vergelijking voor verplaatsing afleiden:
-    \[v = \frac{dx}{dt}\]
-    $\iff$\[dx = v dt\]
-    $\iff$\[x - x_0 = \int_{0}^{t} v \, dt\]
-    $\iff$\[x - x_0 = \int_{0}^{t} (v_0 + at) \, dt\]
-    $\iff$\[x - x_0 = \int_{0}^{t} v_0 \, dt + \int_{0}^{t} at \, dt\]
-    $\iff$\[\mathbf{x - x_0 = v_0t + a\frac{t^2}{2}}\]
+    \begin{center}
+               \[v = \frac{dx}{dt}\]
+	    $\Luda$\[dx = v dt\]
+	    $\Luda$\[x - x_0 = \int_{0}^{t} v \, dt\]
+	    $\Luda$\[x - x_0 = \int_{0}^{t} (v_0 + at) \, dt\]
+	    $\Luda$\[x - x_0 = \int_{0}^{t} v_0 \, dt + \int_{0}^{t} at \, dt\]
+	    $\Luda$\[\mathbf{x - x_0 = v_0t + a\frac{t^2}{2}}\]
+    \end{center}
     Alternatieve vergelijking voor snelheid:
-    \[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
+    \begin{center}
+    	\[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
+    \end{center}
     dan geldt voor de vergelijking van verplaatsing:
-    \[x = x_0 + (\frac{v + v_0}{2})(\frac{v - v_0}{a})\]
-    $\iff$\[x = x_0 + \frac{v^2 + v_0^2}{2a}\]
-    $\iff$\[\mathbf{v^2 = v_0^2 + 2a(x - x_0)}\]
+    \begin{center}
+               \[x = x_0 + (\frac{v + v_0}{2})(\frac{v - v_0}{a})\]
+	    $\Luda$\[x = x_0 + \frac{v^2 + v_0^2}{2a}\]
+	    $\Luda$\[\mathbf{v^2 = v_0^2 + 2a(x - x_0)}\]
+    \end{center}
 
 
     \section{Kinematica in twee of drie dimensies}
@@ -175,9 +186,9 @@
     \[\sum_{i}\vec{F_i} = 0 \Rightarrow \vec{a} = 0\]
 
     \subsection{Tweede wet: versnelling}
-    Een grotere kracht op een lichaam met massa m veroorzaakt een grotere versnelling: a \textasciitilde F
+    Een grotere kracht op een lichaam met massa m veroorzaakt een grotere versnelling: $a \sim F$
 
-    Bij een dubbele massa 2m zal eenzelfde kracht slechts een versnelling a/2 veroorzaken: a \textasciitilde 1/m
+    Bij een dubbele massa 2m zal eenzelfde kracht slechts een versnelling a/2 veroorzaken: $a \sim \frac{1}{m}$
 
     \[\sum_{i} \vec{F_i} = \vec{F} = m\vec{a}\]
 
@@ -195,20 +206,327 @@
 
     \subsection{Delen in de Giancoli}
     5.1-5.3, 5.5-5.6
+    
+    \subsection{Wrijvingskrachten}
+    Voorwerpen in een ERB duren niet oneindig, de oorzaak hiervan is de wrijvingskracht. Dit is weerstand wanneer een voorwerp
+    over het oppervlak van een ander voorwerp beweegt. Deze wrijvingskracht is proportioneel afhankelijk van de normaalkracht
+    op een voorwerp $F_{fr} \sim F_{n}$.  De everedigheidsconstante hangt af van de soort wrijvingskracht op een voorwerp.\\
+    
+    \newpage
+    
+    Er zijn twee soorten wrijvingskrachten:
+    \begin{enumerate}
+            [label=\alph*)]
+            \item Kinetische wrijvingskracht
+            \item Statische wrijvingskracht
+        \end{enumerate}
+        
+    De nettokracht op een voorwerp is gegeven als volgt:
+    
+    $$ F_{net} = F_{A} -  F_{fr} $$
+    
+     \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{papierdoos}
+        \caption{Verduidelijkende figuur bij wrijvingskrachten}
+        \label{papierdoos}
+    \end{figure}    
+        
+    Kinetische wrijvingskracht is de wrijvingskracht die inwerkt op een voorwerp als het voorwerp in beweging is.    
+    De grootte van deze wrijvingskracht is afhankelijk van de kinetische wrijvingscoëfficient $\mu_{k}$:
+    
+   $$ F_{k} = \mu_{k}F_{n} $$
+   
+   Statische wrijvingskracht is de wrijvingskracht die inwerkt op een voorwerp als het voorwerp nog niet in beweging is.
+   De grootte van deze wrijvingskracht is afhankelijk van de statische wrijvingcoëfficient $\mu_{s}$:
+   
+   $$F_{s} \leq \mu_{s}F_{n}$$
+   
+   Belangrijk is op te merken dat als het voorwerp in rust staat, de volgende gelijkheid geldt:
+   
+   $$\vec{F_{s}} = -\vec{F_{A}}$$
+   
+   In het algemeen is het moeilijker een voorwerp in beweging te krijgen dan het verder te laten bewegen en is dus $\mu_{s} > \mu_{k}$
+   
+   \subsection{Weerstand en eindsnelheid}
+   Als het voorwerp zich doorheen een medium (of fluïda) beweegt, is de wrijvingskracht afhankelijk van de snelheid van het voorwerp.
+   Voor relatief kleine voorwerpen met lage snelheid geldt:
+   
+   $$ \vec{F_{d}} = -b\vec{v} $$
+   
+   waarbij $b$ een factor is die afhangt van de grootte/vorm van het voorwerp en de viscositeit (of stroperigheid)
+   van de vloeistof.
+   
+   In evenwicht geldt dat de eindsnelheid van een voorwerp gegeven wordt door:
+   
+   \begin{center}
+   	 \[F_{net} = 0\]
+	  $\Luda$\[mg - bv_{t} = 0\]
+	  $\Luda$\[v_{t} = \frac{mg}{b}\]
+    \end{center}	  
 
+    \subsection{Kinematica van de cirkelbeweging}
+    Als een voorwerp in een cirkel beweegt, verandert de richting van de snelheid constant. Dit wilt dus zeggen dat:
+    
+    $$ \vec{a} \neq 0$$
+    
+    We kunnen de richting als volgt afleiden:
+    
+    \begin{center}
+    	\[\vec{a} = \lim_{\Delta t\to\infty} = \frac{\Delta \vec{v}}{\Delta t} = \frac{d\vec{v}}{dt}\]
+    	$\Luda$\\
+    	Als $\Delta t$ infinitesimaal klein wordt is $\Delta \vec{v}$ infinitesimaal klein\\
+    	$\Luda$\[\Delta\vec{v} \perp \vec{v}\]
+    	$\Luda$\[\vec{a} \perp \vec{v}\]
+    	$\Luda$\\ 
+    	$\vec{a}$ wijst naar het middelpunt van de cirkel.
+    \end{center}
+    
+    De grootte leiden we als volgt af:
+    
+    \begin{center}
+    	\[\vec{a} = \lim_{\Delta t \to 0} = \frac{\Delta \vec{v}}{\Delta t} = \frac{d\vec{v}}{dt}\]
+    	$\Luda$\\ Uit de figuur leiden we gelijkvormige driehoeken $1$ en $2$ af
+	    	\begin{figure}[h]
+	        		\centering
+	       		 \includegraphics[width=0.6\linewidth]{cirkel}
+	       		 \caption{Gelijkvormige driehoeken bij afleiding grootte van de versnelling van een cirkelbeweging}
+	        		\label{cirkel}
+	    	\end{figure}
+	$\Luda$\[\frac{\Delta v}{v} \sim \frac{\Delta l}{r}\]
+	$\Luda$\[\Delta v \sim \frac{v\Delta l}{r}\]	    	
+	We zien nu dat:
+	\[a_{r} = \lim_{\Delta t\to\infty} \frac{\Delta v}{\Delta t}\]
+	$\Luda$\[a_{r} = \lim_{\Delta t \to 0} \frac{v}{r}\frac{\Delta l}{\Delta t}\]
+	$\Luda$\[a_{r} = \frac{v}{r} \lim_{\Delta t \to 0} \frac{\Delta l}{\Delta t}\]
+	$\Luda$\[a_{r} = \frac{v^{2}}{r}\]
+    \end{center}
+    
+    We kunnen ook met behulp van volgende begrippen de snelheid van een voorwerp in een cirkelbeweging afleiden:
+    \begin{enumerate}
+    	\item de periode $T$ = tijd nodig voor 1 omwenteling
+    	\item de frequentie $f$ = aantal omwentelingen per seconde (in Hertz)
+    \end{enumerate}
+    
+    We zien dan dat $T = \frac{1}{f}$ en dat:
+    
+    \begin{center}
+    	\[v = \frac{2\pi r}{T}\]	
+    \end{center}
+    
+    \subsection{Dynamica van de cirkelbeweging}
+    Er is een kracht nodig om een voorwerp op een cirkelbaan te houden, dit is de centripetale kracht. Deze kracht wijst altijd naar het middelpunt
+    van de cirkel en zorgt voor een centripetale versnelling. 
+    
+    $$ \sum F_{R} = ma_{r} = m\frac{v^{2}}{r} $$ 
+    
+    Als de centripetale kracht wegvalt, zal door inertie (eerste wet van Newton), het voorwerp gewoon rechtdoor bewegen in plaats van op de cirkelbaan te blijven. 
+    De snelheid van een voorwerp kan ook veranderen. Dan heeft de versnelling twee componenten: de radiale component en de tangentiële component. Deze componenten
+    kunnen worden gezien als componenten voor de totale versnelling:
+    
+    \begin{enumerate}
+    	\item $a_{r} = \frac{v^{2}}{r}$
+    	\item $a_{tan} = \frac{dv}{dt}$
+    \end{enumerate}
+    
+    Dan is de totale versnelling gelijk aan:
+    
+    $$ a = \sqrt{a_{tan}^{2} + a_{r}^{2}} $$ 
+    
+    \begin{figure}[h]
+    	\centering
+	\includegraphics[width=0.6\linewidth]{cirkel_versnelling}
+    	\caption{Radiale en tangentiële versnelling bij een cirkelbeweging}
+        	\label{cirkel_versnelling}
+    \end{figure}
 
     \section{De zwaartekracht en de synthese van Newton}
 
     \subsection{Delen in Giancoli}
     6.1-6.4, 6.6
 
+    \subsection{De wet van de universele zwaartekracht}
+    Elk paar van voorwerpen oefent een kracht uit op elkaar. Zo oefent ook de Aarde een kracht uit op andere voorwerpen (vb. de maan). 
+    Uit de tweede wet van Newton zien we dat de kracht evenredig is met de massa (1). Uit de derde wet van Netwon
+    zien we dan ook dat de kracht evenredig is met de massa van de aarde (2). Uit experimenten halen we ook dat de kracht
+    omgekeerd evenredig is met het kwadraat van de afstand tussen de twee voorwerpen (3). 
+    
+    \begin{enumerate}
+    	\item $F \sim m_{voorwerp_{A}}$
+    	\item $F \sim m_{voorwerp_{B}}$
+    	\item $F \sim \frac{1}{r^{2}}$
+    \end{enumerate}
+    
+    Als we deze 3 eigenschappen combineren vinden we dat de kracht tussen de twee voorwerpen gegeven wordt door:
+    
+    $$ F \sim \frac{m_{A}m_{b}}{r^{2}} $$
 
-    \section{Arbeid en energie}
+    Elk deeltje in het universum trekt elk ander deeltje aan met een kracht die recht everedig is met het product van hun massa's en omgekeerd
+    evenredig is met het kwadraat van hun afstand. Voor de zwaartekracht is de evenredigheidsconstante $G$:
+    
+    $$ G = 6.673 \times 10^{-11} \frac{Nm^{2}}{kg^{2}} $$ 
+    
+    Waaruit volgt dat de zwaartekracht $F_{g}$ gedefinieerd is als:
+    
+    $$ F_{g} = G \frac{m_{A}m_{b}}{r^{2}} $$ 
+    
+    Belangrijk is te weten dat dit enkel geldt voor puntmassa's! Voor een symmetrische bol of schil, 
+    doen we alsof alle massa in één punt zit.
+    
+    \subsection{Zwaartekracht nabij het oppervlak}
+    Als een massa zicht op een hoogte $h$ boven het aardoppervlak bevindt en de straal van de aarde is $R_{a}$, dan is de zwaartekracht op dat voorwerp:
+    
+    $$ F_{a} = G\frac{mM_{a}}{(R_{a} + h)^{2}} \sim G\frac{mM_{a}}{R_{a}^{2}}$$
+    
+    We kunnen nu de valversnelling afleiden:
+    
+    $$ F_{a} = ma $$
+    $$\Luda$$
+    $$ F_{a} = mg $$
+    $$\Luda$$
+    $$ F_{a} = G\frac{M_{a}}{R_{a}^{2}} $$
+    $$\Luda$$
+    $$ g = 9.81 \frac{m}{s^{2}} $$
+    
+    Aangezien dit berekent is op $h = 0$, kan dit echter afwijken afhankelijk van $h$ als $0 \leq h$. 
+    
+    \subsection{Satellieten}
+    Uit de eerste wet van Newton weten we dat een satelliet zondere kracht rechtdoor zou bewegen. Er werkt echter een kracht in
+    op de satelliet, namelijk de gravitatiekracht. We weten dus dat de kracht die inwerkt op de satelliet, de gravitatiekracht, de satelliet
+    op zijn baan houdt:
+    
+    $$ F_{a} = ma $$
+    $$\Luda$$
+    $$ G\frac{mM_{a}}{r^{2}} = m\frac{v^{2}}{r} $$ 
+    $$\Luda$$
+    $$ v = \sqrt{\frac{GM_{a}}{r}}$$
+    $$\Luda$$
+    $$ v = \sqrt{\frac{GM_{a}}{R_{a} + h}} $$
+    
+    \subsection{Het gravitatieveld}
+    Het gravitatieveld is een manier op de impact van de gravitatie in algemene termen weer te geven voor eender welk punt. Het kan gedefinieerd worden met behulp
+    van volgende afleiding.
+    
+    $$ \vec{F_{g}} = -m\vec{a}$$
+    $$\Luda$$
+    $$ \vec{F_{g}} = -mG\frac{M_{a}}{r^{2}}\vec{u_{r}}$$
+    $$\Luda$$
+    $$ \vec{F_{g}} = -mg\vec{u_{r}}$$
+    $$\Luda$$
+    $$ \vec{F_{g}} = m\vec{g}$$
+    $$\Luda$$
+    $$ \vec{g} = \frac{\vec{F_{g}}}{m}$$
+    
+    We zien nu dat een massa $m$ die geplaatst wordt op een punt waar het veld gelijk is aan $\vec{g}$ een kracht ondervindt:
+    
+    $$ \vec{F_{g}} = m\vec{g}$$ 
+
+    \section{Arbeid en Energie}
 
     \subsection{Delen in Giancoli}
     7.1, 7.3-7.4 (+14.1)
 
-
+    \subsection{Arbeid en Energie}
+    Het algemene probleem dat optreedt bij de dynamica van een probleem is de tijdsafhankelijkheid.
+    We hebben in hoofdstuk 4 gezien dat:
+    
+    $$ \sum_{i} \vec{F_{i}} = m\frac{d\vec{v}}{dt} = m\vec{a} $$
+    
+    We zien hier echter dat we een kracht niet kunnen bepalen in functie van de tijd. Daarom voeren
+    we de notie in van Arbeid en Energie. De definities zijn als volgt:
+    
+    \begin{enumerate}
+    	\item Een systeem dat in staat is om arbeid te leveren, bezit energie
+    	\item Energie is de capaciteit om arbeid te leveren
+    	\item Arbeid is de overdracht van energie
+    \end{enumerate}
+    
+    \emph{Opmerking}: Arbeid en Energie zijn gelijkwaardig, ze hebben dezelfde eenheid en dimensie (zie later)
+    
+    \subsection{Arbeid en Energie door een constante kracht}
+    De arbeid geleverd door een kracht is afhankelijk van de efficiëntie van de kracht (grootte en richting) en de afstand waarover de kracht wordt uitgeoefend. 
+    Arbeid wordt gedefinieerd als: 
+    
+    $$ W = F_{\parallel }d = Fd\cos{\theta} = \vec{F} \cdot \vec{d}$$
+    
+    Een kracht oefent dus géén arbeid uit in de volgende gevallen:
+    \begin{enumerate}
+    	\item Er is geen verplaatsing
+    	\item $\vec{F} \perp \vec{d}$
+    \end{enumerate}
+    
+    De eenheid van arbeid is de Joule ($1J = 1Nm)$.
+    
+    \subsection{Arbeid langs een pad o.i.v. een variabele kracht}
+    Wat als de beweging niet rechtlijnig is en de kracht niet constant zoals in de onderstaande afbeelding?
+    
+    \begin{figure}[h]
+    	\centering
+	\includegraphics[width=0.6\linewidth]{variabele_kracht}
+    	\caption{Variabele kracht langst een pad}
+        	\label{variabele_kracht}
+    \end{figure}
+    
+    We delen het pad op in N infinitisimaal kleine deeltjes $\Delta l_i$ met $\vec{F_i}$. De totale arbeid langsheen het pad kan worden gevonden door:
+    
+    $$\Delta W \sim F_{i}\cos{\theta_{i}}\Delta l_{i}$$
+    $$\Luda$$
+    $$W \sim \sum_{i = 1}^{N} F_{i}\cos{\theta_{i}}\Delta l_{i}$$
+    $$\Luda$$
+    $$W = \lim_{\Delta l_{i} \to 0}\sum F_{i}\cos{\theta_{i}}\Delta l_{i}$$
+    $$\Luda$$
+    $$W = \int_{a}^{b} F\cos{\theta}\Delta l \,dx $$ 
+    $$\Luda$$
+    $$W = \int_{a}^{b} \vec{F} \cdot d\vec{\emph{l}} \, dx $$
+    
+    Dit is algemeen geldig voor elke ruimtedimensie (x, y en z). We kunnen dus in het algemeen schrijven:
+    
+    \begin{center}
+    	$\vec{F} = F_{x}\vec{e_{x}} + F_{y}\vec{e_{y}} + F_{z}\vec{e_{z}}$\\
+     	en\\
+   	$d\vec{l} = dx\vec{e_{x}} + dy\vec{e_{y}} + dz\vec{e_{z}} $\\
+   \end{center}
+    $$\Luda$$	
+    $$W = \int_{x_{a}}^{x_{b}} F_{x}dx + \int_{y_{a}}^{y_{b}} F_{y}dy + \int_{z_{a}}^{z_{b}} F_{z}dz$$
+    
+    \subsection{Teruggroepkracht van schroefveren}
+    \emph{Opemerking}: Dit is hoofdstuk 14.1 in het handboek!
+   
+    De teruggroepkracht van een veer (Wet van Hooke): 
+    
+    $$ F_{x} = -kx $$ 
+    
+    met $k$ de veerconstante. We kunnen de externe arbeid dan schrijven als:
+    
+    $$W_{e} = \int_{x_{i}}^{x_{f}} Fds = \int_{-x_{max}}^{0}(-kx)dx = \frac{1}{2}kx^{2}_{max}$$
+    
+    De arbeid geleverd door de veer is dan:
+    
+    $$W_{s} = \int_{x_{i}}^{x_{f}} Fds = \int_{0}^{x_{max}}(-kx)dx = -\frac{1}{2}kx^{2}_{max}$$
+    
+    \subsection{Kinetische Energie}
+    We weten uit eerdere hoofdstukken dat:
+    
+    \begin{enumerate}
+    	\item $F_{netto} = ma$
+    	\item $a = \frac{v_{2}^{2} - v_{1}^{2}}{2d}$
+    \end{enumerate}
+    
+    We kunnen dan met behulp van de definitie van arbeid afleiden dat:
+    
+    $$W_{netto} = F_{netto}d$$
+    $$\Luda$$
+    $$W_{netto} = mad$$
+    $$\Luda$$
+    $$W_{netto} = m\left( \frac{v_{2}^{2} - v_{1}^{2}}{2} \right)$$
+    $$\Luda$$
+    $$W_{netto} = \frac{1}{2} mv_{2}^{2} - \frac{1}{2} mv_{1}^{2} $$
+    
+    We definiëren kinetische energie als: $K = \frac{1}{2}mv^{2}$. We kunnen een analoge afleiding maken voor
+    een variabele kracht langst een pad. We zien dan dat (TODO; Afleiding):
+    
+    $$W_{netto} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2} = \Delta K$$
+    
     \section{Behoud van energie}
 
     \subsection{Delen in Giancoli}
