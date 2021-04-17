@@ -127,10 +127,11 @@
     \[\mathbf{a = \frac{dv}{dt} = constante}\]
     \begin{center}
 	    $\Luda$ \[a dt = dv\]
-	    $\Luda$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
+	    $\Luda$ \[\int_{0}^{t} a \, dt = \int_{v_0}^{v} \,dv\]
 	    $\Luda$\[v - v_0 = at\]
 	    $\Luda$\[\mathbf{v = v_0 + at}\]
     \end{center}
+\newpage
     Vergelijking voor verplaatsing afleiden:
     \begin{center}
                \[v = \frac{dx}{dt}\]
@@ -142,7 +143,7 @@
     \end{center}
     Alternatieve vergelijking voor snelheid:
     \begin{center}
-    	\[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
+    	\[\bar{v} = \frac{v_0 + v}{2} \text{ en } t = \frac{v - v_0}{a}\]
     \end{center}
     dan geldt voor de vergelijking van verplaatsing:
     \begin{center}
@@ -296,7 +297,7 @@
 	$\Luda$\[\frac{\Delta v}{v} \sim \frac{\Delta l}{r}\]
 	$\Luda$\[\Delta v \sim \frac{v\Delta l}{r}\]	    	
 	We zien nu dat:
-	\[a_{r} = \lim_{\Delta t\to\infty} \frac{\Delta v}{\Delta t}\]
+	\[a_{r} = \lim_{\Delta t\to 0} \frac{\Delta v}{\Delta t}\]
 	$\Luda$\[a_{r} = \lim_{\Delta t \to 0} \frac{v}{r}\frac{\Delta l}{\Delta t}\]
 	$\Luda$\[a_{r} = \frac{v}{r} \lim_{\Delta t \to 0} \frac{\Delta l}{\Delta t}\]
 	$\Luda$\[a_{r} = \frac{v^{2}}{r}\]
@@ -311,7 +312,7 @@
     We zien dan dat $T = \frac{1}{f}$ en dat:
     
     \begin{center}
-    	\[v = \frac{2\pi r}{T}\]	
+    	\[v = 2\pi rf\]	
     \end{center}
     
     \subsection{Dynamica van de cirkelbeweging}
@@ -380,11 +381,11 @@
     
     We kunnen nu de valversnelling afleiden:
     
-    $$ F_{a} = ma $$
+    $$ F_{g} = ma $$
     $$\Luda$$
-    $$ F_{a} = mg $$
+    $$ F_{g} = mg $$
     $$\Luda$$
-    $$ F_{a} = G\frac{M_{a}}{R_{a}^{2}} $$
+    $$ F_{g} = G\frac{M_{a}}{R_{a}^{2}} $$
     $$\Luda$$
     $$ g = 9.81 \frac{m}{s^{2}} $$
     
@@ -715,8 +716,58 @@
 
     \subsection{Delen in Giancoli}
     21.1-21.2, 21.4-21.11, 21.13
-
-
+	\subsection{Eigenschappen van elektrische lading}
+	Er bestaan 2 soorten ladingen: positief en negatief. Tegengestelde ladingen trekken elkaar aan en gelijke ladingen stoten elkaar af. De totale lading van een geisoleerd systeem blijft altijd gelijk. Beweegelijkheid van elektronen hangt af van het materiaal:
+	\begin{itemize}
+		\item \textit{geleider}: sommige elektronen zijn "vrij" (ongebonden) te bewegen
+		\item \textit{isolator}: alle elektronen zijn gebonden, bijgevolg onbeweeglijk
+		\item  \textit{halfgeleider}: ergens tussenin
+	\end{itemize}
+	
+	\subsection{Elektrische ladingen door inductie}
+	Het opladen van een object via inductie gaat als volgt:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{inductie}
+		\label{inductie}
+	\end{figure}
+	Als er een negatief geladen staaf in de buurt wordt gebracht van een neutraal geladen voorwerp, zullen de elektronen binnen dat voorwerp weggaan naar de aarde en zal het voorwerp uiteindelijk positief geladen zijn. 
+	
+	\subsection{De wet van Coulomb}
+	\[\vec{F}_12 = k_e\frac{q_1 q_2}{r^2}\hat{r} = \frac{q_1q_2}{4\pi \epsilon_0 r^2}\hat{r}\]
+	met r de afstand tussen de ladingen. \(\hat{r}\) is de eenheidsvector van $q_1$ naar $q_2$.
+	$k_e$ is de \textbf{Coulomb constante} en is gelijk aan \(\frac{1}{4\pi\epsilon_0}\). $\epsilon_0$ is hier de permitiviteit van het vacuum.
+	
+	Deze kracht is een conservatieve kracht, de weg van het begin tot het einde maakt niet uit. 
+	\newline
+	
+	\subsection{Superpositie van krachten}
+	\begin{itemize}
+		\item \textit{Discrete ladingsverdeling} 
+		\[\vec{F}_{q^*} = \vec{F}_{21} + \vec{F}_{31} + \vec{F}_{41} + ... = k_eq^*\sum_i \frac{q_i}{r_i^2}\hat{r}_i\]
+		\item \textit{Continue ladingsverdeling}
+		\[\vec{F}_{q^*} = k_eq^* \int\frac{1}{r^2}\hat{r}dq\]
+	\end{itemize}
+    Deze formule lijkt enorm op de gravitatiekracht. Het grootste verschil is dat de gravitatie altijd aantrekken is terwijl de Coulombkrach afstotend kan zijn.
+    
+    \subsection{Het elektrisch veld}
+    Een elektrisch veld is een veldkracht (dat werkt zonder contact door een lege ruimte) die veroorzaakt wordt door een bronlading Q.
+    
+    De elektrische veld vector E in een punt in de ruimte is gelijk aan de elektrische kracht $F_e$ die op een \textit{positieve} testlading, gedeeld door de testlading.
+    
+    \[\vec{E} = \frac{\vec{F}_e}{q_0^*}\]
+    
+    In de omgezette formule: \(\vec{F}_e = q\vec{E}\) mag de testlading wel negatief zijn. 
+    
+    \textit{Elektrisch veld tegenover puntlading}:
+    \[E = \frac{F}{q} = \frac{kqQ/r^2}{q} = k\frac{Q}{r^2}\]
+    Voor meerdere puntladingen geldt dan: \(\vec{E} = k_e \sum_i \frac{q_i}{r_i^2}\hat{r}_i\)
+    
+    \subsection{De elektrische dipool}
+    WORDT GRAAG GEVRAAGD!! zie ook deel over dipool in een elektrisch veld!!
+    \newline
+    Een dipool is een positieve lading q en een negatieve lading -q op een afstand l. Zie vb 21.8(b) voor voorbeeld (TO DO)
+	
     \section{De wet van Gauss}
 
     \subsection{Delen in Giancoli}
