@@ -11,6 +11,8 @@
 \usepackage{hyperref}
 \usepackage{gensymb}
 \usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{commath}
 
 \newcommand{\Luda}{\Big\Updownarrow}
 
@@ -767,6 +769,71 @@
     WORDT GRAAG GEVRAAGD!! zie ook deel over dipool in een elektrisch veld!!
     \newline
     Een dipool is een positieve lading q en een negatieve lading -q op een afstand l. Zie vb 21.8(b) voor voorbeeld (TO DO)
+	
+	\subsection{Elektrisch veld van een continue ladingsverdeling}
+	Dit is gelijkaardig een heel veel puntladingen. 
+	\[\vec{E} = k_e\int\frac{dq}{r^2}\hat{r}\]
+	definieer (uniforme) \textit{ladingsverdeling}:
+	\begin{itemize}
+		\item \textbf{Volume-ladingsverdeling}
+		 \[\rho = Q/V \text{ of } dq/dV [C/m^3]\]
+		\item \textbf{Oppervlakte-ladingsverdeling}:
+		 \[\sigma = Q/A \text{ of } dq/dA [C/m^2]\]
+		\item \textbf{Lineaire-ladingsverdeling}:
+		 \[\lambda = Q/l \text{ of } dq/dl [C/m]\]
+	\end{itemize}
+	\subsection{Elektrische veldlijnen}
+	Eigenschappen van elektrische veldlijnen:
+	\begin{itemize}
+		\renewcommand\labelitemi{--}
+		\item Het elektrisch veld is een vectorveld
+		\item De elektrische veldvector raakt aan de elektrische veldlijn.
+		\item Het aantal veldlijnen per oppervlakte-eenheid is evenredig met de elektrische veldsterkte in het beschouwde gebied.
+		\item Veldlijnen beginnen bij positieve ladin en eindigen bij negatieve lading.
+		\item het aantal lijnen nabij lading is evenredig met de lading.
+		\item veldlijnen kunnen nooit kruisen. Als ze dit wel doen, zouden er twee verschillende elektrische velden in 1 punt. 
+	\end{itemize}
+	\subsection{Beweging van een lading in een uniform veld}
+	\[\vec{F}_e = q\vec{E} = m\vec{a} \text{  of  } \vec{a}=\frac{q\vec{E}}{m}\]
+	Bij een uniform elektrisch veld is de \textit{versnelling constant}!
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{uniform-elektrisch-veld}
+		\label{fig:uniform-elektrisch-veld}
+	\end{figure}
+	Als het uniform elektrisch veld op zijn zij gaat liggen, zal de elektron een projectielbeweging nabootsen. De versnelling is dan al volgt: 
+	\[\vec{a}=-\frac{eE}{m_e}\vec{j}\]
+	
+	De kracht zal dan de kracht zijn dat het elektrisch veld uitoefent op de elektron. Bij een proton zijn de min in de formule wegvallen. 
+	
+	\subsection{Beweging van dipool in uniform elektrisch veld}
+	\textit{elektrisch dipool}: systeem van 2 even grote ladingen met tegengesteld teken op afstand l.
+	Het dipoolmoment is als volgt gedefinieerd: \(\abs{\vec{p}} = Ql\)
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.3\linewidth]{dipool}
+		\label{fig:dipool}
+	\end{figure}
+
+	De \textit{totale kracht} op een elektrische dipool in een homogeen veld: 
+
+	\(\vec{F} = \vec{F}_+ + \vec{F}_- = Q\vec{E} - Q\vec{E} = 0\).
+	
+	\textit{krachtmoment} op een elektrische dipool (rond middelpunt), ook wel het dipoolmoment genoemd. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\linewidth]{dippoolmoment}
+		\label{fig:dippoolmoment}
+	\end{figure}
+	\newpage
+	\[\tau = QE\frac{l}{2}\sin\theta + QE\frac{l}{2}\sin\theta = pE\sin\theta\]	
+	DUS : \(\vec{\tau} = \vec{p} \times \vec{E}\)
+	
+	\textit{arbeid} geleverd door een elektrisch veld op een elektrische dipool:
+	\[W = \int_{\theta_1}^{\theta_2}\tau d\theta = -pE\int_{\theta_1}^{\theta_2}\sin\theta = pE(\cos\theta_2 - \cos\theta_1) = -\Delta U\]
+	DUS: \(U = -\vec{p} \cdot \vec{E}\)
+	
+	Er is nog een toepassing op het einde van het hoofdstuk, p582 in de Giancoli
 	
     \section{De wet van Gauss}
 
