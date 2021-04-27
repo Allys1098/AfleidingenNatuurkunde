@@ -531,19 +531,238 @@
 
     \subsection{Delen in Giancoli}
     8.1-8.3, 8.5, 8.8
+    
+    \subsection{Conservatieve en niet-conservatieve krachten}
+    We definiëren een conservatieve kracht als een kracht waarbij de netto arbeid geleverd door deze kracht
+    onafhankelijk is van de gevolgde weg. 
+    
+    We geven hier het voorbeeld van zwaartekracht:
+    
+    \begin{figure}[h]
+    	\centering
+	\includegraphics[width=0.6\linewidth]{zwaartekracht_conservatief}
+    	\caption{Verduidelijkende figuur bij afleiding}
+        	\label{zwaartekracht_conservatief}
+    \end{figure}
 
+    We weten dat de gravitatiekracht $\vec{F} = m\vec{g}$. We nemen hier $\vec{F} = -mg\hat{k}$. 
+    Dan is de arbeid $W$ gegeven door:
+    
+    $$W = -\int_{a}^{b}mg\hat{k} \cdot d\vec{r}$$
+    $$\Luda$$
+    $$W = -mg\int_{a}^{b}\hat{k}\cdot (dx\hat{i} + dy\hat{j} + dz\hat{k})$$
+    $$\Luda$$
+    $$W = -mg\int_{a}^{b}dz$$
+    $$\Luda$$
+    $$W = -mg(z_b - z_a)$$
+
+    Hier zien we dat de arbeid geleverd inderdaad alleen afhankelijk is van begin en eindpunt. Een andere manier waarop
+    we een conservatieve kracht kunnen definiëren is de volgende: Een kracht is conservatief wanneer de netto arbeid geleverd
+    door deze kracht gelijk is aan nul bij een gesloten baan. 
+    
+    \subsection{Potentiële Energie}
+    Potentiële energie kan men samenvatten als een fenomeen waarbij energie wordt opgeslagen. Zo kunnen we bijvoorbeeld
+    de gravitationele potentiële energie beschrijven als:
+    
+    $$\Delta U_g = W_{ext} = -W_{gravitatie} = -(-mg(h_2 - h_1)$$
+    
+    Belangrijk is echter het verschil in potentiële energie. Potentiële energie op zich heeft geen betekenis (het is relatief t.o.v.
+    begin en eindpunt). Over het algemeen geldt voor conservatieve krachten:
+    
+    $$W = \int_{1}^{2}\vec{F}\cdot d\vec{r} = U_1 - U_2 = -\int_{1}^{2} U$$
+    
+    We zien dus dat de arbeid geleverd door een conservatieve kracht gelijk is aan het tegengestelde van de verandering in potentiële energie. We kunnen
+    dit uitbreiden naar 3 dimensies:
+    
+    \begin{enumerate}
+    	\item $F_x = -\frac{\delta U}{\delta x}$
+    	\item $F_y = -\frac{\delta U}{\delta y}$
+    	\item $F_z = -\frac{\delta U}{\delta z}$
+    \end{enumerate}
+    
+    En dus is $\vec{F} = -grad(U) = -\mathbb{\nabla}{U}$.
+
+    \subsection{Behoud van mechanische energie}
+    De totale mechanische energie van een deeltje: $E = K + U$,
+    blijft constant als de inwerkende krachten conservatief zijn.
+    
+    Als er niet-conservatieve krachten mee inwerken op het deeltje, 
+    is de arbeid van alle niet-conservatieve krachten gelijk aan de verandering
+    in mechanische energie: $W = \Delta E$. Deze twee beweringen vormen
+    samen de wet van behoud van energie.
+    
+    \subsection{Vermogen}
+    Vermogen geeft weer in welk tempo er arbeid wordt verricht. Het gemiddelde vermogen is
+    $P_{gem} = \frac{W}{\Delta t}$. Net zoals snelheid, versnelling, etc, kunnen we het ogenblikkelijke vermogen
+    schrijven als:
+    
+    $$P = \frac{dW}{dt} = \frac{dE}{dt}$$
+    
+    Of via de definitie van arbeid:
+    
+    $$P = \vec{F} \cdot \frac{d\vec{r}}{dt} = \vec{F} \cdot \vec{v}$$ 
+    
+     Vermogen wordt uitgedrukt in Watt: $1 \frac{J}{s} = 1 W$.
 
     \section{Impuls}
 
     \subsection{Delen in Giancoli}
-    9.1-9.2 (+36.11)
+    9.1-9.2 (+36.11, 42.4)
 
+    \subsection{Impuls}
+    De impuls is een manier om de hoeveelheid beweging van een een voorwerp te
+    bepalen. Het wordt ook lineair momentum genoemd. Hoe meer impuls een voorwerp
+    heeft, hoe meer impact het voorwerp zal hebben op andere voorwerpen. We zullen
+    ook zien dat er een kracht nodig is om de impuls van een voorwerp te veranderen. We
+    definiëren de impuls als:
+    
+    $$\vec{p} = m\vec{v}$$
+    
+    We kunnen nu ook de tweede wet van Newton herschrijven:
+    
+    $$\sum \vec{F} = \frac{d(m\vec{v})}{dt} = \frac{d\vec{p}}{dt}$$
+
+    \subsection{Behoud van impuls}
+    Stel twee deeltjes in een geïsoleerd systeem voor waarbij:
+    
+    $$\vec{F_{21}} + \vec{F_{12}} = 0$$
+    
+    En waarbij volgens de tweede wet van Newton geldt dat $\vec{F_{21}} = \frac{d\vec{p_1}}{dt}$ en 
+    $\vec{F_{12}} = \frac{d\vec{p_2}}{dt}$. Dan vinden we dat:
+    
+     $$\vec{F_{21}} + \vec{F_{12}} = 0$$
+     $$\Luda$$
+     $$\frac{d\vec{p_1}}{dt} + \frac{d\vec{p_2}}{dt} = 0$$
+     $$\Luda$$
+     $$\frac{d}{dt}(\vec{p_1} + \vec{p_2}) = 0$$
+     $$\Luda$$
+     $$p = (\vec{p_1} + \vec{p_2}) = cte$$
+
+    We zien dus dat de totale impuls van een geïsoleerd systeem constant is. 
 
     \section{Rotatie}
     10.1, 10.4, 10.8
+    
+    \subsection{Grootheden bij rotatie}
+    Een hoekverplaatsing $\Delta \theta$ wordt gegeven door:
+    
+    $$\Delta \theta = \theta_{2} - \theta_{2}$$
+    
+    Een hoek wordt gedefinieerd als:
+    
+    $$\theta = \frac{l}{R}$$ 
+    
+    waarbij $R$ de radius is van een cirkel en $l$ een booglengte op die cirkel. Net zoals bij kinematica kunnen we de begrippen
+    snelheid invoeren, dit maal als gemiddelde en ogenblikkelijke hoeksnelheid (resp.):
+    
+    $$\omega_{gem} = \frac{\Delta \theta}{\Delta t}$$
+    $$\omega = \lim_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t} = \frac{d\theta}{dt}$$
+    
+    De eenheid van hoeksnelheid is radialen / seconde (of kortweg rad/s). We kunnen met behulp van de hoeksnelheid
+    (die hetzelfde is voor elk punt in het object) ook de lineaire snelheid bepalen. De lineaire snelheid is voor punten dichter
+    bij de rotatie-as kleiner als voor punten verder weg van de rotatie-as, aangezien deze een kleinere booglengte $l$
+    moeten afleggen om dezelfde hoekverplaatsing $\Delta \theta$ af te leggen:
+    
+    $$\omega = \frac{d\theta}{dt} = \frac{1}{R} \frac{dl}{dt} = \frac{v}{R}$$
+    $$\Luda$$
+    $$v = \omega R$$
 
+    \subsection{Krachtmoment}
+    Wat als er een kracht inwerkt op een punt $P$ met massa $m$. Het moment van de kracht $F$ 
+    t.o.v. de oorsprong van het referentiestelsel is gegeven door:
+    
+    $$\vec{\tau} = \vec{r} \times \vec{F}$$
+    
+    Dit moment van de kracht is de tendens van een kracht om de draaibeweging van een voorwerp
+    te veranderen.  De eenheid van dit moment is $Nm = J$. 
+    
+    \subsection{Arbeid en energie bij rotatie}
+    In hoofdstuk $7$ (deel $10$) is de kinetische energie van een object gedefinieerd als: $K = \frac{1}{2}mv^{2}$. We
+    hebben echter gezien dat $v$ bij rotatie verschillend is voor ieder punt, afhankelijk van hoever ze zich bevonden van
+    de rotatie-as. Stel dat we het object onderverdelen in kleine massa's $m_i$ elk met een (lineaire) snelheid $v_i$, dan kunnen
+    we de kinetische energie voor een object met rotatie afleiden als:
+    
+    $$K = \sum \left( \frac{1}{2} m_{i} v_{i}^{2}\right)$$
+    $$\Luda$$
+    $$\omega \textrm{ is gelijk voor elke massa } m_{i}$$
+    $$\Luda$$
+    $$K = \sum \left( \frac{1}{2} m_{i} R_{i}^{2}\omega^{2}\right)$$
+    $$\Luda$$
+    $$K = \frac{1}{2} I\omega^{2} \textrm{ met het traagheidsmoment } I = \sum \left(m_{i} R_{i}^{2}\right)$$
+    
+    De arbeid die geleverd wordt kunnen we ook gemakkelijk afleiden:
+    
+    $$W = \int \vec{F} \cdot d\vec{l}$$
+    $$\Luda$$
+    $$W = \int F_{\perp}Rd\theta$$
+    $$\Luda$$
+    $$W = \int_{\theta_{1}}^{\theta_{2}} \tau d\theta$$
 
     \section{Impulsmoment}
+    \subsection{Impulsmoment}
+    Het impulsmoment van een deeltje met massa $m$ op plaats $P$ wordt gegeven als:
+    
+    $$\vec{L} = \vec{r} \times \vec{p}$$
+    
+    waarbij $\vec{r}$ de positievector is van het deeltje en $\vec{p}$ de impuls gezien in hoofdstuk $9$ (deel $11$).
+    Het impulsmoment geeft de tendens van het deeltje weer om rond de oorsprong $O$ te draaien. We zien ook dat dankzij
+    het kruisproduct:
+    
+    \begin{enumerate}
+    	\item als $r \perp p \to L = mvr$ (L is maximaal)
+    	\item als $r \parallel p \to L = 0$
+   \end{enumerate}
+   
+   Een andere belangrijke bevinding is dat:
+   
+   $$L = mvr$$
+   $$\Luda$$
+   $$L = m(\omega r)r$$
+   $$\Luda$$
+   $$L = m\omega r^{2}$$
+   $$\Luda$$
+   $$L = I\omega$$
+   
+   \subsection{Verband tussen impulsmoment en krachtmoment}
+   We zullen net zoals bij impuls bewijzen dat het impulsmoment van een voorwerp geconserveerd is:
+   
+   $$\vec{L} = \vec{r} \times \vec{p}$$
+   $$\Luda$$
+   $$\frac{d\vec{L}}{dt} = \frac{d\vec{r}}{dt} \times \vec{p} + \vec{r} \times \frac{d\vec{p}}{dt}$$
+   $$\Luda$$
+   $$\vec{L} = \vec{v} \times \vec{p} + \vec{r} \times \vec{F} \textrm{ (Zie impuls)}$$
+   $$\Luda$$
+   $$\vec{L} = \vec{r} \times \vec{F} = \vec{\tau} $$
+   
+   We zien dus enkele verbanden, namelijk dat:
+   
+   \begin{enumerate}
+   	\item $\vec{F} = \frac{d\vec{p}}{dt}$
+   	\item $\vec{\tau} = \frac{d\vec{L}}{dt}$
+   \end{enumerate}
+
+    Wie zien dus dat een kracht de impuls van een voorwerp verandert (de hoeveelheid beweging van een systeem verandert) en dat
+    een krachtmoment (a.k.a. torsie) het impulsmoment van een voorwerp verandert (de hoeveelheid draaibeweging van een systeem verandert).
+    
+    \subsection{Behoud van impulsmoment}
+    Neem twee deeltjes in een geïsoleerd systeem, d.w.z. er zijn geen externe krachten die inwerken op de deeltjes:
+    We weten dankzij de tweede wet van Newton dat:
+    
+    $$\vec{F_{12}} + \vec{F_{21}} = 0$$
+    
+    en we weten ook dat:
+    
+    $$\frac{d\vec{L_{1}}}{dt} = \vec{\tau_{1}} \textrm{ en } \frac{d\vec{L_{2}}}{dt} = \vec{\tau_{2}}$$
+
+    We leiden af:
+    
+    $$\tau_1 + \tau_2 = \vec{r_{1}} \times \vec{F_{12}} + \vec{r_{2}} \times \vec{F_{21}}$$
+    $$\Luda$$
+    $$\tau_1 + \tau_2 = (\vec{r_{2}} - vec{r_{1}}) \times \vec{F_{21}} = 0$$
+    $$\Luda$$
+    $$\frac{d\vec{L_{1}}}{dt} + \frac{d\vec{L_{2}}}{dt} = \frac{d}{dt}(\vec{L_1} + \vec{L_2}) = 0$$
+    
+    Het totale impulsmoment tussen twee deeltjes blijft dus constant in grootte en in richting.
 
     \subsection{Delen in Giancoli}
     11.3-11.4, 11.6
