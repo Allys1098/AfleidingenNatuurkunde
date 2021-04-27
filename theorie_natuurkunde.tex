@@ -11,6 +11,8 @@
 \usepackage{hyperref}
 \usepackage{gensymb}
 \usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{commath}
 
 \newcommand{\Luda}{\Big\Updownarrow}
 
@@ -59,7 +61,7 @@
     \end{itemize}
 
     \subsubsection{Scalair product}
-    De grote van deze vector vermenigvuldigd met de projectie van de andere vector op deze vector. Hieruit krijg je dus een scalar!!
+    De grootte van deze vector vermenigvuldigd met de projectie van de andere vector op deze vector. Hieruit krijg je dus een scalar!!
     \[\textbf{A} \cdot \textbf{B} = AB \cos\theta\]
 
     \subsubsection{Vectorproduct}
@@ -127,10 +129,11 @@
     \[\mathbf{a = \frac{dv}{dt} = constante}\]
     \begin{center}
 	    $\Luda$ \[a dt = dv\]
-	    $\Luda$ \[\int_{v_0}^{v} a \, dt = \int_{0}^{t} \,dv\]
+	    $\Luda$ \[\int_{0}^{t} a \, dt = \int_{v_0}^{v} \,dv\]
 	    $\Luda$\[v - v_0 = at\]
 	    $\Luda$\[\mathbf{v = v_0 + at}\]
     \end{center}
+\newpage
     Vergelijking voor verplaatsing afleiden:
     \begin{center}
                \[v = \frac{dx}{dt}\]
@@ -142,7 +145,7 @@
     \end{center}
     Alternatieve vergelijking voor snelheid:
     \begin{center}
-    	\[\bar{v} = \frac{v_0 + v}{2} \text{en} t = \frac{v - v_0}{a}\]
+    	\[\bar{v} = \frac{v_0 + v}{2} \text{ en } t = \frac{v - v_0}{a}\]
     \end{center}
     dan geldt voor de vergelijking van verplaatsing:
     \begin{center}
@@ -296,7 +299,7 @@
 	$\Luda$\[\frac{\Delta v}{v} \sim \frac{\Delta l}{r}\]
 	$\Luda$\[\Delta v \sim \frac{v\Delta l}{r}\]	    	
 	We zien nu dat:
-	\[a_{r} = \lim_{\Delta t\to\infty} \frac{\Delta v}{\Delta t}\]
+	\[a_{r} = \lim_{\Delta t\to 0} \frac{\Delta v}{\Delta t}\]
 	$\Luda$\[a_{r} = \lim_{\Delta t \to 0} \frac{v}{r}\frac{\Delta l}{\Delta t}\]
 	$\Luda$\[a_{r} = \frac{v}{r} \lim_{\Delta t \to 0} \frac{\Delta l}{\Delta t}\]
 	$\Luda$\[a_{r} = \frac{v^{2}}{r}\]
@@ -311,7 +314,7 @@
     We zien dan dat $T = \frac{1}{f}$ en dat:
     
     \begin{center}
-    	\[v = \frac{2\pi r}{T}\]	
+    	\[v = 2\pi rf\]	
     \end{center}
     
     \subsection{Dynamica van de cirkelbeweging}
@@ -380,11 +383,11 @@
     
     We kunnen nu de valversnelling afleiden:
     
-    $$ F_{a} = ma $$
+    $$ F_{g} = ma $$
     $$\Luda$$
-    $$ F_{a} = mg $$
+    $$ F_{g} = mg $$
     $$\Luda$$
-    $$ F_{a} = G\frac{M_{a}}{R_{a}^{2}} $$
+    $$ F_{g} = G\frac{M_{a}}{R_{a}^{2}} $$
     $$\Luda$$
     $$ g = 9.81 \frac{m}{s^{2}} $$
     
@@ -934,9 +937,126 @@
 
     \subsection{Delen in Giancoli}
     21.1-21.2, 21.4-21.11, 21.13
+	\subsection{Eigenschappen van elektrische lading}
+	Er bestaan 2 soorten ladingen: positief en negatief. Tegengestelde ladingen trekken elkaar aan en gelijke ladingen stoten elkaar af. De totale lading van een geisoleerd systeem blijft altijd gelijk. Beweegelijkheid van elektronen hangt af van het materiaal:
+	\begin{itemize}
+		\item \textit{geleider}: sommige elektronen zijn "vrij" (ongebonden) te bewegen
+		\item \textit{isolator}: alle elektronen zijn gebonden, bijgevolg onbeweeglijk
+		\item  \textit{halfgeleider}: ergens tussenin
+	\end{itemize}
+	
+	\subsection{Elektrische ladingen door inductie}
+	Het opladen van een object via inductie gaat als volgt:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{inductie}
+		\label{inductie}
+	\end{figure}
+	Als er een negatief geladen staaf in de buurt wordt gebracht van een neutraal geladen voorwerp, zullen de elektronen binnen dat voorwerp weggaan naar de aarde en zal het voorwerp uiteindelijk positief geladen zijn. 
+	
+	\subsection{De wet van Coulomb}
+	\[\vec{F}_12 = k_e\frac{q_1 q_2}{r^2}\hat{r} = \frac{q_1q_2}{4\pi \epsilon_0 r^2}\hat{r}\]
+	met r de afstand tussen de ladingen. \(\hat{r}\) is de eenheidsvector van $q_1$ naar $q_2$.
+	$k_e$ is de \textbf{Coulomb constante} en is gelijk aan \(\frac{1}{4\pi\epsilon_0}\). $\epsilon_0$ is hier de permitiviteit van het vacuum.
+	
+	Deze kracht is een conservatieve kracht, de weg van het begin tot het einde maakt niet uit. 
+	\newline
+	
+	\subsection{Superpositie van krachten}
+	\begin{itemize}
+		\item \textit{Discrete ladingsverdeling} 
+		\[\vec{F}_{q^*} = \vec{F}_{21} + \vec{F}_{31} + \vec{F}_{41} + ... = k_eq^*\sum_i \frac{q_i}{r_i^2}\hat{r}_i\]
+		\item \textit{Continue ladingsverdeling}
+		\[\vec{F}_{q^*} = k_eq^* \int\frac{1}{r^2}\hat{r}dq\]
+	\end{itemize}
+    Deze formule lijkt enorm op de gravitatiekracht. Het grootste verschil is dat de gravitatie altijd aantrekken is terwijl de Coulombkrach afstotend kan zijn.
+    
+    \subsection{Het elektrisch veld}
+    Een elektrisch veld is een veldkracht (dat werkt zonder contact door een lege ruimte) die veroorzaakt wordt door een bronlading Q.
+    
+    De elektrische veld vector E in een punt in de ruimte is gelijk aan de elektrische kracht $F_e$ die op een \textit{positieve} testlading, gedeeld door de testlading.
+    
+    \[\vec{E} = \frac{\vec{F}_e}{q_0^*}\]
+    
+    In de omgezette formule: \(\vec{F}_e = q\vec{E}\) mag de testlading wel negatief zijn. 
+    
+    \textit{Elektrisch veld tegenover puntlading}:
+    \[E = \frac{F}{q} = \frac{kqQ/r^2}{q} = k\frac{Q}{r^2}\]
+    Voor meerdere puntladingen geldt dan: \(\vec{E} = k_e \sum_i \frac{q_i}{r_i^2}\hat{r}_i\)
+    
+    \subsection{De elektrische dipool}
+    WORDT GRAAG GEVRAAGD!! zie ook deel over dipool in een elektrisch veld!!
+    \newline
+    Een dipool is een positieve lading q en een negatieve lading -q op een afstand l. Zie vb 21.8(b) voor voorbeeld (TO DO)
+	
+	\subsection{Elektrisch veld van een continue ladingsverdeling}
+	Dit is gelijkaardig een heel veel puntladingen. 
+	\[\vec{E} = k_e\int\frac{dq}{r^2}\hat{r}\]
+	definieer (uniforme) \textit{ladingsverdeling}:
+	\begin{itemize}
+		\item \textbf{Volume-ladingsverdeling}
+		 \[\rho = Q/V \text{ of } dq/dV [C/m^3]\]
+		\item \textbf{Oppervlakte-ladingsverdeling}:
+		 \[\sigma = Q/A \text{ of } dq/dA [C/m^2]\]
+		\item \textbf{Lineaire-ladingsverdeling}:
+		 \[\lambda = Q/l \text{ of } dq/dl [C/m]\]
+	\end{itemize}
+	\subsection{Elektrische veldlijnen}
+	Eigenschappen van elektrische veldlijnen:
+	\begin{itemize}
+		\renewcommand\labelitemi{--}
+		\item Het elektrisch veld is een vectorveld
+		\item De elektrische veldvector raakt aan de elektrische veldlijn.
+		\item Het aantal veldlijnen per oppervlakte-eenheid is evenredig met de elektrische veldsterkte in het beschouwde gebied.
+		\item Veldlijnen beginnen bij positieve ladin en eindigen bij negatieve lading.
+		\item het aantal lijnen nabij lading is evenredig met de lading.
+		\item veldlijnen kunnen nooit kruisen. Als ze dit wel doen, zouden er twee verschillende elektrische velden in 1 punt. 
+	\end{itemize}
+	\subsection{Beweging van een lading in een uniform veld}
+	\[\vec{F}_e = q\vec{E} = m\vec{a} \text{  of  } \vec{a}=\frac{q\vec{E}}{m}\]
+	Bij een uniform elektrisch veld is de \textit{versnelling constant}!
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{uniform-elektrisch-veld}
+		\label{fig:uniform-elektrisch-veld}
+	\end{figure}
+	Als het uniform elektrisch veld op zijn zij gaat liggen, zal de elektron een projectielbeweging nabootsen. De versnelling is dan al volgt: 
+	\[\vec{a}=-\frac{eE}{m_e}\vec{j}\]
+	
+	De kracht zal dan de kracht zijn dat het elektrisch veld uitoefent op de elektron. Bij een proton zijn de min in de formule wegvallen. 
+	
+	\subsection{Beweging van dipool in uniform elektrisch veld}
+	\textit{elektrisch dipool}: systeem van 2 even grote ladingen met tegengesteld teken op afstand l.
+	Het dipoolmoment is als volgt gedefinieerd: \(\abs{\vec{p}} = Ql\)
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.3\linewidth]{dipool}
+		\label{fig:dipool}
+	\end{figure}
 
+	De \textit{totale kracht} op een elektrische dipool in een homogeen veld: 
 
+	\(\vec{F} = \vec{F}_+ + \vec{F}_- = Q\vec{E} - Q\vec{E} = 0\).
+	
+	\textit{krachtmoment} op een elektrische dipool (rond middelpunt), ook wel het dipoolmoment genoemd. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\linewidth]{dippoolmoment}
+		\label{fig:dippoolmoment}
+	\end{figure}
+	\newpage
+	\[\tau = QE\frac{l}{2}\sin\theta + QE\frac{l}{2}\sin\theta = pE\sin\theta\]	
+	DUS : \(\vec{\tau} = \vec{p} \times \vec{E}\)
+	
+	\textit{arbeid} geleverd door een elektrisch veld op een elektrische dipool:
+	\[W = \int_{\theta_1}^{\theta_2}\tau d\theta = -pE\int_{\theta_1}^{\theta_2}\sin\theta = pE(\cos\theta_2 - \cos\theta_1) = -\Delta U\]
+	DUS: \(U = -\vec{p} \cdot \vec{E}\)
+	
+	Er is nog een toepassing op het einde van het hoofdstuk, p582 in de Giancoli
+	
     \section{De wet van Gauss}
+    
+    \subsection{Elektrische flux}
 
     \subsection{Delen in Giancoli}
     22.1-22.3
@@ -977,7 +1097,7 @@
     	\item Een van de voorwerpen is neutraal. 
     	\item We moeten bijkomende experimenten doen om het teken van de lading te kennen. 
     \end{enumerate}
-	\textit{Oplossing:}Eigenlijk zijn er 3 juiste antwoorden. A, C en E. Dit laatste is omdat er technisch gezien bijkomende proeven gedaan moeten worden om te weten welke ladingen het zijn. 
+	\textit{Oplossing}: Eigenlijk zijn er 3 juiste antwoorden. A, C en E. Dit laatste is omdat er technisch gezien bijkomende proeven gedaan moeten worden om te weten welke ladingen het zijn. 
 	\newline
 	\item Drie voorwerpen worden dicht bij elkaar gebracht, twee per twee. Wanneer voorwerp A en B bij elkaar gebracht worden, trekken ze elkaar aan. Wanneer voorwerpen B en C bij elkaar gebracht worden, stoten ze elkaar af. Hieruit kunnen we besluiten dat: 
 	\begin{enumerate}[label=\alph*]
@@ -1035,6 +1155,114 @@
 		\item D
 	\end{enumerate}
 	\textit{Oplossing:} Het juiste antwoord is b. Dit kan gemakkelijk gevonden worden door de grafiek af te leiden volgens volgende formule: \(E_x = -\frac{dV}{dx}\). Het deel dat discontinu is zal bij het afleiden gewoon oneindig vormen (wegen delen door 0).
+	\item Een condensator bezit een lading Q bij een potentiaalverschil $\Delta$V. Wanneer de batterijspanning verdubbeld wordt naar 2$\Delta$V, dan:
+	\begin{enumerate}[label=\alph*]
+		\item halveert de capaciteit en blijft de lading gelijk
+		\item halveren zowel de capaciteit als de lading
+		\item verdubbelen zowel de capaciteit als de lading
+		\item blijft de capaciteit gelijk en verdubbelt de lading
+	\end{enumerate}
+	\textit{Oplossing:} D is hier het juiste antwoord. De lading is afhankelijk van potentiaalverschil, de capaciteit blijft altijd constant wanneer de fysische eigenschappen niet veranderen.
+	\item De meeste toetsenbordknoppen bevatten een condensator. Wanneer de toets ingedrukt wordt, wordt de zachte isolator tussen de beweegbare en de vaste plaat samengedrukt. Hierbij zal de capaciteit
+	\begin{enumerate}[label=\alph*]
+		\item Stijgen
+		\item Dalen
+		\item veranderen op een manier die we niet kunnen voorspellen omdat het elektronisch circuit de spanning over de toets kan veranderen. 
+	\end{enumerate}
+	\textit{Oplossing:} Het juiste antwoord is A. Kijk hiervoor naar de formule met de afhankelijkheid tussen de capaciteit en de afstand tussen de twee platen. C is fout omdat de capacteit met deze formule niet afhangt van de lading. 
+	\item Twee condensatoren zijn identiek. Ze kunnen in serie of in parallel geschakeld worden. Om de \textit{kleinste} equivalente capaciteit te bekomen, moet je ze schakelen in
+	\begin{enumerate}[label=\alph*]
+		\item serie
+		\item parallel
+		\item beide resulteren in dezelfde capaciteit
+	\end{enumerate}
+	\textit{Oplossing:} A is het juiste. Bij parallel stijgt de capaciteit en bij serie daalt die. Simpel voorbeeld: stel $C_1 = 2 = C_2$, dan is voor parallel \(C_{tot} = 2 + 2 = 4\) en voor serie \(1/C_{tot} = 1/2 + 1/2 = 1\)
+	\item Twee condensatoren zijn identiek. Elke condensator wordt opgeladen tot een spanning van 10V. Om het grootste gecombineerde potentiaalverschil te bekomen, moet je ze schakelen in
+	\begin{enumerate}[label=\alph*]
+		\item serie
+		\item parallel
+		\item beide resulteren in hetzelfde potentiaalverschil
+	\end{enumerate}
+	\textit{Oplossing:} A is de juiste oplossing. Bij serie zal men alle potentiaalverschillen optellen en zal dus 20V uitkomen, terwijl die bij parallel gewoon 10V blijft. 
+	\item Je hebt drie condensatoren en een batterij ter beschikking. In welke condensatorschakeling zal je de maximale hoeveelheid energie opslaan?
+	\begin{enumerate}[label=\alph*]
+		\item Serie
+		\item Parallel
+		\item Beide schakelingen zullen evenveel energie opslaan.
+	\end{enumerate}
+	\textit{Oplossing}: B is het juiste antwoord. We kijken hiervoor naar \(U = C(\Delta V)^2 / 2\). Bij een parallele schakeling moeten de spanningen gewoon opgeteld worden en dit zal dus voor meer energie zorgen tegenover een parallele schakeling.
+	\item Je laadt een parallelle-platencondensator op, ontkoppelt die vervolgens van de batterij en zorgt ervoor dat de platen elkaar niet raken. 
+	
+	Wanneer je de platen \textit{verder uit elkaar trekt}, zullen de volgende grootheden dan toenemen, afnemen of gelijk blijven? 
+	\begin{enumerate}[label=\alph*]
+		\item C
+		\item Q
+		\item E tussen de platen
+		\item $\Delta$V
+		\item Opgeslagen energie in de capacitor
+	\end{enumerate} 
+	\textit{Oplossing}: De oplossing met de uitleg wordt per grootheid gegeven. 
+	\begin{enumerate}[label=\alph*]
+		\item C zal afnemen, dit kan je gemakkelijk zien in volgende formule: \(C_{||} = \epsilon_0 \frac{A}{d}\)
+		\item Q zal gelijk blijven, er kan geen lading bijkomen of weggaan aangezien de batterij ontkoppeld is.
+		\item Het elektrisch veld zal ook gelijk blijven aangezien enkel de lading van belang is en deze ook gelijk blijft. 
+		\item Het potentiaalverschil zal toenemen, dit kan je op twee manieren zien: \(\Delta V = Ed \rightarrow\) E blijft gelijk $\rightarrow$ d zal stijgen en dus zal $\Delta$V ook stijgen. De andere manier is: \(C = \frac{Q}{\Delta V} \rightarrow\) C zal dalen zoals we bij a zagen en lading blijft gelijk $\rightarrow$ $\Delta$V stijgt.
+		\item De energie zal ook stijgen. Deze energie zal komen uit de arbeid die geleverd moet worden om de platen uit elkaar te trekken, het tegenwerken van de aantrekkingskracht. Je kan dit ook zien met behulp van de volgende formules: \(U = \frac{Q^2}{2C} = \frac{C()\Delta V)^2}{2} = \frac{Q\Delta V}{2}\)
+	\end{enumerate}
+	\item If you have ever tried to hand a picture or a mirror, you know it can be difficult to locate a wooden stud in which to anchor you nail or screw. A carpenter's stud-finder is basically a capacitor with its plates arranged side by side instead of facing one another, as shown in the figure (zie slides). When the device is moved over a stud, the capacitance will:
+	\begin{enumerate}[label=\alph*]
+		\item increase
+		\item decrease
+	\end{enumerate}
+	\textit{Oplossing}: De diëlektrische constante van hout zal hoger liggen dan die van de lucht, dus zal de capaciteit stijgen. 
+	\item Een volledig opgeladen parallelle-platencondensator blijft aan de batterij verbonden terwijl je een diëlektricum tussen de platen inbrengt. Zal de volgend grootheid toenemen, afnemen of gelijk blijven?
+	\begin{enumerate}[label= \alph*]
+		\item C
+		\item Q
+		\item E tussen de platen
+		\item $\Delta$V
+	\end{enumerate}
+TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
+	\textit{Oplossing}:
+	\begin{enumerate}[label=\alph*]
+		\item De capaciteit zal toenemen. 
+		\item De lading zal toenemen. 
+		\item Het elektrisch veld tussen de platen zal gelijkblijven. 
+		\item Het potentiaalverschil zal gelijk blijven, die kan men zien door volgende formule: \(E = \frac{\Delta}{d}\).
+	\end{enumerate}
+	De energie zal stijgen bij het wegnemen van het diëlektricum. 
+	\item Positieve en negatieve ladingen bewegen horizontaal doorheen de vier gebieden in de figuur (zie slides). Rangschik de grootte van de stroom, van klein naar groot. 
+	\begin{enumerate}[label=\alph*]
+		\item a, b, c
+		\item b, c, a
+		\item c, d, a
+		\item d, b, a
+	\end{enumerate}
+	\textit{Oplossing}: Het juiste antwoord zal D zijn. We hebben de conventionele stroomzin bepaalt mbv de positieve lading. Dit betekent dat wanneer de negatieve lading in de tegengestelde richting beweegt (tov de positieve lading) deze bijdraagt aan de stroomzin en dus bij kan worden geteld bij de lading. In elke tekening mogen we de ladingen dus gewoon bij elkaar optellen en zo weten we waar de grootste stroom is. Een andere uitleg is dat de positieve ladingen naar rechts bewegen en dus wordt de linkerkant van de draad negatiever met de tijd. Dit is ook het geval met de negatieve ladingen die naar links bewegen. Ze bouwen dus op elkaar op. 
+	\item Je laat de spanning over een gloeilamp gradueel toenemen, terwijl je de stroom meet. Bovendien ondervind je dat de temperatuur van de lamp toeneemt naarmate de spanning stijgt. Welke curve geeft jouw experimentele data best weer? (zie slides voor figuren).
+	\begin{enumerate}[label=\alph*]
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{enumerate}
+	\textit{Oplossing}: De Helling van de I-$\Delta$V grafiek is 1/R. De weerstand zal hier duidelijk stijgen en dus zal de grafiek moeten dalen. c is de enige dalende grafiek. 
+	\item Hetzelfde potentiaalverschil wordt aangelegd over beide lampen. Welke uitrukking klopt? (Er is een afbeelding van een 30-W lamp en een 60-W lamp).
+	\begin{enumerate}[label=\alph*]
+		\item De 30-W lamp heeft de hoogste stroom en de hoogste weerstand. 
+		\item De 30-W lamp heeft de hoogste stroom maar de 60-W lamp heeft de hoogste weerstand.
+		\item De 30-W lamp heeft de hoogste weerstand maar de 60-W lamp heeft de hoogste stroom. 
+		\item De 60-W lamp heeft de hoogste stroom en de hoogste weerstand. 
+	\end{enumerate}
+	\textit{Oplossing}: c is hier het juiste antwoord. We beginnen bij \(R = \frac{(\Delta V)^2}{P}\). Als we hier P al eens invullen zien we dat de weerstand zal stijgen bij de 30-W lamp en zal dalen bij de 60-W lamp. Voor stroom kunnen we dan kijken naar de afgeleide wet van Ohm: \(R = \frac{\Delta V}{I}\). De weerstand zal bij 30-W stijgen, dus zal de stroom moeten dalen zodat de spanning constant blijft. Met deze denkwijze komt men te weten dat de stroom zal stijgen bij de 60-W lamp. 
+	\item Een stroomvoerende Ohmse draad heeft een diameter die geleidelijk kleiner wordt van links naar rechts. Omdat de stroom overl even groot moet zijn (zodat de lading nergens accumuleert), zullen de driftsnelheid en de weerstand;
+	\begin{enumerate}[label=\alph*]
+		\item Beide toenemen
+		\item Beide afnemen
+		\item De driftsnelheid neemt toe en de weerstand neemt af
+		\item De driftsnelheid neemt af en de weerstand neemt toe
+	\end{enumerate}
+	\textit{Oplossing}: Ze zullen beide toenemen. De weerstand zal toenemen doordat: \(R = \rho\frac{l}{A} \rightarrow A\downarrow \rightarrow R\uparrow\). De driftsnelheid zal ook toenemen: \(I = nqv_dA \rightarrow A\downarrow \rightarrow v_d\uparrow\) en dit doordat de stroom gelijk blijft. 
 	\end{itemize}
     \newpage
 
