@@ -1271,7 +1271,7 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
 	\end{enumerate}
 	\textit{Oplossing}: Het juiste antwoord is A. De fractie van het vermogen is gelijk aan \(\frac{I^2R}{I^2R + I^2r} = \frac{R}{R+r}\). Om de fractie zo froot mogelijk te maken moet dus r zo klein mogelijk zijn en zelf idealiter 0.
 	\item Veronderstel dat je een derde lamp in serie plaatst met de eerste twee. De klemspanning van de batterij zal
-	\begin{enumerate}[label\alph*]
+	\begin{enumerate}[label=\alph*]
 		\item Stijgen
 		\item Dalen
 		\item Onveranderd blijven
@@ -1284,6 +1284,31 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
 		\item Onveranderd blijven
 	\end{enumerate}
 	\textit{Oplossing}: De stroom zal stijgen. Bij een parallelschakeling zal de algemene weerstand dalen wanneer een weerstand wordt toegevoegd. Als we dan kijken naar de wet van Ohm en we weten dat de spanning gelijk blijft, is het logisch dat de stroom zal stijgen. 
+	\item Beschouw volgende kring, waarbij de batterij geen inwendige weerstand heeft. Net na het sluiten van de schakelaar is de emf van de batterij gelijk aan het potentiaalverschil van (voor afbeelding, zie slides)
+	\begin{enumerate}[label=\alph*]
+		\item de condensator
+		\item de weerstand
+		\item noch C, noch R
+	\end{enumerate}
+	\textit{Oplossing}: Het juiste antwoord is B. Het kan de condensator niet zijn aangezien dat als de spanning hier gelijk zou zijn aan de batterij, er geen stroom zou zijn. Op t = 0, is er nog geen lading op de condensator en dus nog geen spanning op de condensator. Dan kunnen we de kring als een gewone kring evalueren en kunnen we gebruik maken van de wet van Ohm. \(\epsilon = I_0R \Rightarrow \epsilon = \Delta V\) waarbij $\Delta V$ de spanning is op de weerstand. 
+	\item Beschouw de volgende kring, waarbij de batterij geen inwendige weerstand heeft. Net na het sluiten van de schakelaar, is de stroom in de batterij gelijk aan (afbeelding te vinden in de slides)
+	\begin{enumerate}[label=\alph*]
+		\item nul
+		\item $\epsilon/2R$
+		\item $2\epsilon/R$
+		\item $\epsilon/R$
+		\item onmogelijk te bepalen
+	\end{enumerate}
+	\textit{Oplossing}: Het juiste antwoord is C. Eerste bepaald men de totale weerstand voor heel de kring. Aangezien de weerstanden parallel geschakeld zijn, komt men uit op: \(\frac{1}{R_{tot}} = \frac{1}{\sum R} \Rightarrow R_{tot} = \frac{R}{2}\). Dan kunnen we de wet van ohm gebruiken aangezien de condensator hier nog niet uitmaakt: \(\epsilon = I\frac{R}{2} \Rightarrow I = \frac{2\epsilon}{R}\)
+	\item Na een zeer lange tijd, is de stroom van de batterij gelijk aan
+	\begin{enumerate}[label=\alph*]
+		\item nul
+		\item $\epsilon/2R$
+		\item $2\epsilon/R$
+		\item $\epsilon/R$
+		\item onmogelijk te bepalen
+	\end{enumerate}
+	\textit{Oplossing}: D is het juiste antwoord. Er gaat geen stroom meer door de condensator, waardoor er geen stroom meer loop door de rechterweerstand en deze dus niet meetelt bij het bepalen van de algemene stroom. Dan is dit een simpele kring waar men de wet van Ohm kan toepassen: \(\epsilon = IR \Rightarrow \epsilon/R = I\)
 	\end{itemize}
     \newpage
 
