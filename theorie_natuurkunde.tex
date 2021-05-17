@@ -1062,11 +1062,149 @@
     22.1-22.3
 
 
-	\section{Elektrische potentiaal}
+    \section{Elektrische potentiaal}
 
     \subsection{Delen in Giancoli}
     23.1-23.9
 
+    \subsection{Elektrisch Potentiaal}
+    In hoofdstuk 7 hebben we arbeid geïntroduceerd. Arbeid kan echter alleen worden gebruikt wanneer
+    de kracht die ``arbeid' levert'' conservatief is. We hebben enkele van deze krachten gezien zoals de
+    gravitatiekracht en de veerkracht. De elektrische kracht is ook zo'n conservatieve kracht waarvoor
+    we arbeid dus kunnen definiëren. Uit hoofdstuk 21 weten we dat de kracht op een testlading in een
+    elektrisch veld gegeven is door: 
+    
+    $$\vec{F} = q_{0} \vec{E}$$
+    
+    Als we deze lading nu verplaatsen over een afstand $ds$, kunnen we de arbeid berekenen verricht 
+    door de elektrische kracht:
+    
+    $$dW = \vec{F_{e}} \cdot d\vec{s} = q_{0}\vec{E} \cdot d\vec{s}$$
+    
+    Ook hebben we in hoofdstuk 7 gezien dat $W = -\Delta U$. We kunnen dus de potentiële energie van
+    het systeem bepalen:
+    
+    $$dU = -W$$
+    $$\Luda$$
+    $$dU = -\vec{F} \cdot d\vec{s}$$
+    $$\Luda$$
+    $$dU = -q_{0}\vec{E} \cdot d\vec{s}$$
+    
+    Als we nu de verandering in potentiële energie willen berekenen tussen twee punten A en B, dan vinden 
+    we de volgende uitdrukking:
+    
+    $$\Delta U = U_{b} - U_{a} = -q_{0} \int_{A}^{B} \vec{E} \cdot d\vec{s}$$
+    
+    We zien dus dat het verschil in potentiële energie niet afhangt van het gevolgde pad, maar alleen van 
+    de punten A en B. Een goede opmerking is dat de potentiële energie zal verminderen wanneer de verplaatsing
+    in de richting is van de kracht.
+    
+    We hebben het elektrische veld gedefiniëerd als de kracht per testlading: $\vec{E} = \frac{\vec{F}}{q_{0}}$. 
+    We kunnen een analoge denkwijze toepassen op het verschil in potentiële energie:
+    
+    $$\frac{\Delta U}{q_{0}} = -\int_{A}^{B} \vec{E} \cdot d\vec{s}$$. Deze uitdrukking definiëren we als het
+    potentiaalverschil $\Delta V = \frac{\Delta U}{q_{0}}$. Het potentiaal in een punt is dan $V = \frac{U}{q_{0}}$. Let echter goed op! Het potentiaalverschil
+    is niet hetzelfde als het verschil in potentiële energie! Potentiaalverschil is namelijk het verschil in potentiële energie
+    gedeeld door de testlading $q_{0}$. Aangezien enkel het verschil in potentiële energie fysisch zinvol is, en dus ook
+    enkel het potentiaalverschil, moeten we ergens het potentiaal $V = 0$ kiezen. Dit doen we meestal op $\infty$. 
+    
+    Uit dit potentiaalverschil kunnen we ook rechtstreeks de arbeid berekenen verricht door een externe kracht:
+    
+    $$W = \Delta U = q\Delta V$$
+    
+    Het potentiaalverschil wordt uitgedrukt in Volt: 1V = 1J/C.\\
+    \\
+    Laten we het potentiaalverschil berekenen voor een uniform elektrisch veld:
+    
+    $$\Delta V = V_{B} - V_{A} = \frac{\Delta U}{q_{0}} = -\int_{A}^{B} \vec{E} \cdot d\vec{s} = -\int_{A}^{B} Eds = -E\int_{A}^{B} ds = -Ed$$
+    $$\Delta U = q_{0} \Delta V$$
+    
+    Een andere goede opmerking is dat de veldlijnen van een elektrisch veld altijd wijzen in de richting van afnemende potentiaal. We kunnen dit gemakkelijk zien
+    aan de hand van een voorbeeld. Nemen we een positief en negatief geladen plaat en een positieve testlading aan de positieve plaat. Eens we deze testlading
+    loslaten zal deze in de richting van het veld naar de negatieve plaat bewegen (herinner: veldlijnen gaan altijd van positief naar negatief!). Zoals we in 
+    hoofdstuk 21 hebben gezien met de wetten van Newton, wint het systeem aan kinetische energie: snelheid. We hebben hier echter alleen verklaart
+    waar de kinetische energie vandaan kwam. Volgens de wet van behoud van energie moet deze kinetische energie ergens van komen. Inderdaad,
+    de potentiele elektrische energie die de testlading heeft aan de positieve plaat wordt omgezet in deze kinetische energie. Dankzij behoud van energie weten we dan 
+    dat de testlading potentiële elektrische energie verliest naarmate het naar de negatieve plaat beweegt en dus dat het potentiaal afneemt in de richting van de 
+    veldlijnen. \\
+    
+    \begin{figure}[h]
+    	\centering
+	\includegraphics[width=0.4\linewidth]{equipot_oppervlakken}
+    	\caption{Equipotentiaaloppervlakken}
+        	\label{equipot_opp}
+    \end{figure}
+    
+    Kijken we naar de bijgevoegde figuur, kunnen we zelfs redeneren dat punten B en C dezelfde potentiaal hebben. 
+    
+    $$\Delta V = -\int_{A}^{B} \vec{E} \cdot d\vec{s} = -\vec{E} \cdot \vec{s}$$
+    
+    Dit scalair product kunnen we uitwerken als:
+    
+    $$-\vec{E} \cdot \vec{s} = -Es\cos{\theta}$$
+    
+    Hierbij substituëren we $cos{\theta}$ met $\cos{\theta} = \frac{d}{s}$ en dus bekomen we:
+    
+    $$-\vec{E} \cdot \vec{s} = -Es\frac{d}{s} = -Ed$$
+    
+    Waarbij $-Ed$ het potentiaal is in punt C. Voor een uniform elektrisch veld geldt in het algemeen dat
+    alle punten in een vlak loodrecht op het elektrisch veld dezelfde potentiaal hebben. Over het algemeen (niet
+    per se uniforme velden) kunnen we zeggen dat een equipotentiaaloppervlak een oppervlak is bestaande uit
+    punten met dezelfde elektrische potentiaal.
+    
+    \subsection{Elektrisch potentiaal/potentiële energie bij puntladingen}
+    Herinner dat we het elektrisch veld voor een puntlading hebben berekend: $E = k_{e} \frac{Q}{r^{2}}$. Nu kunnen we
+    gemakkelijk het potentiaalverschil berekenen tussen twee punten op straal $r_{a}$ en $r°{b}$ van de puntlading: 
+    
+    $$\Delta V = V_{b} - V_{a} = -k_{e}Q\int_{r_a}^{r_b} \frac{dr}{r^{2}}$$
+    $$\Luda$$
+    $$\Delta V = k_{e}Q \left( \frac{1}{r_{b}} - \frac{1}{r_{a}} \right)$$
+    
+    Hier kiezen we $V = 0$ voor $r_{a} = \infty$ en vinden we dat $V_{b} = \frac{k_{e}Q}{r}$. Als we met
+    meerdere puntladingen hebben te maken kunnen we het superpositieprincipe gebruiken, namelijk dat:
+    
+    $$V = k_{e}\sum_{i} \frac{Q_{i}}{r_{i}}$$
+
+    \subsection{Elektrisch veld afleiden uit de eletrische potentiaal}
+    We hebben de hele tijd gewerkt met het feit dat $\Delta V = \frac{\Delta U}{q_{0}} = -\int_{A}^{B} \vec{E} \cdot d\vec{s}$. We nemen
+    nu $\Delta V$ infinitisemaal klein:
+    
+    $$dV = -\vec{E} \cdot d\vec{s}$$
+    
+    Waaruit de dus kunnen afleiden dat:
+    
+    \begin{equation}
+    	\begin{cases}
+      		E_{x} = -\frac{\partial V}{\partial x}\\
+      		E_{y} = -\frac{\partial V}{\partial y}\\
+      		E_{z} = -\frac{\partial V}{\partial z}\\
+    	\end{cases}\,
+    \end{equation}
+    
+    We vinden dus dat: $\vec{E} = -\mathbb{\nabla}{V}$.
+    
+    \subsection{Elektrische potentiaal van een geladen geleider}
+    Voor een geleider in evenwicht geldt dat: $\vec{E} \cdot d\vec{l} = 0$ en dus dat $\Delta V = 0$ (dit kan
+    je eenvoudig nagaan door de definitie van potentiaalverschil te gebruiken). We weten dat het oppervlak van een
+    geleider in elektrostatisch evenwicht een constante potentiaal heeft. We weten dus ook dat er binnenin de geleider
+    een constante potentiaal is! 
+    
+    We zien dus dat er geen arbeid nodig is om een lading te verplaatsen binnen een geleider, immers: $\Delta U = q\Delta V = 0q = 0$.
+    We hebben eerder gezien dat een geleider zich gedraagt alsof de lading allemaal in één punt zit en dus is het elektrisch veld voor een
+    geleider:
+    
+    $$V = k_{e}\frac{Q}{R}$$
+    
+    We kunnen $Q$ schrijven in termen van de ladingsdichtheid $\sigma$: $Q = \sigma A$ waarbij A het oppervlak is van de geleider. Dan krijgen we:
+    
+    $$V = k_{e}\frac{\sigma A}{R} = k_{e} \frac{\sigma 4\pi R^{2}}{R} = k_{e}\sigma 4 \pi R$$
+    
+    Als we twee geleiders nemen met elk hun elektrisch veld is:
+    
+    $$\frac{E_{1}}{E_{2}} = \frac{\sigma_{1}}{\sigma_{2}} = \frac{R_{1}}{R_{2}}$$ 
+    
+    waarbij $\sigma = \frac{V}{k_{e}4\pi R}$. We kunnen zien dat het elektrische veld sterker is
+    nabij convexe punten!
 
     \section{Condensatoren en diëlektrica}
 
