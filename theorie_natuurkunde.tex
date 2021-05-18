@@ -13,6 +13,7 @@
 \usepackage{siunitx}
 \usepackage{mathtools}
 \usepackage{commath}
+\usepackage{circuitikz}
 
 \newcommand{\Luda}{\Big\Updownarrow}
 
@@ -1154,7 +1155,7 @@
     
     \subsection{Elektrisch potentiaal/potentiële energie bij puntladingen}
     Herinner dat we het elektrisch veld voor een puntlading hebben berekend: $E = k_{e} \frac{Q}{r^{2}}$. Nu kunnen we
-    gemakkelijk het potentiaalverschil berekenen tussen twee punten op straal $r_{a}$ en $r°{b}$ van de puntlading: 
+    gemakkelijk het potentiaalverschil berekenen tussen twee punten op straal $r_{a}$ en $r_{b}$ van de puntlading: 
     
     $$\Delta V = V_{b} - V_{a} = -k_{e}Q\int_{r_a}^{r_b} \frac{dr}{r^{2}}$$
     $$\Luda$$
@@ -1207,10 +1208,170 @@
     nabij convexe punten!
 
     \section{Condensatoren en diëlektrica}
-
     \subsection{Delen in Giancoli}
     24.2-24.6
+    
+    \subsection{Condensatoren}
+    Een condensator is een instrument om elektrische lading en energie in op te slaan. De bouw van een
+    condensator is vrij simpel: Twee geleiders met oppervlakte $A$ op een afstand $d$ van elkaar met
+    ertussen een diëlektricum (zie later). Als de condensator geladen is hebben de geleiders dezelfde 
+    tegengestelde lading. We kunnen dan de hoeveelheid lading of capaciteit die wordt opgeslagen definiëren als
+    de verhouding van de absolute waarde van de elektrische lading op één van de geleiders en het
+    potentiaalverschil tussen de geleiders:
+    
+    $$C = \frac{Q}{\Delta V}$$
 
+    Capaciteit wordt uitgedrukt in Farad: 1F = 1C/V.
+    
+    \subsection{Berekenen van de capaciteit van een condensator}
+    Als we de capaciteit willen kennen moeten we het potentiaalverschil kennen. Dit kunnen
+    we berekenen met gebruik van de uitdrukking:
+    
+    $$\Delta V = -\int_{A}^{B} \vec{E} \cdot d\vec{s}$$
+    
+    We nemen als voorbeeld een geïsoleerde, geleidende geladen bol met straal $R$ en lading $Q$. Stel dat
+    we nu een tweede bol nemen op een afstand $\infty$ van de eerste bol met lading $-Q$. We kunnen het potentiaalverschil
+    dan berekenen (potentiaal van een puntlading is berekend in 18.3. Een geleidende geladen bol doet alsof alle lading in één punt zit):
+    
+    $$\Delta V = V_{r = R} - V_{r = \infty} = k_{e}Q\left(\frac{1}{R}\right) = k_{e}\frac{Q}{R}$$
+    $$\Luda$$
+    $$C = \frac{Q}{\Delta C} = \frac{Q}{\frac{k_{e}Q}{R}} = \frac{R}{k_{e}} = 4\pi \epsilon_{0} R$$
+    
+    Als tweede voorbeeld berekenen we de capaciteit van een parallelle-platen condensator. Van parallelle platen weten 
+    we dat ze oppervlak $A$ hebben het elektrische veld $E = \frac{\sigma}{\epsilon_{0}}$ waarbij $\sigma = \frac{Q}{A}$.
+    Het potentiaalverschil tussen de platen berekenen we als volgt:
+    
+    $$\Delta V = -\int_{A}^{B} \vec{E} \cdot d\vec{l} = Ed = \frac{\sigma}{\epsilon_{0}}d = \frac{Qd}{\epsilon_{0} A}$$
+    
+    Dan vinden we voor de capaciteit:
+    
+    $$C = \frac{Q}{\Delta V} = \frac{Q}{\frac{Qd}{\epsilon_{0} A}} = \epsilon_{0} \frac{A}{d}$$
+    
+    \subsection{Combinaties van condensatoren}
+    We stellen enkele nieuwe symbolen voor:
+    
+    \begin{enumerate}
+    	\item Een condensator: \begin{circuitikz} \draw (0, 0) to[capacitor] (2, 0); \end{circuitikz}
+    	\item Een batterij: \begin{circuitikz} \draw (0, 0) to[battery1] (2, 0); \end{circuitikz}
+    	\item Een schakelaar: \begin{circuitikz} \draw (0, 0) to[closing switch] (2, 0); \end{circuitikz}
+    \end{enumerate}
+
+    We bekijken eerst een parallelle schakeling waarin twee condensatoren rechtstreeks aan de batterij hangen:
+    
+    \begin{center}
+    	\begin{circuitikz}
+    		\draw (0, 0)
+    		to[battery1, l=$\Delta V$] (2, 0)
+    		(0, 0)
+    		to[short, *-] (0, 2)
+    		(2, 0)
+    		to[short, *-] (2, 2)
+    		(0, 2)
+    		to[capacitor, l=$C_{1}$] (2, 2)
+		(0, 2)
+		to[short, *-] (0, 4)
+		(2, 2)
+		to[short, *-] (2, 4)
+		(0, 4)
+		to[capacitor, l=$C_{2}$] (2, 4);
+    	\end{circuitikz}
+    \end{center}
+    
+    Het potentiaalverschil over alle condensatoren is in dit geval hetzelfde, namelijk $\Delta V$. Dan zijn:
+    
+    \begin{enumerate}
+    	\item $Q_{1} = C_{1}\Delta V$
+    	\item $Q_{2} = C_{2}\Delta V$
+    \end{enumerate}
+    
+    aangezien $Q = Q_{1} + Q_{2}$. Dus moet $Q = C_{1}\Delta V +  C_{2}\Delta V$. Dan kunnen we een equivalente
+    capaciteit beschouwen als: $C_{eq} = C_{1} + C_{2}$ en in het algemeen:
+    
+    $$C_{eq} = \sum_{i} C_i$$
+
+    We kunnen de stroomkring ook hertekenen als:
+
+    \begin{center}
+    	\begin{circuitikz}
+    		\draw (0, 0)
+    		to[battery1, l=$\Delta V$] (2, 0)
+    		(0, 0)
+    		to[short, *-] (0, 4)
+    		(2, 0)
+    		to[short, *-] (2, 4)
+    		(0, 4)
+    		to[capacitor, l=$C_{eq}$] (2, 4);
+    	\end{circuitikz}
+    \end{center}
+
+    We bekijken nu een serieschakeling:
+    
+    \begin{center}
+    	\begin{circuitikz}
+    		\draw (0, 0)
+    		to[battery1, l=$\Delta V$] (4, 0)
+    		to[short, *-] (4, 2)
+    		to[capacitor, l=$C_{2}$] (3, 2)
+    		to[short, *-] (1, 2)
+    		to[capacitor, l=$C_{1}$] (0, 2)
+    		to[short, *-] (0, 0);
+    	\end{circuitikz}
+    \end{center}
+    
+    Nu is niet het potentiaalverschil maar de lading gelijk over alle condensatoren, namelijk $Q$. Dan zijn:
+    
+    \begin{enumerate}
+    	\item $\Delta V_{1} = \frac{Q}{C_{1}}$
+    	\item $\Delta V_{2} = \frac{Q}{C_{2}}$
+    \end{enumerate}
+
+    aangezien $\Delta V = \Delta V_{1} + \Delta V_{2}$. Dus moet $\Delta V = \frac{Q}{C_{1}} + \frac{Q}{C_{2}}$. Dan kunnen we een
+    equivalente capaciteit beschouwen als: $\frac{1}{C_{eq}} = \frac{1}{C_{1}} + \frac{1}{C_{2}}$ en in het algemeen:
+    
+    $$C_{eq} = \sum_{i} \frac{1}{C_{i}}$$
+    
+    We kunnen de stroomkring ook hertekenen als:
+    
+     \begin{center}
+    	\begin{circuitikz}
+    		\draw (0, 0)
+    		to[battery1, l=$\Delta V$] (4, 0)
+    		to[short, *-] (4, 2)
+    		to[capacitor, l=$C_{eq}$] (0, 2)
+    		to[short, *-] (0, 0);
+    	\end{circuitikz}
+    \end{center}
+    
+    \subsection{Energie opgeslagen in een geladen condensator}
+    In een condensator wordt er lading overgebracht van de negatieve naar de positieve pool. Initieel is er geen arbeid nodig om een kleine
+    hoeveelheid lading $dq$ te verplaatsen (aangezien de lading op de positieve plaat 0 is, en er dus nog geen krachten inwerken op $dq$). 
+    
+    Eens dat $dq$ wel verplaatst is, zal er wel arbeid nodig zijn om een nieuwe $dq$ te verplaatsen, aangezien de eerste ladingstransfert ervoor
+    heeft gezorgd dat er zich nu een potentiaalverschil bevindt tussen te positieve en de negatieve plaat. Hoe meer lading er wordt overgezet,
+    hoe meer arbeid er dus nodig zal zijn om een nieuw stukje lading over te zetten.
+    
+    Stel er bevindt zich een lading $q$ op de positieve plaat, dan is $\Delta V = \frac{q}{C}$ en dan is $dW = \Delta V dq = \frac{q}{C}dq$. We
+    kunnen nu dus de arbeid berekenen om een infinitisemale lading $dq$ over te zetten van de positieve naar de negatieve plaat wanneer er zich reeds
+    een lading $q$ op de positieve plaat bevindt:
+    
+    $$W = \int_{0}^{Q} \frac{q}{C}dq = \frac{1}{C} \int_{0}^{Q}qdq = \frac{Q^{2}}{2C}$$
+    
+    Dan vinden we dat $U = \frac{Q^{2}}{2C} = \frac{Q\Delta V}{2} = \frac{C(\Delta V)^{2}}{2}$
+    We definiëren ook een energiedichtheid tussen de oppervlakken van de condensator:
+    
+    $$U_{e} = \frac{\epsilon_{0}E^{2}}{2}$$
+    
+    Deze uitdrukking is geldig voor eender welk elektrisch veld.
+    
+    \subsection{Condensatoren met een diëlektricum}
+    We hebben gezegd dat de zicht in de ruimte $d$ tussen de oppervlakken van de condensator zich een diëlektricum
+    bevindt. Dit diëlektricum is een isolator die de capaciteit van de condensator verhoogt met een factor $\kappa$:
+    
+    $$C_{0} = \frac{Q_{0}}{\Delta V_{0}} < C = \frac{Q_{0}}{\Delta V} \textit{ met } C = \kappa C_{0}$$
+    
+    Het diëlektricum zorgt voor een afname in potentiaalverschil, en dus een toename in capaciteit. We dus beredeneren 
+    dat een diëlektricum het elektrische veld van een ladingsverdeling afzwak. 
+    
 
     \section{Elektrische stroom en weerstand}
 
