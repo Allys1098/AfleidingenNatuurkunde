@@ -20,7 +20,7 @@
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
-    pdftitle={Overleaf Example},
+    pdftitle={Natuurkunde Samenvatting},
     pdfpagemode=FullScreen,
     }
 
@@ -991,11 +991,35 @@
     Voor meerdere puntladingen geldt dan: \(\vec{E} = k_e \sum_i \frac{q_i}{r_i^2}\hat{r}_i\)
     
     \subsection{De elektrische dipool}%TODO elektrische dipool moet aangevuld worden
-    WORDT GRAAG GEVRAAGD!! zie ook deel over dipool in een elektrisch veld!!
+    WORDT GRAAG GEVRAAGD!
     \newline
-    Een dipool is een positieve lading q en een negatieve lading -q op een afstand l. Zie vb 21.8(b) voor voorbeeld (TO DO)
+    Een dipool is een positieve lading q en een negatieve lading -q op een afstand $2a$ van elkaar. Stel dat we het elektrische
+    veld in een p:
+    
+    \begin{figure}
+	\centering
+	\includegraphics[width=0.3\linewidth]{dipool_elektrische_veld}
+	\label{dev}
+    \end{figure}
+    
+    We kunnen het elektrisch veld als volgt bepalen:
+    
+    $$\vec{E} = \vec{E_{1}} + \vec{E_{2}}$$
+    
+    en we weten dat:
+    
+    $$E_{1} = E_{2} = k_{e} \frac{q}{r^{2}} = k_{e}\frac{q}{y^{2} + a^{2}}$$
 	
-	\subsection{Elektrisch veld van een continue ladingsverdeling}
+	
+    De y-componenten zullen elkaar altijd opheffen, voor de x-componenten geldt:
+    
+    $$E = 2E_{1}\cos(\theta) = 2k_{e}\frac{q}{y^{2} + a^{2}}\frac{a}{(y^{2} + a^{2})^{\frac{1}{2}}}$$
+    $$\Luda$$
+    $$E = k_{e}\frac{2qa}{(y^{2} + a^{2})^{\frac{3}{2}}}$$
+    $$\Luda$$
+    $$y >> a \to E \sim k_{e}\frac{2qa}{y^{3}}$$
+	
+    \subsection{Elektrisch veld van een continue ladingsverdeling}
 	Dit is gelijkaardig een heel veel puntladingen. 
 	\[\vec{E} = k_e\int\frac{dq}{r^2}\hat{r}\]
 	definieer (uniforme) \textit{ladingsverdeling}:
