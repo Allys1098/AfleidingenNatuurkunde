@@ -1084,7 +1084,7 @@
 	
 	Er is nog een toepassing op het einde van het hoofdstuk, p582 in de Giancoli
 	
-    \section{De wet van Gauss}%TODO wet van gauss hoofdstuk
+    \section{De wet van Gauss}
     22.1-22.3
 
     \subsection{Elektrische flux}
@@ -1092,8 +1092,23 @@
     \[\Phi_E = EA' = EA\cos\theta\]
     Waarbij A' staat voor wanneer het elektrisch veld en het oppervlak loodrecht staan op elkaar. Dit is ook allemaal gedefinieerd als het elektrisch veld uniform is, maar kan ook gedefinieerd worden voor een niet-uniform elektrisch veld.
     
+    \[\Phi_E = \lim_{\Delta A_i \rightarrow 0} \sum \vec{E}_i \cdot \Delta\vec{A}_i = \int_{\text{surface}} \vec{E}\cdot d\vec{A}\]
+    
+    De flux zal men hier definiëren over een klein stukje $\Delta A$ van het totale oppervlak A. De vector $d\vec{A}_i$ wordt gedefinieerd als de vector loodrecht op het oppervlak, met de richting van binnen naar buiten.
+    
+    Om de elektrische flux van een gesloten oppervlak te bepalen kijken we opnieuw naar de definitie: \textbf{netto flux} is het netto aantal veldlijnen dat het oppervlak verlaat. Bij een gesloten oppervlak zullen evenveel lijnen het oppervlak binnentreden als het verlaten, dus is de nettoflux van een gesloten oppervlak altijd nul. De veldlijnen die binnenkomen zorgen voor negatieve flux en de veldlijnen die het oppervlak verlaten zorgen voor positieve flux.
+    
+    \subsection{De wet van Gauss}
+    \textit{Verband tussen flux en ingesloten lading bij gesloten oppervlak}
+    
+    De grootte van het elektrisch veld voor een puntlading is \(E = k_e q/r^2\) en de veldlijnen wijzen van binnen naar buiten. Er zal dus positieve flux ontstaan. 
+   	\[\vec{E}\cdot\Delta A_i = E\Delta A_i \text{  of  } \Phi_E = \int\vec{E}\cdot\vec{A} = \int EdA = E\int A\]
+   	\[\Phi_E = k_e\frac{q}{r^2}\cdot 4\pi r^2 = 4\pi k_eq \text{  en  } k_e = \frac{1}{4\pi\epsilon_0} \text{  ,dus  } \Phi_E = \frac{q}{\epsilon_0}\]
+   	
+   	Dus de nettoflux door een willekeurig gesloten oppervlak dat een lading q omsluit, is steeds gelijk aan $q/\epsilon_0$
+    
 
-
+	%TODO wet van gauss hoofdstuk
     \section{Elektrische potentiaal}
     23.1-23.9
 
