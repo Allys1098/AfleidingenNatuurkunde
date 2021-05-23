@@ -30,11 +30,10 @@ Het is niet de bedoeling dat de oorspronkelijk auteurs nieuwe afleidingen
 moeten toevoegen aan het document, tenzij ze koekjes krijgen (een semester lang Natuurkunde is meer dan genoeg)!
 
 Als er issues zijn (e.g. typfouten, tips, etc) mag dit altijd naar ons gestuurd worden via discord of via een
-pull-request. Pull-requests die voor de lol gestuurd worden zullen worden genegeerd, hier verdoen wij onze tijd niet mee. Als
-iemand deze mogelijkheden tot PR's blijft misbruiken zal deze persoon de toegang tot de repo worden ontzegt. 
+pull-request. Pull-requests die voor de lol gestuurd worden zullen worden genegeerd, hier verdoen wij onze tijd niet mee.
 
 **Er mag onder geen enkele voorwaarde een gecompileerd bestand worden verspreid!**. 
-Het is deels de bedoeling dat mensen leren werken met git en Latex aangezien ditzeer handig is naar de toekomst toe. Ook kan je de repo up-to-date houden en zal de PDF die je zelf compiled altijd
+Het is deels de bedoeling dat mensen leren werken met git en Latex aangezien dit zeer handig is naar de toekomst toe. Ook kan je de repo up-to-date houden en zal de PDF die je zelf compiled altijd
 de laatste versie zijn (deze garantie heb je niet met een PDF die je ergens anders vandaan haalt)! Om te laatste nieuwe
 versie van de repo te verkrijgen kan je in je filestructuur waar je de repo origineel gecloned hebt het volgende commando
 uitvoeren:
