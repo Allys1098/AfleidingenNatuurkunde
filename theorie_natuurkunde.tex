@@ -14,6 +14,7 @@
 \usepackage{mathtools}
 \usepackage{commath}
 \usepackage{circuitikz}
+\usepackage{fullpage}
 
 \hypersetup{
     colorlinks=true,
@@ -25,6 +26,7 @@
     }
 
 \newcommand{\Luda}{\Big\Updownarrow}
+\newcommand{\Epsilon}{\mathcal{E}}
 
 \author{Estelle Severs, Matthias Kovacic}
 \title{Afleidingen Natuurkunde}
@@ -35,7 +37,7 @@
     \newpage
 
 
-    \section{Algemene informatie en afspraken rond dit document}
+    \section{Algemene informatie en afspraken}
     \subsection{Informatie}
     Dit document is géén samenvatting! Het document bevat algemene informatie, antwoorden
     op vragen uit de les en afleidingen voor uitdrukkingen. Het document geeft niet weer wat de 
@@ -136,7 +138,7 @@
         \textit{Oplossing:} a is juist. De richting van de vector is dan -$\hat{k}$, het vectorproduct gebruikt een sinus om de grootte te bepalen en de hoek tussen $\vec{a}$ en $\vec{b}$ is 90$\degree$ - $\theta$
     \end{itemize}
 
-
+	\newpage
     \section{Deel 1 - Mechanica}
 
 
@@ -232,8 +234,6 @@
     Voorwerpen in een ERB duren niet oneindig, de oorzaak hiervan is de wrijvingskracht. Dit is weerstand wanneer een voorwerp
     over het oppervlak van een ander voorwerp beweegt. Deze wrijvingskracht is proportioneel afhankelijk van de normaalkracht
     op een voorwerp $F_{fr} \sim F_{n}$.  De everedigheidsconstante hangt af van de soort wrijvingskracht op een voorwerp.\\
-    
-    \newpage
     
     Er zijn twee soorten wrijvingskrachten:
     \begin{enumerate}
@@ -1490,20 +1490,33 @@
     Leer dit goed! hij heeft het (tot nu) nog niet op een examen gevraagd dus is de kans wel wat groter dat dat eens gaat gebeuren. Dit is een deel dat niet in het boek te vinden is dus luister hier goed naar bij de les.
 
 
-    \section{Gelijkstroomschakelingen}%TODO gelijkstroomschakelingen
+    \section{Gelijkstroomschakelingen}
     26.2-26.5, 26.7
+    
+    \subsection{Gelijkstroomkringen}
+    Schakelingen met een spanningsbron, weerstand en condensatoren. We mogen in deze gevallen veronderstellen dat de stroom constant is in richting en zin: \textit{Gelijkstroom (DC)}.
+    
+    \textbf{Elektromotorische "kracht" (emf)}
+    De emf $\Epsilon$ is de maximale spanning (of het maximaal potentiaalverschil) dat een batterij kan leveren in de ideale omstandigheden. In werkelijkheid heeft de batterij ook intern een weerstand r, je kan dit ook in de onderstaande figuur zien.
    
     \begin{center}
     	\begin{circuitikz}
     		\draw (0,0)
-    		to[battery1, l=$\epsilon$] (2, 0)
+    		to[battery1, l=$\Epsilon$] (2, 0)
     		to[american resistor, l=$r$] (4, 0);
     	\end{circuitikz}
     \end{center}
-    
-    Hele deel = reële batterij, $\epsilon$ is ideale batterij
-    
-    
+	Door deze interne weerstand zal men dus nooit de maximale spanning $\Epsilon$ kunnen benuttigen. De \textit{klemspanning} van de batterij zal dus \(\Delta V_{ab} = V_b - V_a = \Epsilon - Ir\). Hier kan men dus zien dat de spanning stroomafhankelijk zal zijn en wanneer er geen stroom vloeit, de spanning gelijk zal zijn aan $\Epsilon$.
+	
+	We kunnen ook rekening houden met de weerstand buiten de batterij met volgende formules:
+	\[\Epsilon = IR + Ir \Rightarrow I = \frac{\Epsilon}{R + r}\]
+	
+	We kunnen met deze kennis ook het vermogen van de batterij berekenen:
+	\[I\Epsilon = I^2R + I^2r\]
+	
+	\subsection{Weerstanden in serie en parallel}
+	\begin{itemize}
+	\item \textbf{Serieschakeling}
     \begin{center}
     	\begin{circuitikz}
     		\draw (0,0)
@@ -1514,21 +1527,11 @@
     		to[short, *-] (0, 0);
     	\end{circuitikz}
     \end{center}
-    
-    Serieschakeling resistoren is equivalent met:
-    
-     \begin{center}
-    	\begin{circuitikz}
-    		\draw (0,0)
-    		to[battery1, l=$\epsilon$] (8, 0)
-    		to[short, *-] (8, 3)
-    		to[american resistor, l=$R_{eq}$] (0, 3)
-    		to[short, *-] (0, 0);
-    	\end{circuitikz}
-    \end{center}
-    
-    waarbij $R_{eq} = \sum_{i} R_{i}$
-    
+	Alle lading passeert langs elke weerstand, dus in serie zal er \textit{gelijke stroom zijn in alle weerstanden.}
+	Het potentiaalverschil van de batterij wordt dus verdeeld over de weerstanden: 
+	\[\Delta = IR_1 + IR_2 = I(R_1+R_2) = IR_{eq} \Rightarrow R_{eq} = \sum_i R_i\] 
+	
+	\item \textbf{Parallelschakeling}
     \begin{center}
     	\begin{circuitikz}
     		\draw (0,0)
@@ -1546,23 +1549,33 @@
     	 	to[short, *-] (2, 3);
     	\end{circuitikz}
     \end{center}
+    De lading wordt verdeeld over beide weerstanden: \(I = I_1 + I_2\). Bij parallelijk zal er \textit{gelijk potentiaalverschil zijn over alle weerstanden.} \[I = I_1+I_2 = \frac{\Delta V}{R_1}+\frac{\Delta V}{R_2} = \Delta V(\frac{1}{R_1} + \frac{1}{R_2}) = \frac{\Delta V}{R_{eq}} \Rightarrow \frac{1}{R_{eq}} = \sum_i \frac{1}{R_i}\]
     
-     Parallelle schakeling resistoren is equivalent met:
-    
-     \begin{center}
-    	\begin{circuitikz}
-    		\draw (0,0)
-    		to[battery1, l=$\epsilon$] (8, 0)
-    		to[short, *-] (8, 3)
-    		to[american resistor, l=$R_{eq}$] (0, 3)
-    		to[short, *-] (0, 0);
-    	\end{circuitikz}
-    \end{center}
-  
-    waarbij $\frac{1}{R_{eq}} = \sum_{i} \frac{1}{R_{i}}$
-    
-    RC-Kring:
-    
+    Er zijn ook verschillende voordelen aan parallelschakeling: Eerste en vooral is de weerstand over alle gebruikers dus kleiner. Als tweede is het feit dat wanneer een lamp (of weerstand) breekt, de rest wel zal blijven werken. Het is in deze situatie dan ook heel gemakkelijk om de kapotte lamp te localiseren en dan te maken. Als laatste zal de stroom door de weerstanden niet worden veranderd als er een weerstand wordt toegevoegd.
+	\end{itemize}
+	
+	\subsection{De regels van Kirchhoff}
+	\begin{itemize}
+		\item \textbf{\emph{Eerste regel van Kirchhof}}
+		\textit{Behoud van lading}: De som van de stromen die een vertakking binnenkomen, moet gelijk zijn aan de som van de stromen die de vertakking verlaten.
+		\[\sum I_{in} = \sum I_{uit}\]
+		
+		\item \textbf{\emph{Tweede regel van Kirchhof}}
+		\textit{Behoud van energie}: De som van de potentiaalverschillen over alle elementen in een gesloten kring, moet nul zijn.
+		\[\sum_{gesloten kring} \Delta V = 0\]
+		Bij deze regel zijn de volgende 'regeltjes' handig te onthouden: 
+		\begin{itemize}
+			\renewcommand\labelitemi{--}
+			\item Weerstand mee met de stroom: \(\Delta V = -IR\)
+			\item Weerstand tegen de stroom in: \(\Delta V = +IR\)
+			\item emf-bron van - naar + : \(\Delta V = +\Epsilon\)
+			\item emf-bron van + naar - : \(\Delta V = -\Epsilon\)
+		\end{itemize}
+	\end{itemize}
+	Deze regels leer je het best door voorbeelden zelf te maken en de oefenzittingen te maken! Dan zullen de regels heel logisch zijn.
+	
+	\subsection{RC-kringen}
+	Een RC-kring ziet er als volgt uit:    
     \begin{center}
     	\begin{circuitikz}
     		\draw (0,0)
@@ -1573,9 +1586,35 @@
     		to[capacitor, l=$C$] (0, 0);
     	\end{circuitikz}
     \end{center}
+	Als men hier de tweede regel van Kirchhof toepassen, krijgen we \(\Epsilon - \frac{q}{c} - IR = 0\). I en q zullen variëren met de tijd. 
+	
+	Op \emph{t = 0} zal er nog geen lading zijn: \[\Epsilon - I_0R = 0 \rightarrow I_0 = \frac{\Epsilon}{R}\]
+	Hier is de condensator nog niet van belang aangezien hier nog helemaal een lading op staat, dus geldt de wet van Ohm gewoon.
+	
+	Op \emph{t = $\inf$} zal er geen stroom meer zijn: \[\Epsilon - \frac{Q}{C} = 0 \rightarrow Q = C\Epsilon\]
+	In dit geval gaat het lijken alsof er geen weerstand is, aangezien er geen stroom is en de weerstand dus geen effect heeft. 
+	
+	\textbf{Tijdsafhankelijke oplossing}: We zoeken een formule om afhankelijk van de tijd, de stroom en de lading te kunnen bepalen, hiervoor maken we volgende afleiding:
+	\[\Epsilon - \frac{q}{C} - IR = 0 \text{  en  } I = \frac{dq}{dt} \rightarrow \frac{dq}{dt} = \frac{\Epsilon}{R} - \frac{q}{RC}\]
+	Hierboven hebben we dus de tweede regel van Kirchhof gebruikt om dan nog de stroom I te vervangen door de definite die we ervoor al kennen en dan beide leden door R te delen. We kunnen die laatste vergelijking dan verder herwerken om daarna te kunnen integreren.
+	
+	\[\frac{dq}{dt} = \frac{C\Epsilon}{RC} - \frac{q}{RC} = -\frac{q - C\Epsilon}{RC} \rightarrow \frac{dq}{q - C\Epsilon} = -\frac{1}{RC}dt\]
+	
+	We integreren dit van tijd 0 tot t:
+	\[\int_0^q \frac{dq}{q-C\Epsilon} = -\frac{1}{RC}\int_0^tdt \rightarrow ln(1-\frac{q}{C\Epsilon}) = -\frac{t}{RC} \rightarrow 1-\frac{q}{C\Epsilon} = e^{-\frac{t}{RC}}\]
+	
+	En deze hele afleiding geeft dus als formules:
+	\[q = C\Epsilon(1 - e^{-\frac{t}{RC}}) = Q(1-e^{-\frac{t}{RC}})\]
+	\[I = \frac{dq}{dt} = \frac{\Epsilon}{R}e^{-\frac{t}{RC}}\]
+	Hier is de tijdsconstante $\tau = RC$.
+	
+	\textbf{Energiebalans van de RC-kring}: Hoeveel energie heeft de emf geleverd?
+	\[\int_0^{U_{emf}}dU = \int_0^Q\Epsilon dq = \Epsilon\int_0^Qdq \Rightarrow U_{emf} = Q\Epsilon = \Epsilon^2C\]
+	
+	De energie is eerlijk verdeeld over de condensator en de weerstand:
+	\[U_C = U_R = \frac{\Epsilon^2C}{2} \Rightarrow U_{emf} = U_C + U_R\]
     
-    Ontladen van een condensator:
-    
+    \textbf{Ontladen van de condensator}: We gaan zien wat er gebeurt als we de schakelaar openen en de condensator ontlaadt. 
     \begin{center}
     	\begin{circuitikz}
     		\draw (0,0)
@@ -1585,6 +1624,15 @@
     		to[capacitor, l=$C$] (0, 0);
     	\end{circuitikz}
     \end{center}
+
+	\[-\frac{q}{C} - IR = 0 \text{  en  } I = \frac{dq}{dt} \rightarrow -R\frac{dq}{dt} = \frac{q}{C} \rightarrow \frac{dq}{q} = -\frac{1}{RC}dt\]    
+	Dit laatste kan men dan weer integreren:
+	\[\int_Q^q\frac{dq}{q} = -\frac{1}{RC}\int_0^tdt \rightarrow ln(\frac{q}{Q}) = -\frac{t}{RC} \Rightarrow q = Qe^{-\frac{t}{RC}}\]
+	\[I = \frac{dq}{dt} = \frac{d}{dt}(Qe^{-\frac{t}{RC}}) = -\frac{Q}{RC}e^{-\frac{t}{RC}} \Rightarrow -I_0 e^{-\frac{t}{RC}}\]
+	Met dezelfde tijdsconstante $\tau = RC$
+	
+	\textbf{energiebalans van de RC-keten}
+	\[\int_{0}^{U_R }dU = \int_{0}^{\infty}Pdt = \int_{0}^{\infty} I^2Rdt = \frac{Q^2R}{R^2C^2}\int_0^\infty e^{\frac{-2t}{RC}}dt = \frac{Q^2RC}{RC^2} = \frac{Q^2}{2C} = U_R = U_C\]
   
     \section{Pollevs}
     \begin{itemize}
