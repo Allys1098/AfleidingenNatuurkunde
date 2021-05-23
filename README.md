@@ -57,3 +57,9 @@ hier nog niet gewoon aan zijn kan men [hier](https://files.ulyssis.org/uploads/L
 
 Het kan zijn dat je Latex-versie vraagt om bepaalde packages te installeren. Deze packages zijn noodzakelijk
 om bepaalde formatteringen en afbeeldingen duidelijk weer te geven. 
+
+---
+<p align="center">Easter-🥚 may apply</p>
+<p align="center">
+    Made with ❤️ in <b>Leuven</b> from 🏡.
+</p>
