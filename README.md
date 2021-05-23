@@ -20,6 +20,10 @@ hoe beter)! Uitgewerkte oplossingen voor ALLE oefeningen uit het Giancoli-boek k
 van de oplossingen die [hier](https://www.principis.be/drive/Giancoli-Physics-for-Scientists-and-Engineers-4th-Solutions.pdf) te vinden zijn. 
 
 ## Regeltjes (want die moeten er zijn)
+**Probeer te vermijden dat de prof deze repo te weten komt. We vermoeden namelijk dat hij hier
+niet tevreden gaat mee zijn en dat de repo verwijderd zal moeten worden (wat niet ten
+goede komt van vele studenten).**
+
 Dit document is vervaardigd in het 2e semester van het academiejaar 2020-2021. T.e.m. de herexamens van
 dit academiejaar zullen de oorspronkelijke auteurs pull-requests toestaan voor eventuele toevoegingen
 of veranderingen. 
