@@ -1449,7 +1449,44 @@
     met $\rho$ de resistiviteit van de geleider. Deze is afhankelijk van het materiaal en van de temperatuur. Voor deze laatste is er ook een formule: 
     \[\rho = \rho_0[1 + \alpha (T - T_0)]\]
     
-    %TODO elektrische stroom en weerstand
+    \subsection{Elektrische energie en vermogen}
+    Er is een energietransfer van de batterij naar het 'toestel', er zal in het toestel dus een energieverlies zijn. 
+    
+    We hebben hier al een uitdrukking voor gezien, namelijk Vermogen: 
+    \[P = \frac{dU}{dt} = \frac{d}{dt}(q\Delta V) = \frac{dq}{dt}\Delta V = I\Delta V\]
+    
+    Het elektrisch vermogen wordt dus als volgt gedefinieerd: 
+    \[P = I\Delta V = I^2R = \frac{(\Delta V)^2}{R}\]
+    De eenheid hiervoor is Watt.
+    
+    \subsection{Microscopisch model van elektrische stroom}
+    Wanneer er een spanning wordt geplaatst op de batterij, zal er een elektrisch veld ontstaan dat evenwijdig is met de wanden van de draad. Dit gaat er dus voor zorgen dat er elektronen zullen bewegen in de draag. We kunnen vanuit de stroom een gemiddelde stroom bepalen: 
+    
+    \[I_{gem} : \frac{\Delta Q}{\Delta t} = nqv_dA\]
+    Waarbij n aantal lading in dat deel, q de lading, $v_d$ de driftsnelheid van de elektronen. De driftsnelheid is de snelheid van de elektronen op een rechte schaal, deze bewegen volledig random door een materiaal maar wij hebben hun snelheid nodig tegenover de x-as. Lading wordt hier dan gedefinieerd door \((nA\Delta x)q\) met \(\Delta x = v_d \Delta t\)
+    
+    Met hetgeen we nu hebben gevonden kunnen we de stroomdichtheid definiëren. Dit is dus stroom per oppervlakte (van de draad). 
+    
+    \[j = \frac{I}{A} : nqv_d\]
+    
+    \subsection{Microscopisch model van elektrische stroom}
+    Nu we stroomdichtheid hebben kunnen definiëren, kan men hieruit de echt wet van Ohm afleiden. \(\vec{J} = nq\vec{v}_d\)
+    \textit{Wanneer het potentiaalverschil over een geleider constant gehouden wordt, ontstaan een stroomdichtheid J en een elektrisch veld E.}
+    \[\vec{J} = \sigma\vec{E}\]
+    met $\sigma$ de geleidbaarheid van het materiaal. Dit is gelijk aan $\sigma = 1/\rho$
+    
+    \textit{Wet van Ohm (de echte): De verhouding van de stroomdichtheid en het elektrisch veld is een constante.}
+    
+    \textbf{In de praktijk}
+    Het potentiaalverschil kan als volgt worden bepaald: \(\Delta V = V_b - V_a = -\int_a^b \vec{E}\cdot d\vec{s} = -E\int_0^ldx = El\).
+    We kunnen dus E vervangen in volgende vergelijking en verderwerken tot we de gewone wet van Ohm verkrijgen.
+    \[J = \sigma E = \sigma\frac{\Delta V}{l}\]
+    \[\Delta V = \frac{l}{\sigma}J = \frac{l}{\sigma A}I = RI\]    
+    
+    Dit toont dus aan dat de twee 'wetten van Ohm' eigenlijk evenredig zijn. We kunnen door onze kennis over resistiviteit en geleidbaarheid. \[R = \frac{l}{\sigma A} = \rho\frac{l}{A}\]
+    
+    \subsection{microscopisch model voor elektrische geleiding}
+    Leer dit goed! hij heeft het (tot nu) nog niet op een examen gevraagd dus is de kans wel wat groter dat dat eens gaat gebeuren. Dit is een deel dat niet in het boek te vinden is dus luister hier goed naar bij de les.
 
 
     \section{Gelijkstroomschakelingen}%TODO gelijkstroomschakelingen
