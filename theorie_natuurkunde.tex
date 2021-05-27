@@ -544,9 +544,34 @@
     $$W_{netto} = \frac{1}{2} mv_{2}^{2} - \frac{1}{2} mv_{1}^{2} $$
     
     We definiëren kinetische energie als: $K = \frac{1}{2}mv^{2}$. We kunnen een analoge afleiding maken voor
-    een variabele kracht langst een pad. We zien dan dat (TODO; Afleiding):
+    een variabele kracht langst een pad. We zien dan dat:
     
-    $$W_{netto} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2} = \Delta K$$
+    $$W_{netto} = \int \vec{F_{netto}} \cdot d\vec{l}$$
+    $$\Luda$$
+    $$W_{netto} = \int F_{netto}\cos{\theta}dl$$
+    $$\Luda$$
+    $$W_{netto} = \int F_{||}dl$$
+
+    Waarin $F_{||}$ de component van de nettokracht evenwijdig aan de verplaatsing op een willekeurig punt is. Volgens de tweede wet van Netwon is:
+
+    $$F_{||} = ma_{||} = m\frac{dv}{dt}$$
+
+    Waarin $a_{||}$ de component van $a$ evenwijdig aan de kromme op een willekeurig punt, gelijk is aan de snelheid waarmee de snelheid verandert, $\frac{dv}{dt}$. 
+    We beschouwen $v$ als een functie van $l$:
+
+    $$\frac{dv}{dt} = \frac{dv}{dl} \frac{dl}{dt} = \frac{dv}{dl}v$$
+
+    Omdat $\frac{dv}{dt}$ de snelheid is geldt:
+
+    $$W_{netto} = \int_{1}^{2} F_{||}dl$$
+    $$\Luda$$
+    $$W_{netto} = \int_{1}^{2} m\frac{dv}{dt}dl$$
+    $$\Luda$$
+    $$W_{netto} = \int_{1}^{2} mv\frac{dv}{dl}dl$$
+    $$\Luda$$
+    $$W_{netto} = \int_{1}^{2} mvdv$$
+    $$\Luda$$
+    $$W_{netto} = \frac{1}{2} mv_{f}^{2} - \frac{1}{2}mv_{i}^{2} = \Delta K$$
     
     \section{Behoud van energie}
     8.1-8.3, 8.5, 8.8
