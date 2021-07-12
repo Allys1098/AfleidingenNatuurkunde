@@ -1916,6 +1916,51 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
     
     H27-31 in giancoli
     \section{Magnetisme}
+    \subsection{Magnetische kracht op een stroomvoerende draad}
+    De stroom zal een kracht uitoefenen op een magneet waarmee dit een magnetisch veld induceert. (27.2) Volgens de derde wet van Newton, zal er een gelijke tegengestelde kracht inwerken. Het magnetisch veld zal dus ook een kracht uitoefenen op een stroomvoerende draad. 
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.6\linewidth]{images/27.3}
+    \end{figure}
+
+    Experimenteel heeft men vastgelegd dat: 
+    \begin{itemize}
+    	\renewcommand\labelitemi{--}
+    	\item \(F_B \sim I, l en B\)
+    	\item \(F_B \sim \sin(\theta)\)[\(\theta is de kleinste hoek tussen I en B\)]
+    	\item afhankelijk van de grootte en de richting van B
+    	\item afhankelijk van de stroomzin. 
+    \end{itemize}
+	\(F \sim IlB\sin(\theta)\)
+	\[\Rightarrow \vec{F} = I(\vec{L}\times\vec{B})\]
+	Met $\vec{L}$ in de richting en zin van de stroom en met de grootte van de lengte.
+	
+	Deze formule gebruikt het vectorproduct! Herbekijk dit als je het nog niet onder de knie hebt. 
+	\begin{itemize}
+		\renewcommand\labelitemi{--}
+		\item Magnetische kracht op een \textit{willekeurige stroomvoerende geleider}
+		\newline
+		Men zal de geleider dan moeten opdelen in infinitisimale lengtedeeltjes om te kunnen integreren over de draad. 
+		\[d\vec{F} = I(d\vec{s}\times B) \Rightarrow \vec{F} = I \int_{a}^{b}d\vec{s}\times\vec{B}\]
+		\item willekeurige stroomvoerende geleiden in een \textit{homogeen magnetisch veld}
+		\newline
+		Als het magnetisch veld homogeen is, mag deze in de formule buiten de integraal worden geplaatst: 
+		\[\vec{F} = i\int_a^b d\vec{s}\times\vec{B} = I (\int_a^b d\vec{s})\times\vec{B}\]
+		Dit kan men dan vereenvoudigen aangezien de integraal tussen twee punten gewoon het lijnstuk tussen die punten is. (Zie afbeelding voor verduidelijking)
+		\[= I(\vec{L}' \times \vec{B})\]
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.4\linewidth]{images/27.3-willekeurig_pad}
+		\end{figure}
+		
+		'Magnetische kracht op willekeurige stroomvoerende geleider in een uniform veld is gelijk aan de kracht op een rechte geleider tussen de eindpunten.'
+		\item \textit{gesloten stroomvoerende geleider} in een homogeen magnetisch veld.
+		\newline
+		De eerste stappen zijn gelijkaardig aan vorige denkwijze, maar \((\int_a^b d\vec{s})\) zal uiteindelijk gelijk zijn aan 0 aangezien de eindpunten gelijk zijn. 
+		
+		'Netto magnetische kracht op een gesloten stroomvoerende geleider in een uniform veld is nul.'
+	\end{itemize}
+	\subsection{}
     \section{Bronnen van magnetische velden}
     \section{Magnetische inductie - wet van Faraday}
     \section{Inductantie, elektromagnetische oscillaties en AC-kringen}
