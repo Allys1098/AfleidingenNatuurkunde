@@ -15,6 +15,7 @@
 \usepackage{commath}
 \usepackage{circuitikz}
 \usepackage{fullpage}
+\usepackage{pbox}
 
 \hypersetup{
     colorlinks=true,
@@ -1960,11 +1961,129 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
 		
 		'Netto magnetische kracht op een gesloten stroomvoerende geleider in een uniform veld is nul.'
 	\end{itemize}
-	\subsection{}
+	\newpage
+	\subsection{Magnetische kracht op een bewegende lading in B}
+	De magnetische kracht op alle mobiele ladingsdragers in het segment: 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\linewidth]{images/27.4}
+	\end{figure}
+	\[\vec{F} = I\vec{L}\times\vec{B} \text{  en  } I = naqv_d\]
+	Dit is de kracht op alle ladingsdragers, we kunnen deze formules dan combineren. 
+	\[\vec{F} = nAL(q\vec{v}_d\times\vec{B})\]
+	Om de kracht voor één lading te bepalen, moeten we nog een aantal dingen omzetten. \(AL\) is het volume van de draad op die lengte en aangezien n het aantal ladingsdragers is per volume, blijft enkel het aantal ladingsdragers over. Aangezien dat de kracht op dit moment is op alle ladingsdragers, kan dit gedeeld worden door het aantal ladingsdragers om de kracht op 1 lading te krijgen. Dit wordt dan de volgende formule: 
+	\[\vec{F} = q\vec{v}\times\vec{B} = qvB\sin(\theta)\text{ û}\] 
+	Let voor de rechterhandregel op de lading, als dit een elektron is, zal de kracht in de tegengestelde zin staan. 
+	\newline
+	\newline
+	Een deeltje beweegt in een cirkel in een vlak loodrecht op het magnetisch veld. Dit wel enkel wanneer een deeltje met een bepaalde snelheid het magnetisch veld binnenkomt. 
+	
+	Centripetale kracht = magnetische kracht
+	
+	\[\sum F = ma_c = \frac{mv^2}{r} \rightarrow r = \frac{mv}{qb}\]
+	
+	hoeksnelheid (rad/s) = \(\omega = \frac{v}{r} = \frac{qb}{m}\)
+	
+	periode (cycles/s) = \(T = \frac{2\pi r}{v} = \frac{2\pi}{\omega} = \frac{2\pi m}{qB}\) 
+	
+	\subsection{Torsie op een stroomkring in een uniform geladen magnetisch veld}
+	De formule voor de kracht is (ter herinnering): \(\vec{F} = I\vec{l}\times\vec{B}\)
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/27.5.1}
+	\end{figure}
+	\newline
+	\begin{itemize}
+		\renewcommand\labelitemi{--}
+		\item Kracht op (1) en (3) is 0 aangezien L||B.
+		\item Kracht op (2) en (4) is ILB = IaB : \(L\perp B\)
+	\end{itemize}
+
+	De zin van de krachten op (2) en (4) zullen tegengesteld staan: \(\vec{F}_2 = -\vec{F}_4\)
+	
+	Het initieel krachtmoment kennen we al: \(\vec{\tau} = \vec{r}\times\vec{F}\)
+	
+	Dan kan men dit invullen met wat we hebben gevonden: 
+	
+	\[\tau_{max} = F_2\frac{b}{2} + F_4\frac{b}{2} = (IaB)\frac{b}{2} + (IaB)\frac{b}{2} = IabB = IAB\]
+	Met in de laatste uitdrukken A = de oppervlakte. 
+	\newline
+	\newline
+	Wanneer de stroomkring niet langs het magnetisch veld ligt, zal er een hoek zijn tussen de kracht en de straal (b/2) en zal volgende uitdrukking correcter zijn: 
+	
+	\[\tau = F_2\frac{b}{2}\sin(\theta) + F_4\frac{b}{2}\sin(\theta) = IabB\sin(\theta) = IAB\sin(\theta)\]
+	\[\Rightarrow \vec{\tau} = I\vec{A}\times\vec{B}\]
+	
+	De kwantiteit I$\vec{A}$ wordt ook wel het magnetisch dipoolmoment $\vec{\mu}$ genoemd. Dan kan voorgaande formule ook geschreven worden als: 
+	\(\vec{\tau} = \vec{\mu}\times\vec{B}\) 
+	
+	Voor een spoel met N windingen, komt het dan op het volgende neer:
+	\(\vec{\tau} = N\vec{\mu}\times\vec{B}\)
+	\newline
+	\newline
+	Nu we ons krachtmoment hebben, kunnen we ook de potentiële energie bepalen: 
+	\[U = \int\tau d\theta = \int NIAB\sin(\theta)d\theta = -\mu B \cos(\theta) = -\vec{\mu}\cdot\vec{B}\]
+	
+	\newpage
+	\subsection{Hall-effect}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/27.8}
+	\end{figure}
+	
+	Wanneer een stroomvoerende geleider vastligt in een magnetisch veld, zal er een zijwaartse krahct uitgevoerd worden op de ladingen in de geleider. 
+	
+	In het eerste geval van de afbeelding, zullen de elektronen zich eerder onderaan de afbeelding uilijnen door de magnetische kracht. Dit zal een elektrisch veld induceren, wat ook wel het Hall-veld wordt genoemd. Dit elektrisch veld zal dan ook een kracht uitoefenen op die ladingen. Deze kracht is tegenovergesteld van de magnetische kracht, waardoor dit systeem na een tijdje in equilibrium terechtkomt. 
+	De magnetische en elektriche kracht worden als volgt gedefinieerd:
+	\[\vec{F}_B = -e\vec{v}_d\times\vec{B}\]
+	\[\vec{F}_e = -e\vec{E}_H\]
+	Dus hieruit kan men de volgende gelijkheid opstellen: 
+	\[\vec{F}_B = -\vec{F}_e \Rightarrow E_H = V_dB\]
+	
+	De Hallspanning wordt als volgt gedefinieerd: 
+	\[\mathcal{E}_H = \Delta V_H = E_Hh = v_d B d\]
+	
+	\subsection{massaspectrometer}
+	Heeft hij nog niet gevraagd en is ook niet echt een afleiding, maar lees het toch grondig na. 
+	
+	\subsection{Algemene vergelijking met Elektriciteit}
+	\begin{table}[h]
+		\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Magnetisme & Elektriciteit \\
+		\hline
+		Magnetische kracht: $\vec{F}_B = q\vec{v}\times\vec{B}$ 
+		& Elektrische kracht: $\vec{F}_E = q\vec{E}$ \\
+		\hline
+		\textit{Loodrecht} op het magnetisch veld 
+		& In de \textit{richting} van het elektrisch veld \\
+		\hline
+		werkt enkel op \textit{bewegende} lading 
+		& werkt op een \textit{lading} (onaghankelijk van de snelheid)  \\
+		\hline
+		\pbox{6cm}{Levert \textit{geen arbeid} bij verplaatsing van een lading} 
+		& \pbox{6cm}{levert \textit{arbeid} bij verplaatsing van de lading} \\
+		\hline
+		\pbox{6cm}{Magnetisch dipoolmoment in magnetisch veld: $\vec{\tau} = \vec{\mu}\times\vec{B}$} 
+		& \pbox{6cm}{Elektrisch dipoolmoment in elektrisch veld: $\vec{\tau} = \vec{p}\times\vec{E}$} \\
+		\hline
+		Pot energie: $U = -\vec{\mu}\cdot\vec{B}$ 
+		& Pot energie: $U = -\vec{p}\cdot\vec{E}$ \\
+		\hline
+	\end{tabular}
+	\end{table}
+
+	%TODO mooiere fix vinden voor deze tabel want amai
+	
     \section{Bronnen van magnetische velden}
+    
     \section{Magnetische inductie - wet van Faraday}
+    
     \section{Inductantie, elektromagnetische oscillaties en AC-kringen}
+    
     \section{De vergelijkingen van Maxwell, elektromagnetische golven}
+    
     \section{Pollevs}
     \begin{itemize}
     	\renewcommand\labelitemi{--}
