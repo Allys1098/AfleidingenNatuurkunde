@@ -16,6 +16,7 @@
 \usepackage{circuitikz}
 \usepackage{fullpage}
 \usepackage{pbox}
+\usepackage{subfig}
 
 \hypersetup{
     colorlinks=true,
@@ -2047,6 +2048,7 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
 	\subsection{massaspectrometer}
 	Heeft hij nog niet gevraagd en is ook niet echt een afleiding, maar lees het toch grondig na. 
 	
+	\newpage
 	\subsection{Algemene vergelijking met Elektriciteit}
 	\begin{table}[h]
 		\centering
@@ -2078,6 +2080,72 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
 	%TODO mooiere fix vinden voor deze tabel want amai
 	
     \section{Bronnen van magnetische velden}
+    \subsection{Magnetisch veld als gevolg van een rechte draad}
+    Kwantitatieve bepaling van het magneetveld ten gevolge van een elektrische stroom: Hoe meer stroom, hoe groter het veld. Hoe verder van de draad, hoe kleiner het veld. \(B\sim\frac{I}{r}\)
+    
+    Evenredigheidsconstante: \(B = \frac{\mu_0I}{2\pi r}\) , met $\mu_0$ de magnetische permeabiliteit in vacuum.
+    
+    \subsection{Magnetische kracht tussen twee evenwijdige geleiders}
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\linewidth]{images/28.2}
+    \end{figure}
+    Een stroomvoerende geleider in een maneetveld is onderhevig aan magnetische kracht. De stroom door een geleider genereert een magnetisch veld. Stroomvoerende geleiders zullen dus kracht uitoefenen op elkaar. 
+    
+    \[\vec{F_1} = I_1\vec{l}\times\vec{B}_2 \text{  en  } \vec{l}\perp\vec{B}_2 \rightarrow F_1 = I_1 l B_2\]
+    \[F_1 = I_1lB_2 = I_1l(\frac{\mu_0 I_2}{2\pi a}) = \frac{\mu_0 I_1I_2}{2\pi a}l\]
+    \[F_2 = I_2lB_1 = I_2l(\frac{\mu_0 I_1}{2\pi a}) = \frac{\mu_0I_1I_2}{2\pi a}l\]
+    Evenwijdige stroomvoerende geleiders: trekken elkaar aan indien de stroom in dezelfde richting vloeit en stoten elkaar af indien de stroom in tegengestelde richting vloeit.
+	\newline
+	Op basis van deze ondervinding, kan men Ampère definiëren: 
+	Als door twee lange, evenwijdige geleiders die op 1 meter van elkaar verwijderd zijn, een gelijke stroom in dezelfde richting voert en als de geleiders aangetrokken worden met een kracht per lengte-eenheid van \(2\times 10^{-7}\)N/m, dan vloeit een stroom van 1 Ampère [A] in elke geleider. Deze definitie laat dus toe om elektrische grootheden te meten via mechanische krachten!
+    \subsection{De wet van ampère}
+    Het magnetisch veld bepalen adhv een willekeurige geleider (ipv een rechte).
+    \begin{figure}[h]
+    	\centering
+    	\subfloat[\centering]{{\includegraphics[width=5cm]{images/ampere1} }}%
+    	\qquad
+    	\subfloat[\centering]{{\includegraphics[width=5cm]{images/ampere2} }}%
+    \end{figure}
+
+	Wanneer je het gesloten pad rond de draad opdeeld in kleine delen die parallel zijn aan het magnetisch veld, en al deze delen dan optelt bekomen je volgens Ampere: \[\sum\vec{B}\cdot\Delta \vec{l} = \sum B\Delta l = \mu_0I_{in}\]
+	\[\Delta l \rightarrow 0: \int \vec{B}\cdot\Delta\vec{l} = \mu_0I_{in}\]
+	
+	Om deze wet beter te snappen, passen we hem toe op de rechtergeleider, die veel simpeler is. In de praktijk zal men altijd zoeken naar een integratiepad dat symmetrisch is, om het integreren te vergemakkelijken. 
+	
+	\[\mu_0I = \int\vec{B}\cdot d\vec{l} = \int Bdl = B\int dl = B(2\pi r) \rightarrow B = \frac{\mu_0I}{2\pi r}\]
+	De lijnintegraal van het magneetveld ($\vec{B}\cdot d\vec{l}$) langs een (willekeurig) gesloten pas is gelijk aan $\mu_0 I_{in}$, waarbij $I_{in}$ de totale stroom is, die vloeit door een oppervlak dat omsloten is door het pad. 
+	\[\int \vec{B}\cdot d\vec{l} = \mu_0I_{in}\]
+    \subsection{Het magnetisch veld van een spoel}
+    
+    %TODO Afbeelding uit giancoli van 28.5
+    Als men het pad kiest dat hierboven is aangeduid (afbeelding on the way als ARTHUR ZIJN SERVERS FIXT), kan men de wet van ampere gebruiken om het magnetisch veld te bepalen: 
+    \[\int\vec{B}\cdot d\vec{l} = \int_a^b\vec{B}\cdot d\vec{l} + \int_b^c\vec{B}\cdot d\vec{l} + \int_c^d\vec{B}\cdot d\vec{l} + \int_d^a\vec{B}\cdot d\vec{l}\]
+    Het veld buiten de solenoide is zo klein dat deze eigenlijk 0 is (a->b). Het magnetisch veld staat loodrecht op de segmenten bc en da, dus zullen deze ook 0 zijn. Het enige deel dat nog overblijft is dus: 
+    \[\int\vec{B}\cdot d\vec{l} = \int_c^d\vec{B}\cdot d\vec{l} = Bl\]
+    Voor de rechterhelft van de wet van ampere, moet men de ingesloten stroom kennen. Als een stroom I door de volledige draad loopt, zal in het pad dat wij hebben gekozen, NI stroom lopen met N het aantal draden dat het pad insluit. Dus geeft de wet van ampere ons: 
+    \[Bl = \mu_0NI\]
+    We laten n = N/l, wat het aantal draden is per lengte-eenheid: 
+    \[B = \mu_0nI\]
+    \subsection{De wet van Boit-Savart}
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.4\linewidth]{images/28.6}
+    \end{figure}
+    
+    Magnetisch veld ten gevolge van een bewegende lading, wanneer er dus onvoldoende symmetrie is voor de wet van ampere: 
+    de kwantitatieve bepaling van kracht op een magneet ten gevolge van een infinitesimale elektrische stroom: 
+    \begin{itemize}
+    	\renewcommand\labelitemi{--}
+    	\item dB is loodrecht op ds en op r
+    	\item |dB| $\sim r^{-2}$
+    	\item |dB| $\sim$ ds en I doorheen ds
+    	\item |dB| $\sim \sin(\theta)$ met $\theta$ de hoek tussen ds en r
+    \end{itemize}
+	\[d\vec{B} = \frac{\mu_0}{4\pi}\frac{Id\vec{s}\times\hat{r}}{r^2}\]
+	$\hat{r}$ is hier enkel om de richting aan te geven van de straal, de grootte hiervan is 1. De stroom zal ook constant zijn over de geleider aangezien men de stroom niet kan opsplitsen en ook wegens behoud van lading.
+	Het totale magnetische veld is dus: 
+	\[\vec{B} = \frac{\mu_0I}{4\pi}\int\frac{d\vec{s}\times\hat{r}}{r^2}\]
     
     \section{Magnetische inductie - wet van Faraday}
     
