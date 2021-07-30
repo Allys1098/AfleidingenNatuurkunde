@@ -2161,9 +2161,26 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
     %De rest van dit hoofdstuk vind ik zelf nog wat vaag. Als je dat wilt toevoegen, feel free!
     
     \section{Inductantie, elektromagnetische oscillaties en AC-kringen}
-    
-    
+    \subsection{Zelfinductie in een spoel met N wikkelingen en lengte l}
+    \subsection{RL-kringen}
+    \subsection{Harmonische beweging}
+    \subsection{Oscillaties in een LC-kring}
+    \subsection{Harmonische oscillatie tussen energie in condensator en inductie}
+    \subsection{Verloop van stroom (lading) in verschillende kringen}
+    \subsection{De RLC-kring}
+    \subsection{Weerstand in een wisselstroomkring}
+    \subsection{Gemiddelde stroom en gemiddelde spanning}
+    \subsection{Zelfinductie in een wisselstroomkring}
+    \subsection{Inductieve reactantie}
+    \subsection{Condensator in een wisselstroomkring}
+    \subsection{Capacitieve reactantie}
+    \subsection{Het vermogen in een wisselstroomkring}
+      
     \section{De vergelijkingen van Maxwell, elektromagnetische golven}
+    \subsection{Wiskundige beschrijving van golfbeweging}
+    \subsection{Derde en vierde wet van Maxwell voor vlakke golven}
+    \subsection{Oplossing van de golfvergelijkingen: cosinusgolf}
+    \subsection{Energie in elektromagnetische golven: de Poyntingvector}
     
     \section{Pollevs}
     \begin{itemize}
@@ -2331,6 +2348,42 @@ TODO: LES HERBEKIJKEN VOOR BETERE UITLEG
     		\item de helderheid zal dezelfde zijn bij alle frequenties
     	\end{enumerate}
     	\textit{Oplossing}: Het juiste antwoord is hier b. Je wilt dat de weerstand bij de spoel het kleinst is, dus zal men een lage frequentie nodig hebben. 
+    	\item An AC source drives an RLC curcuit circuit with a fixed voltage amplitude. If the driving frequency is $\omega_1$, the circuit is more capacitive than inductive and the phase angle is -10°. If the driving frequency is $\omega_2$, the circuit is more inductive than capacitive and the phase angle is +10°. The largest amount of power is delivered to the circuit at: 
+    	\begin{enumerate}[label=\alph*]
+    		\item $\omega_1$
+    		\item $\omega_2$
+    		\item The same amount of power is delivered at both frequencies.
+    	\end{enumerate}
+    	\textit{Oplossing}: Het juiste antwoord is c. De impedantie zal gelijk blijven en dus zal de stroomamplitude ook gelijk blijven. De fasehoek zal symmetrie ondervinden en de cosinus van deze hoeken zal hetzelfde zijn dus is het vermogen gelijk. 
+    	\item De condensator in een RC-kring begint te ontladen. Tijdens heft ontladen is er in het gebied tussen de platen van de condensator. 
+    	\begin{enumerate}[label=\alph*]
+    		\item een elektrisch veld maar geen magnetisch veld
+    		\item een magnetisch veld maar geen elektrish veld
+    		\item zowel een elektrisch veld als een magnetisch veld
+    		\item noch een elektrisch, noch een magnetisch veld
+    	\end{enumerate}
+    	\textit{Oplossing}: Het antwoord zal hier c zijn. Tussen de platen zal er een elektrish veld zijn zolang er lading is en zolang de stroom vloeit is er lading. Aangezien er een elektrisch veld is tussen de platen (dat geleidelijk aan afneemt) is er een elektrische flux en zal ie zorgen voor een verplaatsingstroom:  \(I_d = \epsilon_0\frac{d\Phi_E}{dt}\). Deze stroom zal ook zorgen voor een magnetisch veld. 
+    	\item Door een draad vloeit een stroom (zie figuur op slides). Een gesloten pad bevindt zich in hetzelfde vlak als de draad. We kunnen stellen da de padintegraal van het magneetveld rond dit pad nul moet zijn, omdat
+    	\begin{enumerate}[label=\alph*]
+    		\item Er is geen stroom vloeit door het vlak omsloten door dit pad. 
+    		\item Er geen magnetisch veld gaat door het vlak omsloten door dit pad.
+    		\item De integraal langs een cirkel is, dus met zelfde begin- en eindpunt.
+    		\item Het magnetisch veld en het lengte-element altijd loodrecht op elkaar staan. 
+    		\item A+C
+    		\item A+D
+    		\item C+D
+    		\item A+C+D
+    	\end{enumerate}
+    	\textit{Oplossing}: Het juiste antwoord is f. A vanwege de wet van Ampere: \(\int\vec{B}\cdot d\vec{l} = \mu_0I_{in}\) en aangezien er geen ingesloten lading is, is dit nul. D is juist aangezien het magnetisch veld en het lengte-element loodrecht staan op elkaar en de cosinus van een rechte hoek is 0.
+    	\item Stel dat Hertz golven met dubbele golflengte wil genereren (ten opzichte van zijn oorspronkelijke opstelling). Daarvoor moet hij
+    	\begin{enumerate}[label=\alph*]
+    		\item De capaciteit van de elektrodes verdubbelen
+    		\item De capaciteit van de elektrodes verviervoudigen
+    		\item De capaciteit van de elektrodes halveren
+    		\item De capaciteit van de elektrodes vier maal kleiner nemen
+    		\item De golflengte is onafhankelijk van de capaciteit van de elektrodes
+    	\end{enumerate}
+    	\textit{Oplossing}: Het antwoord zal b zijn. \(\omega_r = \frac{1}{\sqrt{LC}} = 2\pi f \Rightarrow \lambda\frac{c}{f} = c2\pi\sqrt{LC}\). C zal dus 4 keer zo groot moeten zijn om lambda te verdubbelen. 
     \end{itemize}
 %beep
 \end{document}
